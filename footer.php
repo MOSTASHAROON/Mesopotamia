@@ -11,8 +11,10 @@
 
 ?>
 
-	</div><!-- #content -->
-
+</div><!-- #content -->
+</div><!-- #page -->
+</div><!-- .container -->
+<div class="container">
 	<footer id="colophon" class="site-footer" role="contentinfo">
 		<div class="site-info">
 			<a href="<?php echo esc_url( __( 'https://wordpress.org/', 'mesopotamia' ) ); ?>"><?php printf( esc_html__( 'Proudly powered by %s', 'mesopotamia' ), 'WordPress' ); ?></a>
@@ -20,7 +22,7 @@
 			<?php printf( esc_html__( 'Theme: %1$s by %2$s.', 'mesopotamia' ), 'mesopotamia', '<a href="http://underscores.me/" rel="designer">Underscores.me</a>' ); ?>
 		</div><!-- .site-info -->
 	</footer><!-- #colophon -->
-</div><!-- #page -->
+</div><!-- #container -->
 
 <?php wp_footer(); ?>
 
