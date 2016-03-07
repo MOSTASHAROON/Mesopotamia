@@ -14,15 +14,14 @@
 </div><!-- #content -->
 </div><!-- #page -->
 </div><!-- .container -->
-<div class="container">
+<div class="container-fluid footer-container">
 	<footer id="colophon" class="site-footer" role="contentinfo">
 		<div class="site-info">
-			<a href="<?php echo esc_url( __( 'https://wordpress.org/', 'mesopotamia' ) ); ?>"><?php printf( esc_html__( 'Proudly powered by %s', 'mesopotamia' ), 'WordPress' ); ?></a>
-			<span class="sep"> | </span>
-			<?php printf( esc_html__( 'Theme: %1$s by %2$s.', 'mesopotamia' ), 'mesopotamia', '<a href="http://underscores.me/" rel="designer">Underscores.me</a>' ); ?>
+			<?php printf( esc_html__( '© 2016 %1$s', 'mesopotamia' ), '<a href="https://mostasharoon.org" rel="designer">MOSTASHAROON</a>' ); ?>
 		</div><!-- .site-info -->
+		<?php mesopotamia_footer_menu(); ?>
 	</footer><!-- #colophon -->
-</div><!-- #container -->
+</div><!-- .container -->
 
 <?php wp_footer(); ?>
 

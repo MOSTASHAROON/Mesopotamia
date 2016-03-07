@@ -45,6 +45,7 @@ if ( ! function_exists( 'mesopotamia_setup' ) ) :
 		// This theme uses wp_nav_menu() in one location.
 		register_nav_menus( array(
 			'primary' => esc_html__( 'Primary', 'mesopotamia' ),
+			'footer'  => esc_html__( 'Footer', 'mesopotamia' ),
 		) );
 
 		/*
@@ -112,7 +113,6 @@ add_action( 'widgets_init', 'mesopotamia_widgets_init' );
  * Enqueue scripts and styles.
  */
 function mesopotamia_scripts() {
-	wp_enqueue_style( 'mesopotamia-style', get_stylesheet_uri() );
 
 	wp_enqueue_script( 'mesopotamia-navigation', get_template_directory_uri() . '/js/navigation.js', array(), '20151215', true );
 
@@ -127,6 +127,8 @@ function mesopotamia_scripts() {
 		'mesopotamia-bootstrap'
 	) );
 
+	wp_enqueue_style( 'mesopotamia-style', get_stylesheet_uri(), array( 'mesopotamia-bootstrap-theme' ) );
+
 	wp_enqueue_script( 'mesopotamia-bootstrap-js', get_template_directory_uri() . '/lib/bootstrap/js/bootstrap.min.js', array( 'jquery' ) );
 }
 
@@ -135,7 +137,7 @@ add_action( 'wp_enqueue_scripts', 'mesopotamia_scripts' );
 /**
  * Implement the Custom Header feature.
  */
-require get_template_directory() . '/inc/custom-header.php';
+//require get_template_directory() . '/inc/custom-header.php';
 
 /**
  * Custom template tags for this theme.

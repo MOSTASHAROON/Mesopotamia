@@ -4,7 +4,7 @@ Theme URI: https://mostasharoon.org
 Author: Mohammed Al-Mahdawi
 Author URI: https://mostasharoon.org
 Description: Multi purpose theme
-Version: 0.1
+Version: 0.2
 License: GNU General Public License v2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 Text Domain: mesopotamia
@@ -19,3 +19,106 @@ Underscores is distributed under the terms of the GNU GPL v2 or later.
 Normalizing styles have been helped along thanks to the fine work of
 Nicolas Gallagher and Jonathan Neal http://necolas.github.com/normalize.css/
 */
+
+/*--------------------------------------------------------------
+# Accessibility
+--------------------------------------------------------------*/
+/* Text meant only for screen readers. */
+.screen-reader-text {
+    clip: rect(1px, 1px, 1px, 1px);
+    position: absolute !important;
+    height: 1px;
+    width: 1px;
+    overflow: hidden;
+}
+
+.screen-reader-text:focus {
+    background-color: #f1f1f1;
+    border-radius: 3px;
+    box-shadow: 0 0 2px 2px rgba(0, 0, 0, 0.6);
+    clip: auto !important;
+    color: #21759b;
+    display: block;
+    font-size: 14px;
+    font-size: 0.875rem;
+    font-weight: bold;
+    height: auto;
+    left: 5px;
+    line-height: normal;
+    padding: 15px 23px 14px;
+    text-decoration: none;
+    top: 5px;
+    width: auto;
+    z-index: 100000; /* Above WP toolbar. */
+}
+
+/* Do not show the outline on the skip link target. */
+#content[tabindex="-1"]:focus {
+    outline: 0;
+}
+
+/*--------------------------------------------------------------
+# Footer
+--------------------------------------------------------------*/
+.site-footer {
+    text-align: center;
+    padding: 15px;
+}
+
+.site-footer, .site-footer a {
+    color: #b3b5b6;
+}
+
+.footer-container {
+    background-color: #F2F3F3;
+}
+
+.site-info {
+    margin-bottom: 5px;
+}
+
+/*--------------------------------------------------------------
+# Misc
+--------------------------------------------------------------*/
+
+.container-fluid {
+    padding: 0;
+}
+
+#content {
+    padding-left: 15px;
+    padding-right: 15px;
+}
+
+#secondary {
+    padding: 15px;
+}
+
+/*Make images responsive*/
+img, figure{
+    max-width: 100%;
+    height: auto;
+}
+
+/*Make select responsive*/
+select{
+    max-width: 100%;
+}
+
+/*--------------------------------------------------------------
+## Posts and pages
+--------------------------------------------------------------*/
+.single.single-post .content-area {
+    margin: 0 auto;
+    max-width: 50em;
+}
+
+.entry-meta {
+    color: #b3b5b6;
+}
+
+.entry-footer{
+    color: #b3b5b6;
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
