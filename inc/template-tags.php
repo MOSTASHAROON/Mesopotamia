@@ -25,17 +25,21 @@ if ( ! function_exists( 'mesopotamia_posted_on' ) ) :
 		);
 
 		$posted_on = sprintf(
-			esc_html_x( 'Posted on %s', 'post date', 'mesopotamia' ),
+			esc_html_x( '%s', 'post date', 'mesopotamia' ),
 			'<a href="' . esc_url( get_permalink() ) . '" rel="bookmark">' . $time_string . '</a>'
 		);
 
 		$byline = sprintf(
-			esc_html_x( 'by %s', 'post author', 'mesopotamia' ),
+			esc_html_x( '%s', 'post author', 'mesopotamia' ),
 			'<span class="author vcard"><a class="url fn n" href="' . esc_url( get_author_posts_url( get_the_author_meta( 'ID' ) ) ) . '">' . esc_html( get_the_author() ) . '</a></span>'
 		);
 
-		echo '<span class="posted-on">' . $posted_on . '</span><span class="byline"> ' . $byline . '</span>'; // WPCS: XSS OK.
+		echo '<span class="posted-on"><span class="glyphicon glyphicon-calendar" aria-hidden="true"></span> ' . $posted_on . '&nbsp;&nbsp;</span><span class="byline"><span class="glyphicon glyphicon-user" aria-hidden="true"></span> ' . $byline . '</span>'; // WPCS: XSS OK.
 
+		$categories_list = mesopotamia_get_the_category();
+		if ( $categories_list && mesopotamia_categorized_blog() ) {
+			echo $categories_list;
+		}
 	}
 endif;
 
@@ -47,20 +51,14 @@ if ( ! function_exists( 'mesopotamia_entry_footer' ) ) :
 		// Hide category and tag text for pages.
 		if ( 'post' === get_post_type() ) {
 			/* translators: used between list items, there is a space after the comma */
-			$categories_list = get_the_category_list( esc_html__( ', ', 'mesopotamia' ) );
-			if ( $categories_list && mesopotamia_categorized_blog() ) {
-				printf( '<span class="cat-links">' . esc_html__( 'Posted in %1$s', 'mesopotamia' ) . '</span>', $categories_list ); // WPCS: XSS OK.
-			}
-
-			/* translators: used between list items, there is a space after the comma */
-			$tags_list = get_the_tag_list( '', esc_html__( ', ', 'mesopotamia' ) );
+			$tags_list = get_the_tag_list( '<ul class="list-inline"><li><i class="fa fa-tag"></i> ', '</li><li><i class="fa fa-tag"></i> ', '</li></ul>' );
 			if ( $tags_list ) {
-				printf( '<span class="tags-links">' . esc_html__( 'Tagged %1$s', 'mesopotamia' ) . '</span>', $tags_list ); // WPCS: XSS OK.
+				printf( '<span class="tags-links"> ' . esc_html__( '%1$s', 'mesopotamia' ) . '</span>', $tags_list ); // WPCS: XSS OK.
 			}
 		}
 
 		if ( ! is_single() && ! post_password_required() && ( comments_open() || get_comments_number() ) ) {
-			echo '<span class="comments-link">';
+			echo '<span class="comments-link"> ';
 			comments_popup_link( esc_html__( 'Leave a comment', 'mesopotamia' ), esc_html__( '1 Comment', 'mesopotamia' ), esc_html__( '% Comments', 'mesopotamia' ) );
 			echo '</span>';
 		}
@@ -71,7 +69,7 @@ if ( ! function_exists( 'mesopotamia_entry_footer' ) ) :
 				esc_html__( 'Edit %s', 'mesopotamia' ),
 				the_title( '<span class="screen-reader-text">"', '"</span>', false )
 			),
-			'<span class="edit-link">',
+			'<span class="edit-link"><i class="fa fa-pencil"></i> ',
 			'</span>'
 		);
 	}
@@ -140,4 +138,44 @@ function mesopotamia_footer_menu() {
 			)
 		);
 	}
+}
+
+function mesopotamia_get_the_category() {
+	$categories = get_the_category();
+
+	if ( empty( $categories ) ) {
+		return '';
+	}
+
+	global $wp_rewrite;
+
+	$rel = ( is_object( $wp_rewrite ) && $wp_rewrite->using_permalinks() ) ? 'rel="category tag"' : 'rel="category"';
+
+	$thelist = '<ul class="post-categories list-inline">';
+
+	foreach ( $categories as $category ) {
+		$thelist .= "<li>";
+		$thelist .= '<i class="fa fa-folder-open"></i> <a href="' . esc_url( get_category_link( $category->term_id ) ) . '" ' . $rel . '>' . $category->name . '</a>';
+		$thelist .= "</li>";
+	}
+
+	$thelist .= '</ul>';
+
+	return $thelist;
+}
+
+function mesopotamia_post_nav() {
+	?>
+	<nav class="navigation post-navigation" role="navigation">
+		<div class="post-nav-box">
+			<h1 class="screen-reader-text"><?php _e( 'Post navigation', 'mesopotamia' ); ?></h1>
+			<div class="nav-links">
+				<?php
+				previous_post_link( '<div class="nav-previous"><div class="nav-indicator">' . _x( 'Previous Post:', 'Previous post', 'mesopotamia' ) . '</div>%link</div>', '%title' );
+				next_post_link( '<div class="nav-next"><div class="nav-indicator">' . _x( 'Next Post:', 'Next post', 'mesopotamia' ) . '</div>%link</div>', '%title' );
+				?>
+			</div><!-- .nav-links -->
+		</div><!-- .post-nav-box -->
+	</nav><!-- .navigation -->
+	<?php
 }
