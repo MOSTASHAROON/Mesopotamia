@@ -128,9 +128,16 @@ function mesopotamia_scripts() {
 		'mesopotamia-bootstrap'
 	) );
 
-	wp_enqueue_style( 'mesopotamia-style', get_stylesheet_uri(), array( 'mesopotamia-bootstrap-theme','mesopotamia-font-awesome' ) );
+	wp_enqueue_style( 'mesopotamia-style', get_stylesheet_uri(), array(
+		'mesopotamia-bootstrap-theme',
+		'mesopotamia-font-awesome'
+	) );
 
 	wp_enqueue_script( 'mesopotamia-bootstrap-js', get_template_directory_uri() . '/lib/bootstrap/js/bootstrap.min.js', array( 'jquery' ) );
+	wp_enqueue_script( 'mesopotamia-js', get_template_directory_uri() . '/js/script.js', array(
+		'masonry',
+		'mesopotamia-bootstrap-js'
+	) );
 }
 
 add_action( 'wp_enqueue_scripts', 'mesopotamia_scripts' );
