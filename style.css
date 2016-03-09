@@ -21,6 +21,74 @@ Nicolas Gallagher and Jonathan Neal http://necolas.github.com/normalize.css/
 */
 
 /*--------------------------------------------------------------
+# Misc
+--------------------------------------------------------------*/
+
+* {
+    max-width: 100%;
+}
+
+.container-fluid {
+    padding: 0;
+}
+
+#content {
+    padding-left: 15px;
+    padding-right: 15px;
+}
+
+#secondary {
+    padding: 15px;
+}
+
+/*Make images responsive*/
+img, figure {
+    max-width: 100%;
+    height: auto;
+}
+
+/*Make select responsive*/
+select {
+    max-width: 100%;
+}
+
+a{
+    color: #2b2b2b;
+}
+
+a:hover{
+    color: #0ca2e0;
+}
+
+.mesopotamia-posts{
+    margin-top: 1em;
+}
+
+.mesopotamia-posts article{
+    /*background-color: #2b2b2b;*/
+    /*margin: .5em;*/
+    /*box-sizing: content-box;*/
+}
+
+article {
+    word-wrap: break-word;
+}
+
+/*.entry-meta .cat-links a:before {*/
+/*!*display: block;*!*/
+/*!*float: left;*!*/
+/*!*padding-top: 2px;*!*/
+/*margin-left: .5em;*/
+/*margin-right: .25em;*/
+/*font-family: FontAwesome;*/
+/*!*font-size: 14px;*!*/
+/*!*font-size: 1.4rem;*!*/
+/*content: "\f07c";*/
+/*color: #cbcccc;*/
+/*text-decoration: none;*/
+/*}*/
+
+/*--------------------------------------------------------------
 # Accessibility
 --------------------------------------------------------------*/
 /* Text meant only for screen readers. */
@@ -191,48 +259,6 @@ object {
 }
 
 /*--------------------------------------------------------------
-# Misc
---------------------------------------------------------------*/
-
-.container-fluid {
-    padding: 0;
-}
-
-#content {
-    padding-left: 15px;
-    padding-right: 15px;
-}
-
-#secondary {
-    padding: 15px;
-}
-
-/*Make images responsive*/
-img, figure {
-    max-width: 100%;
-    height: auto;
-}
-
-/*Make select responsive*/
-select {
-    max-width: 100%;
-}
-
-/*.entry-meta .cat-links a:before {*/
-    /*!*display: block;*!*/
-    /*!*float: left;*!*/
-    /*!*padding-top: 2px;*!*/
-    /*margin-left: .5em;*/
-    /*margin-right: .25em;*/
-    /*font-family: FontAwesome;*/
-    /*!*font-size: 14px;*!*/
-    /*!*font-size: 1.4rem;*!*/
-    /*content: "\f07c";*/
-    /*color: #cbcccc;*/
-    /*text-decoration: none;*/
-/*}*/
-
-/*--------------------------------------------------------------
 ## Menus
 --------------------------------------------------------------*/
 
@@ -285,7 +311,7 @@ select {
     color: #6a6c6d;
 }
 
-.entry-meta .post-categories{
+.entry-meta .post-categories {
     margin-left: 5px;
     display: inline;
 }

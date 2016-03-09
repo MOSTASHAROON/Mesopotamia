@@ -181,10 +181,10 @@ function mesopotamia_post_nav() {
 }
 
 function mesopotamia_add_post_classes( $classes, $class, $post_id ) {
-	$classes[] = 'post-box';
-	$classes[] = 'col-lg-4';
-	$classes[] = 'col-md-4';
-	$classes[] = 'col-sm-4';
+	$classes[] = 'thumbnail';
+//	$classes[] = 'col-lg-4';
+//	$classes[] = 'col-md-4';
+//	$classes[] = 'col-sm-4';
 
 	return $classes;
 }
