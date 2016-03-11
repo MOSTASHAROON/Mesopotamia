@@ -122,6 +122,8 @@ function mesopotamia_scripts() {
 		wp_enqueue_script( 'comment-reply' );
 	}
 
+//	wp_enqueue_style( 'mesopotamia-google-fonts', 'https://fonts.googleapis.com/css?family=Ranga:400,700|Contrail+One|Courgette|Italianno|Romanesco' );
+	wp_enqueue_style( 'mesopotamia-google-fonts', 'https://fonts.googleapis.com/css?family=Ubuntu:400,700,700italic,500italic,500,400italic,300italic,300' );
 	wp_enqueue_style( 'mesopotamia-font-awesome', get_template_directory_uri() . '/lib/font-awesome.min.css' );
 	wp_enqueue_style( 'mesopotamia-bootstrap', get_template_directory_uri() . '/lib/bootstrap/css/bootstrap.min.css' );
 	wp_enqueue_style( 'mesopotamia-bootstrap-theme', get_template_directory_uri() . '/lib/bootstrap/css/bootstrap-theme.min.css', array(
@@ -130,6 +132,7 @@ function mesopotamia_scripts() {
 
 	wp_enqueue_style( 'mesopotamia-style', get_stylesheet_uri(), array(
 		'mesopotamia-bootstrap-theme',
+		'mesopotamia-google-fonts',
 		'mesopotamia-font-awesome'
 	) );
 

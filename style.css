@@ -24,8 +24,51 @@ Nicolas Gallagher and Jonathan Neal http://necolas.github.com/normalize.css/
 # Misc
 --------------------------------------------------------------*/
 
+/*Sidebar*/
+aside section{
+    background-color: white;
+    border-top: 4px solid #00aeef;
+    padding: 10px;
+    margin-bottom: 1em;
+}
+
+aside{
+    margin-top: 1em;
+    /*padding: 0;*/
+}
+
+aside section h2{
+    margin-top: 10px;
+    border-top: 2px solid #ff6700;
+    margin-bottom: 10px;
+    color: #ff6700;
+    background-color: #F3F3F5;
+    /* border-bottom: 1px solid #ff6700; */
+    text-align: center;
+    /* padding: 0; */
+    padding: 10px;
+}
+
+aside section  table{
+    width: 100%;
+}
+/*Sidebar*/
+
+.site-content {
+    background-color: #E5E7EA;
+}
+
 * {
     max-width: 100%;
+    /*font-family: 'Italianno', cursive;*/
+    /*font-family: 'Courgette', cursive;*/
+    /*font-family: 'Contrail One', cursive;*/
+    /*font-family: 'Ranga', cursive;*/
+    font-family: 'Ubuntu', sans-serif;
+}
+
+h1, h2, h3, h4, h5, h6 {
+    font-weight: 900;
 }
 
 .container-fluid {
@@ -37,9 +80,9 @@ Nicolas Gallagher and Jonathan Neal http://necolas.github.com/normalize.css/
     padding-right: 15px;
 }
 
-#secondary {
-    padding: 15px;
-}
+/*#secondary {*/
+    /*padding: 15px;*/
+/*}*/
 
 /*Make images responsive*/
 img, figure {
@@ -52,19 +95,23 @@ select {
     max-width: 100%;
 }
 
-a{
-    color: #2b2b2b;
+a {
+    color: #ff6700;
 }
 
-a:hover{
-    color: #0ca2e0;
+a:hover, a:focus {
+    color: #ff6700;
 }
 
-.mesopotamia-posts{
-    margin-top: 1em;
+
+
+.mesopotamia-posts {
+    /*margin-top: 1em;*/
+    font-size: 80%;
 }
 
-.mesopotamia-posts article{
+.mesopotamia-posts article h2 {
+    font-size: 20px;
     /*background-color: #2b2b2b;*/
     /*margin: .5em;*/
     /*box-sizing: content-box;*/
@@ -72,6 +119,10 @@ a:hover{
 
 article {
     word-wrap: break-word;
+}
+
+.thumbnail h2 {
+    margin-top: 10px;
 }
 
 /*.entry-meta .cat-links a:before {*/
@@ -87,6 +138,29 @@ article {
 /*color: #cbcccc;*/
 /*text-decoration: none;*/
 /*}*/
+
+article.thumbnail {
+    padding: 0;
+    border: none;
+    box-shadow: none;
+    border-top: 4px solid #00aeef;
+    border-radius: 0;
+    /*border-radius: 0;*/
+}
+
+article {
+    background-color: white;
+}
+
+.thumbnail > img {
+    padding: 0;
+    margin: 0;
+    height: auto;
+    width: 100%;
+    /*border-top-right-radius: 4px;*/
+    /*border-top-left-radius: 4px;*/
+    /*border-radius: 0;*/
+}
 
 /*--------------------------------------------------------------
 # Accessibility
@@ -170,6 +244,30 @@ article {
 }
 
 /*--------------------------------------------------------------
+## Scroll To Top Button
+--------------------------------------------------------------*/
+
+.scrollToTop{
+    /*width:100px;*/
+    /*height:130px;*/
+    /*padding:10px;*/
+    /*text-align:center;*/
+    /*background: whiteSmoke;*/
+    font-weight: bold;
+    color: #00aeef;
+    font-size: 3em;
+    text-decoration: none;
+    position:fixed;
+    bottom: 40px;
+    right: 40px;
+    display:none;
+    /*background: url('arrow_up.png') no-repeat 0px 20px;*/
+}
+.scrollToTop:hover{
+    text-decoration:none;
+}
+
+/*--------------------------------------------------------------
 ## Galleries
 --------------------------------------------------------------*/
 .gallery {
@@ -231,8 +329,13 @@ article {
     color: #b3b5b6;
 }
 
+.site-footer a:hover {
+    color: #ff6700;
+}
+
 .footer-container {
-    background-color: #F2F3F3;
+    background-color: #FFFFFF;
+    border-top: 4px solid #ff6700;
 }
 
 .site-info {
@@ -262,6 +365,13 @@ object {
 ## Menus
 --------------------------------------------------------------*/
 
+.comment-navigation,
+.posts-navigation,
+.post-navigation {
+    border-top: 1px solid #eee;
+    padding-top: 10px;
+}
+
 .comment-navigation .nav-previous,
 .posts-navigation .nav-previous,
 .post-navigation .nav-previous {
@@ -284,6 +394,30 @@ object {
 .posts-navigation .nav-next a,
 .post-navigation .nav-next a {
     color: #6a6c6d;
+    padding: 15px;
+    background-color: white;
+    border-bottom: 4px solid #00aeef;
+    text-decoration: none;
+    display: inline-block;
+    width: 50%;
+}
+
+.comment-navigation .nav-previous a:hover,
+.posts-navigation .nav-previous a:hover,
+.post-navigation .nav-previous a:hover,
+.comment-navigation .nav-next a:hover,
+.posts-navigation .nav-next a:hover,
+.post-navigation .nav-next a:hover {
+    color: #6a6c6d;
+}
+
+.paging-navigation{
+    background-color: white;
+    border-top: 4px solid #00aeef;
+}
+
+.page-numbers{
+    padding: 5px;
 }
 
 /*--------------------------------------------------------------
@@ -292,9 +426,14 @@ object {
 .single.single-post .content-area {
     margin: 0 auto;
     max-width: 50em;
+    margin-top: 1em;
 }
 
-.entry-meta {
+.content-area {
+    margin-top: 1em;
+}
+
+.entry-meta, .entry-meta i {
     color: #cbcccc;
 }
 
@@ -302,8 +441,8 @@ object {
     color: #cbcccc;
     margin-top: 10px;
     margin-bottom: 10px;
-    border-top: 1px solid #eee;
-    border-bottom: 1px solid #eee;
+    border-top: 4px solid #ff6700;
+    background-color: white;
     padding: 10px;
 }
 

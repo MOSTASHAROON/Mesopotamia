@@ -2,6 +2,7 @@ jQuery(document).ready(function ($) {
     var MesopotamiaObject = {
         init: function () {
             this.masonry();
+            this.scrollToTopButton();
         },
         masonry: function () {
             $('.mesopotamia-posts').masonry({
@@ -10,33 +11,24 @@ jQuery(document).ready(function ($) {
                 transitionDuration: 0
             });
         },
-        doSomething: function (e) {
-            e.preventDefault();
-            var self = $(this),
-                form = self.closest('form'),
-                params = {action: 'tajer_action'},
-                data = form.serialize() + '&' + $.param(params);
+        scrollToTopButton: function () {
 
-            self.addClass('loading');
-            $.ajax({
-                url: Tajer.ajaxurl,
-                type: 'POST',
-                data: data,
-                success: function (result) {
-                    //in case we got unexpected result then just extract our json string
-                    var extractJsonString = result.match(/\[tajer_json\](\{.+\})\[\/tajer_json\]/);
-                    result = $.parseJSON(extractJsonString[1]);
-                    self.removeClass('loading');
-                    if (result.status != 'example') {
-
-                    } else {
-                        setTimeout(
-                            function () {
-                                successMessage.empty();
-                            }, 3000);
-                    }
+            //Check to see if the window is top if not then display button
+            $(window).scroll(function () {
+                if ($(this).scrollTop() > 100) {
+                    $('.scrollToTop').fadeIn();
+                } else {
+                    $('.scrollToTop').fadeOut();
                 }
             });
+
+            //Click event to scroll to top
+            $('.scrollToTop').click(function () {
+                $('html, body').animate({scrollTop: 0}, 800);
+                return false;
+            });
+
+
         }
     };
     MesopotamiaObject.init();

@@ -14,7 +14,7 @@ if ( ! function_exists( 'mesopotamia_posted_on' ) ) :
 	function mesopotamia_posted_on() {
 		$time_string = '<time class="entry-date published updated" datetime="%1$s">%2$s</time>';
 		if ( get_the_time( 'U' ) !== get_the_modified_time( 'U' ) ) {
-			$time_string = '<time class="entry-date published" datetime="%1$s">%2$s</time><time class="updated" datetime="%3$s">%4$s</time>';
+			$time_string = '<time class="entry-date published" datetime="%1$s">%2$s</time> <i class="fa fa-pencil"></i> <time class="updated" datetime="%3$s">%4$s</time>';
 		}
 
 		$time_string = sprintf( $time_string,
@@ -171,8 +171,9 @@ function mesopotamia_post_nav() {
 			<h1 class="screen-reader-text"><?php _e( 'Post navigation', 'mesopotamia' ); ?></h1>
 			<div class="nav-links">
 				<?php
-				previous_post_link( '<div class="nav-previous"><div class="nav-indicator">' . _x( 'Previous Post:', 'Previous post', 'mesopotamia' ) . '</div>%link</div>', '%title' );
-				next_post_link( '<div class="nav-next"><div class="nav-indicator">' . _x( 'Next Post:', 'Next post', 'mesopotamia' ) . '</div>%link</div>', '%title' );
+//				previous_post_link( '<div class="nav-previous"><div class="nav-indicator">' . _x( 'Previous', 'Previous post', 'mesopotamia' ) . '</div>%link</div>', '%title' );
+				previous_post_link( '<div class="nav-previous"><div class="nav-indicator">%link</div></div>', _x( 'Previous', 'Previous post', 'mesopotamia' ) );
+				next_post_link( '<div class="nav-next"><div class="nav-indicator">%link</div></div>', _x( 'Next', 'Next post', 'mesopotamia' ) );
 				?>
 			</div><!-- .nav-links -->
 		</div><!-- .post-nav-box -->
@@ -180,16 +181,15 @@ function mesopotamia_post_nav() {
 	<?php
 }
 
-function mesopotamia_add_post_classes( $classes, $class, $post_id ) {
-	$classes[] = 'thumbnail';
-//	$classes[] = 'col-lg-4';
-//	$classes[] = 'col-md-4';
-//	$classes[] = 'col-sm-4';
-
-	return $classes;
-}
-
-add_filter( 'post_class', 'mesopotamia_add_post_classes', 10, 3 );
+//function mesopotamia_add_post_classes( $classes, $class, $post_id ) {
+//	if ( ! is_single() ) {
+//		$classes[] = 'thumbnail';
+//	}
+//
+//	return $classes;
+//}
+//
+//add_filter( 'post_class', 'mesopotamia_add_post_classes', 10, 3 );
 
 if ( ! function_exists( 'mesopotamia_paging_nav' ) ) :
 	/**

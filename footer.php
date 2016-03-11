@@ -14,6 +14,7 @@
 </div><!-- #content -->
 </div><!-- #page -->
 </div><!-- .container -->
+<a href="#" class="scrollToTop"><i class="fa fa-chevron-up"></i></a>
 <div class="container-fluid footer-container">
 	<footer id="colophon" class="site-footer" role="contentinfo">
 		<div class="site-info">
