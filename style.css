@@ -41,7 +41,7 @@ aside {
     /*padding: 0;*/
 }
 
-aside section h2, .mesopotamia-404-widgets h2 {
+aside section h2, .mesopotamia-widgets h2 {
     margin-top: 10px;
     border-top: 2px solid #ff6700;
     margin-bottom: 10px;
@@ -108,19 +108,19 @@ a:hover, a:focus {
     color: #ff6700;
 }
 
-.mesopotamia-posts, .mesopotamia-404-widgets {
+.mesopotamia-posts, .mesopotamia-widgets {
     /*margin-top: 1em;*/
     font-size: 80%;
 }
 
-.mesopotamia-posts article h2, .mesopotamia-404-widgets article h2 {
+.mesopotamia-posts article h2, .mesopotamia-widgets article h2 {
     font-size: 20px;
     /*background-color: #2b2b2b;*/
     /*margin: .5em;*/
     /*box-sizing: content-box;*/
 }
 
-.mesopotamia-404-widgets {
+.mesopotamia-widgets {
     margin-top: 1em;
 }
 
@@ -463,12 +463,12 @@ object {
     display: inline;
 }
 
-section.error-404 form > div {
+section.error-404 form > div, section.no-results form > div {
     margin-left: auto;
     margin-right: auto;
 }
 
-section.error-404 .page-content > p {
+section.error-404 .page-content > p, section.no-results .page-content > p {
     text-align: center;
 }
 

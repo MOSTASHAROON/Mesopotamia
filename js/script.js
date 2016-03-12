@@ -13,7 +13,7 @@ jQuery(document).ready(function ($) {
         //    $(document).ready(MesopotamiaObject.adjust_body_offset);
         //},
         masonry: function () {
-            $('.mesopotamia-posts, .mesopotamia-404-widgets').masonry({
+            $('.mesopotamia-posts, .mesopotamia-widgets').masonry({
                 itemSelector: '.post-box',
                 columnWidth: '.post-box',
                 transitionDuration: 0

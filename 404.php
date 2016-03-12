@@ -24,7 +24,7 @@ get_header(); ?>
 						<?php
 						get_search_form();
 						?>
-						<div class="mesopotamia-404-widgets">
+						<div class="mesopotamia-widgets">
 							<div class="post-box col-lg-4 col-md-4 col-sm-4">
 								<article class="thumbnail">
 									<div class="caption">
@@ -83,7 +83,7 @@ get_header(); ?>
 									</div><!-- .caption -->
 								</article><!-- .thumbnail -->
 							</div><!-- .post-box -->
-						</div><!-- .mesopotamia-404-widgets -->
+						</div><!-- .mesopotamia-widgets -->
 					</div><!-- .page-content -->
 				</section><!-- .error-404 -->
 
