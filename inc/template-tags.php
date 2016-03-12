@@ -34,7 +34,7 @@ if ( ! function_exists( 'mesopotamia_posted_on' ) ) :
 			'<span class="author vcard"><a class="url fn n" href="' . esc_url( get_author_posts_url( get_the_author_meta( 'ID' ) ) ) . '">' . esc_html( get_the_author() ) . '</a></span>'
 		);
 
-		echo '<span class="posted-on"><span class="glyphicon glyphicon-calendar" aria-hidden="true"></span> ' . $posted_on . '&nbsp;&nbsp;</span><span class="byline"><span class="glyphicon glyphicon-user" aria-hidden="true"></span> ' . $byline . '</span>'; // WPCS: XSS OK.
+		echo '<span class="posted-on"><i class="fa fa-calendar"></i> ' . $posted_on . '&nbsp;&nbsp;</span><span class="byline"><i class="fa fa-user"></i> ' . $byline . '</span>'; // WPCS: XSS OK.
 
 		$categories_list = mesopotamia_get_the_category();
 		if ( $categories_list && mesopotamia_categorized_blog() ) {
@@ -58,7 +58,7 @@ if ( ! function_exists( 'mesopotamia_entry_footer' ) ) :
 		}
 
 		if ( ! is_single() && ! post_password_required() && ( comments_open() || get_comments_number() ) ) {
-			echo '<span class="comments-link"> ';
+			echo '<span class="comments-link"><i class="fa fa-comments"></i> ';
 			comments_popup_link( esc_html__( 'Leave a comment', 'mesopotamia' ), esc_html__( '1 Comment', 'mesopotamia' ), esc_html__( '% Comments', 'mesopotamia' ) );
 			echo '</span>';
 		}
@@ -69,7 +69,7 @@ if ( ! function_exists( 'mesopotamia_entry_footer' ) ) :
 				esc_html__( 'Edit %s', 'mesopotamia' ),
 				the_title( '<span class="screen-reader-text">"', '"</span>', false )
 			),
-			'<span class="edit-link"><i class="fa fa-pencil"></i> ',
+			' <span class="edit-link"><i class="fa fa-pencil"></i> ',
 			'</span>'
 		);
 	}

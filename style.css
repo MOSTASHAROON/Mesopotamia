@@ -24,6 +24,10 @@ Nicolas Gallagher and Jonathan Neal http://necolas.github.com/normalize.css/
 # Misc
 --------------------------------------------------------------*/
 
+body {
+    padding-top: 46px;
+}
+
 /*Sidebar*/
 aside section {
     background-color: white;
@@ -37,7 +41,7 @@ aside {
     /*padding: 0;*/
 }
 
-aside section h2 {
+aside section h2, .mesopotamia-404-widgets h2 {
     margin-top: 10px;
     border-top: 2px solid #ff6700;
     margin-bottom: 10px;
@@ -104,16 +108,20 @@ a:hover, a:focus {
     color: #ff6700;
 }
 
-.mesopotamia-posts {
+.mesopotamia-posts, .mesopotamia-404-widgets {
     /*margin-top: 1em;*/
     font-size: 80%;
 }
 
-.mesopotamia-posts article h2 {
+.mesopotamia-posts article h2, .mesopotamia-404-widgets article h2 {
     font-size: 20px;
     /*background-color: #2b2b2b;*/
     /*margin: .5em;*/
     /*box-sizing: content-box;*/
+}
+
+.mesopotamia-404-widgets {
+    margin-top: 1em;
 }
 
 article {
@@ -455,6 +463,15 @@ object {
     display: inline;
 }
 
+section.error-404 form > div {
+    margin-left: auto;
+    margin-right: auto;
+}
+
+section.error-404 .page-content > p {
+    text-align: center;
+}
+
 /*--------------------------------------------------------------
 ## Search form
 --------------------------------------------------------------*/
@@ -465,7 +482,7 @@ object {
     border-color: #666;
 }
 
-.btn-search:hover{
+.btn-search:hover {
     color: #00aeef;
 }
 
@@ -481,11 +498,11 @@ object {
     box-shadow: none;
 }
 
-.search-form .col-lg-12, .search-form .col-lg-12 .row{
+.search-form .col-lg-12, .search-form .col-lg-12 .row {
     margin-right: auto;
     margin-left: auto;
 }
 
-.search-form .input-group{
+.search-form .input-group {
     border-top: 5px solid #ff6700;
 }

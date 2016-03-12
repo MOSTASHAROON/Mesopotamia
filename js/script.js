@@ -3,9 +3,17 @@ jQuery(document).ready(function ($) {
         init: function () {
             this.masonry();
             this.scrollToTopButton();
+            //this.body_offset();
         },
+        //adjust_body_offset: function adjust_body_offset() {
+        //    $('body').css('padding-top', $('#site-navigation').outerHeight(true) + 'px');
+        //},
+        //body_offset: function () {
+        //    $(window).resize(MesopotamiaObject.adjust_body_offset);
+        //    $(document).ready(MesopotamiaObject.adjust_body_offset);
+        //},
         masonry: function () {
-            $('.mesopotamia-posts').masonry({
+            $('.mesopotamia-posts, .mesopotamia-404-widgets').masonry({
                 itemSelector: '.post-box',
                 columnWidth: '.post-box',
                 transitionDuration: 0
