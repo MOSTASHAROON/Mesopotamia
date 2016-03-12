@@ -25,19 +25,19 @@ Nicolas Gallagher and Jonathan Neal http://necolas.github.com/normalize.css/
 --------------------------------------------------------------*/
 
 /*Sidebar*/
-aside section{
+aside section {
     background-color: white;
     border-top: 4px solid #00aeef;
     padding: 10px;
     margin-bottom: 1em;
 }
 
-aside{
+aside {
     margin-top: 1em;
     /*padding: 0;*/
 }
 
-aside section h2{
+aside section h2 {
     margin-top: 10px;
     border-top: 2px solid #ff6700;
     margin-bottom: 10px;
@@ -49,16 +49,17 @@ aside section h2{
     padding: 10px;
 }
 
-aside section  table{
+aside section table {
     width: 100%;
 }
+
 /*Sidebar*/
 
 .site-content {
     background-color: #E5E7EA;
 }
 
-* {
+.container-fluid * {
     max-width: 100%;
     /*font-family: 'Italianno', cursive;*/
     /*font-family: 'Courgette', cursive;*/
@@ -81,7 +82,7 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 /*#secondary {*/
-    /*padding: 15px;*/
+/*padding: 15px;*/
 /*}*/
 
 /*Make images responsive*/
@@ -102,8 +103,6 @@ a {
 a:hover, a:focus {
     color: #ff6700;
 }
-
-
 
 .mesopotamia-posts {
     /*margin-top: 1em;*/
@@ -247,7 +246,7 @@ article {
 ## Scroll To Top Button
 --------------------------------------------------------------*/
 
-.scrollToTop{
+.scrollToTop {
     /*width:100px;*/
     /*height:130px;*/
     /*padding:10px;*/
@@ -257,14 +256,15 @@ article {
     color: #00aeef;
     font-size: 3em;
     text-decoration: none;
-    position:fixed;
+    position: fixed;
     bottom: 40px;
     right: 40px;
-    display:none;
+    display: none;
     /*background: url('arrow_up.png') no-repeat 0px 20px;*/
 }
-.scrollToTop:hover{
-    text-decoration:none;
+
+.scrollToTop:hover {
+    text-decoration: none;
 }
 
 /*--------------------------------------------------------------
@@ -411,19 +411,19 @@ object {
     color: #6a6c6d;
 }
 
-.paging-navigation{
+.paging-navigation {
     background-color: white;
     border-top: 4px solid #00aeef;
 }
 
-.page-numbers{
+.page-numbers {
     padding: 5px;
 }
 
 /*--------------------------------------------------------------
 ## Posts and pages
 --------------------------------------------------------------*/
-.single.single-post .content-area {
+.single .content-area, .page .content-area {
     margin: 0 auto;
     max-width: 50em;
     margin-top: 1em;
@@ -453,4 +453,39 @@ object {
 .entry-meta .post-categories {
     margin-left: 5px;
     display: inline;
+}
+
+/*--------------------------------------------------------------
+## Search form
+--------------------------------------------------------------*/
+.btn-search {
+    background-color: #666;
+    color: #00aeef;
+    border-radius: 0;
+    border-color: #666;
+}
+
+.btn-search:hover{
+    color: #00aeef;
+}
+
+.input-search {
+    border-radius: 0;
+    background-color: #F3F3F5;
+    box-shadow: none;
+    border: none;
+    border-right: 1px solid #F3F3F5;
+}
+
+.input-search:focus {
+    box-shadow: none;
+}
+
+.search-form .col-lg-12, .search-form .col-lg-12 .row{
+    margin-right: auto;
+    margin-left: auto;
+}
+
+.search-form .input-group{
+    border-top: 5px solid #ff6700;
 }

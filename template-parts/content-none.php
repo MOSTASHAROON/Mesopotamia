@@ -10,7 +10,7 @@
 ?>
 
 <section class="no-results not-found">
-	<header class="page-header">
+	<header class="page-header page-header">
 		<h1 class="page-title"><?php esc_html_e( 'Nothing Found', 'mesopotamia' ); ?></h1>
 	</header><!-- .page-header -->
 

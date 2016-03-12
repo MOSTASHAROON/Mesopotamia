@@ -8,15 +8,15 @@
  */
 
 ?>
-	<article id="post-<?php the_ID(); ?>" <?php post_class('thumbnail'); ?>>
+<article id="post-<?php the_ID(); ?>" <?php post_class( 'thumbnail' ); ?>>
 
-		<?php
-		// Check if the post has a Post Thumbnail assigned to it.
-		if ( has_post_thumbnail() ) {
-			the_post_thumbnail();
-		}
-		?>
-		<div class="caption">
+	<?php
+	// Check if the post has a Post Thumbnail assigned to it.
+	if ( has_post_thumbnail() ) {
+		the_post_thumbnail();
+	}
+	?>
+	<div class="caption">
 		<header class="entry-header page-header caption">
 			<?php
 			if ( is_single() ) {
@@ -33,7 +33,7 @@
 			endif; ?>
 		</header><!-- .entry-header -->
 
-		<div class="entry-content caption">
+		<div class="entry-content clearfix caption">
 			<?php
 			the_content( sprintf(
 			/* translators: %s: Name of current post. */
@@ -51,5 +51,5 @@
 		<footer class="entry-footer">
 			<?php mesopotamia_entry_footer(); ?>
 		</footer><!-- .entry-footer -->
-		</div>
-	</article><!-- #post-## -->
+	</div>
+</article><!-- #post-## -->
