@@ -136,6 +136,12 @@ function mesopotamia_scripts() {
 		'mesopotamia-font-awesome'
 	) );
 
+//	if (is_page_template('page-templates/page-nosidebar.php')) {
+//		wp_enqueue_style( 'my-sinome-layout-style' , get_template_directory_uri() . '/layouts/no-sidebar.css');
+//	} else {
+//		wp_enqueue_style( 'my-sinome-layout-style' , get_template_directory_uri() . '/layouts/content-sidebar.css');
+//	}
+
 	wp_enqueue_script( 'mesopotamia-bootstrap-js', get_template_directory_uri() . '/lib/bootstrap/js/bootstrap.min.js', array( 'jquery' ) );
 	wp_enqueue_script( 'mesopotamia-js', get_template_directory_uri() . '/js/script.js', array(
 		'masonry',
