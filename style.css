@@ -3,7 +3,7 @@ Theme Name: Mesopotamia
 Theme URI: https://mostasharoon.org
 Author: Mohammed Al-Mahdawi
 Author URI: https://mostasharoon.org
-Description: Multi purpose theme
+Description: Multi purpose, responsive, Bootstrap base, Pinterest style theme.
 Version: 0.2
 License: GNU General Public License v2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
@@ -24,9 +24,9 @@ Nicolas Gallagher and Jonathan Neal http://necolas.github.com/normalize.css/
 # Misc
 --------------------------------------------------------------*/
 
-body {
-    padding-top: 46px;
-}
+/*body {*/
+    /*padding-top: 46px;*/
+/*}*/
 
 /*Sidebar*/
 aside section {
@@ -121,7 +121,7 @@ a:hover, a:focus {
 }
 
 .mesopotamia-widgets {
-    margin-top: 1em;
+    margin-top: 2em;
 }
 
 article {
@@ -422,6 +422,7 @@ object {
 .paging-navigation {
     background-color: white;
     border-top: 4px solid #00aeef;
+    text-align: center;
 }
 
 .page-numbers {
