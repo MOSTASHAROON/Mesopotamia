@@ -9,7 +9,7 @@
 
 ?>
 <div class="post-box col-lg-4 col-md-4 col-sm-4">
-	<article id="post-<?php the_ID(); ?>" <?php post_class('thumbnail'); ?>>
+	<article id="post-<?php the_ID(); ?>" <?php post_class( 'thumbnail' ); ?>>
 
 		<?php
 		// Check if the post has a Post Thumbnail assigned to it.

@@ -3,6 +3,14 @@ jQuery(document).ready(function ($) {
         init: function () {
             this.masonry();
             this.scrollToTopButton();
+
+            //Add Hover effect to menus
+            $('ul.nav li.dropdown').hover(function () {
+                $(this).find('.dropdown-menu').stop(true, true).delay(200).fadeIn();
+            }, function () {
+                $(this).find('.dropdown-menu').stop(true, true).delay(200).fadeOut();
+            });
+
             //this.body_offset();
         },
         //adjust_body_offset: function adjust_body_offset() {

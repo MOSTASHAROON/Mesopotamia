@@ -24,9 +24,10 @@ Nicolas Gallagher and Jonathan Neal http://necolas.github.com/normalize.css/
 # Misc
 --------------------------------------------------------------*/
 
-/*body {*/
-    /*padding-top: 46px;*/
-/*}*/
+body {
+    padding-top: 60px;
+    background-color: #E5E7EA;
+}
 
 /*Sidebar*/
 aside section {
@@ -63,8 +64,11 @@ aside section table {
     background-color: #E5E7EA;
 }
 
-.container-fluid * {
+.container-fluid *:not(.main-navigation *) {
     max-width: 100%;
+}
+
+.container-fluid * {
     /*font-family: 'Italianno', cursive;*/
     /*font-family: 'Courgette', cursive;*/
     /*font-family: 'Contrail One', cursive;*/
@@ -76,7 +80,7 @@ h1, h2, h3, h4, h5, h6 {
     font-weight: 900;
 }
 
-.container-fluid {
+.container-fluid:not(.navbar-container-fluid) {
     padding: 0;
 }
 
@@ -427,6 +431,31 @@ object {
 
 .page-numbers {
     padding: 5px;
+}
+
+#site-navigation {
+    background: none;
+    background-color: #FFFFFF;
+    border: none;
+    border-top: 4px solid #ff6700;
+}
+
+.navbar-brand {
+    font-size: 2em;
+    color: #ff6700 !important;
+}
+
+@media (min-width: 768px) {
+    #primary-menu {
+        float: right;
+    }
+}
+
+#primary-menu a:hover, #primary-menu a:active , #primary-menu li.active a{
+    background: none !important;
+    box-shadow: none !important;
+    background-color: #E5E7EA !important;
+    color: #ff6700
 }
 
 /*--------------------------------------------------------------

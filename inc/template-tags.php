@@ -171,7 +171,7 @@ function mesopotamia_post_nav() {
 			<h1 class="screen-reader-text"><?php _e( 'Post navigation', 'mesopotamia' ); ?></h1>
 			<div class="nav-links">
 				<?php
-//				previous_post_link( '<div class="nav-previous"><div class="nav-indicator">' . _x( 'Previous', 'Previous post', 'mesopotamia' ) . '</div>%link</div>', '%title' );
+				//				previous_post_link( '<div class="nav-previous"><div class="nav-indicator">' . _x( 'Previous', 'Previous post', 'mesopotamia' ) . '</div>%link</div>', '%title' );
 				previous_post_link( '<div class="nav-previous"><div class="nav-indicator">%link</div></div>', _x( 'Previous', 'Previous post', 'mesopotamia' ) );
 				next_post_link( '<div class="nav-next"><div class="nav-indicator">%link</div></div>', _x( 'Next', 'Next post', 'mesopotamia' ) );
 				?>
