@@ -159,7 +159,7 @@ article.thumbnail {
     /*border-radius: 0;*/
 }
 
-article {
+article{
     background-color: white;
 }
 
@@ -382,6 +382,7 @@ object {
 .post-navigation {
     border-top: 1px solid #eee;
     padding-top: 10px;
+    padding-bottom: 10px;
 }
 
 .comment-navigation .nav-previous,
@@ -535,4 +536,60 @@ section.error-404 .page-content > p, section.no-results .page-content > p {
 
 .search-form .input-group {
     border-top: 5px solid #ff6700;
+}
+
+/*--------------------------------------------------------------
+## Comments
+--------------------------------------------------------------*/
+
+#submit, .comment-reply-link{
+    border: none;
+    border-radius: 0;
+    box-shadow: none;
+    background: none;
+    color: #FF6700;
+    padding: 15px;
+    background-color: white;
+    border-bottom: 4px solid #00aeef;
+    text-decoration: none;
+    display: inline-block;
+}
+
+.comment-reply-link:hover{
+    text-decoration: none;
+    border-bottom: 4px solid #FF6700;
+    color:  #00aeef;
+}
+
+.comment-list{
+    margin-top: 10px;
+}
+
+.comment-list .avatar{
+    margin-left: auto;
+    margin-right: auto;
+}
+
+#comments article{
+    padding: 20px;
+    /*margin-bottom: 0;*/
+}
+
+.comment-form *{
+     border-radius: 0;
+}
+
+.form-control:focus {
+    border-color: #FF6700;
+    outline: 0;
+    -webkit-box-shadow: inset 0 1px 1px rgba(0,0,0,.075),0 0 8px rgba(255, 103, 0,.6);
+    box-shadow: inset 0 1px 1px rgba(0,0,0,.075),0 0 8px rgba(255, 103, 0,.6);
+}
+
+/*.comment-list .media{*/
+    /*margin-top: 0;*/
+/*}*/
+
+.bypostauthor article{
+    border-top: 4px solid #FF6700;
 }

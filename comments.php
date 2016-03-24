@@ -20,7 +20,7 @@ if ( post_password_required() ) {
 }
 ?>
 
-<div id="comments" class="comments-area">
+<div id="comments" class="comments-area media">
 
 	<?php
 	// You can start editing here -- including this comment!
@@ -36,7 +36,7 @@ if ( post_password_required() ) {
 		</h2>
 
 		<?php if ( get_comment_pages_count() > 1 && get_option( 'page_comments' ) ) : // Are there comments to navigate through? ?>
-			<nav id="comment-nav-above" class="navigation comment-navigation" role="navigation">
+			<nav id="comment-nav-above" class="clearfix navigation comment-navigation" role="navigation">
 				<h2 class="screen-reader-text"><?php esc_html_e( 'Comment navigation', 'mesopotamia' ); ?></h2>
 				<div class="nav-links">
 
@@ -54,12 +54,14 @@ if ( post_password_required() ) {
 			wp_list_comments( array(
 				'style'      => 'ol',
 				'short_ping' => true,
+				'avatar_size'=>48,
+				'callback' => 'bootstrap3_comment_format',
 			) );
 			?>
 		</ol><!-- .comment-list -->
 
 		<?php if ( get_comment_pages_count() > 1 && get_option( 'page_comments' ) ) : // Are there comments to navigate through? ?>
-			<nav id="comment-nav-below" class="navigation comment-navigation" role="navigation">
+			<nav id="comment-nav-below" class="clearfix navigation comment-navigation" role="navigation">
 				<h2 class="screen-reader-text"><?php esc_html_e( 'Comment navigation', 'mesopotamia' ); ?></h2>
 				<div class="nav-links">
 
