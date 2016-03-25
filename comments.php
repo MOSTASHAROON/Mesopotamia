@@ -49,7 +49,7 @@ if ( post_password_required() ) {
 			</nav><!-- #comment-nav-above -->
 		<?php endif; // Check for comment navigation. ?>
 
-		<ol class="comment-list">
+		<ol class="comment-list media-list">
 			<?php
 			wp_list_comments( array(
 				'style'      => 'ol',
