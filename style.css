@@ -541,7 +541,6 @@ section.error-404 .page-content > p, section.no-results .page-content > p {
 /*--------------------------------------------------------------
 ## Comments
 --------------------------------------------------------------*/
-
 #submit, .comment-reply-link{
     border: none;
     border-radius: 0;
@@ -572,6 +571,8 @@ section.error-404 .page-content > p, section.no-results .page-content > p {
 
 #comments article{
     padding: 20px;
+    border: none;
+    border-left: 4px solid #00aeef;
     /*margin-bottom: 0;*/
 }
 
@@ -586,10 +587,6 @@ section.error-404 .page-content > p, section.no-results .page-content > p {
     box-shadow: inset 0 1px 1px rgba(0,0,0,.075),0 0 8px rgba(255, 103, 0,.6);
 }
 
-/*.comment-list .media{*/
-    /*margin-top: 0;*/
-/*}*/
-
-.bypostauthor article{
-    border-top: 4px solid #FF6700;
+#comments .bypostauthor article{
+    border-left: 4px solid #FF6700;
 }
