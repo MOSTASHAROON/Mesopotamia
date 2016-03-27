@@ -462,7 +462,7 @@ object {
 /*--------------------------------------------------------------
 ## Posts and pages
 --------------------------------------------------------------*/
-.single .content-area, .page .content-area {
+.single .content-area {
     margin: 0 auto;
     max-width: 50em;
     margin-top: 1em;

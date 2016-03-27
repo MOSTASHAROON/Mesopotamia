@@ -5,3 +5,9 @@
  *
  * Learn more: https://developer.wordpress.org/themes/basics/template-files/
 */
+
+.page .content-area {
+    margin: 0 auto;
+    margin-top: 1em;
+    max-width: none;
+}
