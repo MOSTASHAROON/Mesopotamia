@@ -1,5 +1,8 @@
 jQuery(document).ready(function ($) {
     var MesopotamiaObject = {
+        addClassesDynamically: function () {
+            $('.widget_archive').find('select').addClass('form-control');
+        },
         init: function () {
             this.masonry();
             this.scrollToTopButton();
@@ -11,7 +14,7 @@ jQuery(document).ready(function ($) {
                 $(this).find('.dropdown-menu').stop(true, true).delay(200).fadeOut();
             });
 
-            //this.body_offset();
+            this.addClassesDynamically();
         },
         //adjust_body_offset: function adjust_body_offset() {
         //    $('body').css('padding-top', $('#site-navigation').outerHeight(true) + 'px');
