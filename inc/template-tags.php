@@ -336,3 +336,39 @@ function mesopotamia_widget_categories_dropdown_args( $cat_args ) {
 add_filter( 'widget_categories_dropdown_args', 'mesopotamia_widget_categories_dropdown_args', 10, 1 );
 
 
+/**
+ * Include theme options page library
+ */
+if ( ! class_exists( 'MOSTASHAROON_Admin_Page' ) ) {
+	require_once( get_template_directory() .'/lib/mostasharoon-admin-page/mostasharoon-admin-page.php' );
+}
+
+function app_admin_menu() {
+	$fields = array(
+		'general' => array(
+		),
+		'tools'   => array(
+
+		)
+	);
+
+
+	$tabs = array( 'general' => 'General', 'tools' => 'Tools' );
+
+	$page = new MOSTASHAROON_Admin_Page();
+	$page->setPluginUrl( get_template_directory_uri()  )
+	     ->setTabsHeaders( $tabs )
+	     ->setActiveTab( 'general' )
+	     ->setFields( $fields )
+	     ->setPageTitle( 'Mesopotamia' )
+	     ->add_sub_menu_page( 'themes.php','manage_options', 'mesopotamia' );
+}
+
+add_action( 'admin_menu', 'app_admin_menu' );
+
+function app_save_settings() {
+	update_option( 'app_general_settings', $_POST['app_general_settings'] );
+	update_option( 'app_tools_settings', $_POST['app_tools_settings'] );
+}
+
+add_action( 'mostasharoon_save_settings', 'app_save_settings' );
