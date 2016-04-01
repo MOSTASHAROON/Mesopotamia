@@ -78,6 +78,30 @@ endif;
 add_action( 'after_setup_theme', 'mesopotamia_setup' );
 
 /**
+ * Get the value of a settings field
+ *
+ * @param string $option settings field name
+ * @param string $section the section name this field belongs to
+ * @param string $default default text if it's not found
+ *
+ * @return mixed
+ */
+function mesopotamia_get_option( $option, $section, $default = '' ) {
+
+	$options = get_option( $section );
+
+	if ( isset( $options[ $option ] ) ) {
+		$returned_value = $options[ $option ];
+	} else {
+		$returned_value = $default;
+	}
+
+	$returned_value = apply_filters( 'mesopotamia_get_option', $returned_value, $option, $section, $default );
+
+	return $returned_value;
+}
+
+/**
  * Set the content width in pixels, based on the theme's design and stylesheet.
  *
  * Priority 0 to make it available to lower priority callbacks.
@@ -192,3 +216,8 @@ require get_template_directory() . '/inc/jetpack.php';
  * Load Bootstrap nav walker.
  */
 require get_template_directory() . '/inc/wp_bootstrap_navwalker.php';
+
+/**
+ * Load inline style.
+ */
+require get_template_directory() . '/inc/inline-style.php';
