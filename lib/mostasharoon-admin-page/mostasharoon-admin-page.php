@@ -66,6 +66,7 @@ class MOSTASHAROON_Admin_Page {
 	}
 
 	function admin_scripts() {
+		do_action( 'start_mostasharoon_enqueue', $this );
 		do_action( $this->menu_slug . 'scripts', $this );
 		wp_enqueue_style( 'wp-color-picker' );
 		wp_enqueue_style( 'mostasharoon-font-awesome', $this->plugin_url . 'lib/mostasharoon-admin-page/lib/font-awesome/css/font-awesome.min.css' );
@@ -85,6 +86,8 @@ class MOSTASHAROON_Admin_Page {
 			'mostasharoon-bootstrap-js',
 			'wp-color-picker'
 		) );
+
+		do_action( 'end_mostasharoon_enqueue', $this );
 	}
 
 	function admin_menu() {
@@ -174,6 +177,7 @@ class MOSTASHAROON_Admin_Page {
 				}
 
 				$val  = isset( $matches[1] ) ? $this->get_option( $matches[2], $matches[1], '' ) : '';
+				$val  = ( $val ? $val : ( ( isset( $field['default'] ) && $field['default'] ) ? $field['default'] : '' ) );
 				$help = ( isset( $field['help'] ) && ! empty( $field['help'] ) ) ? $field['help'] : '';
 				switch ( $field['type'] ) {
 					case 'password':
@@ -190,7 +194,7 @@ class MOSTASHAROON_Admin_Page {
 						$html .= '<label class="col-sm-5 control-label" for="' . $field['name'] . '">' . $field['label'] . '</label>';
 
 						$html .= '<div class="col-sm-7">';
-						$html .= '<input type="text" name="' . $field['name'] . '" value="' . ( $val ? $val : ( ( isset( $field['default'] ) && $field['default'] ) ? $field['default'] : '' ) ) . '" class="form-control" data-toggle="tooltip" data-placement="right" title="' . $help . '" id="' . $field['name'] . '" placeholder="">';
+						$html .= '<input type="text" name="' . $field['name'] . '" value="' . $val . '" class="form-control" data-toggle="tooltip" data-placement="right" title="' . $help . '" id="' . $field['name'] . '" placeholder="">';
 
 						$html .= '</div>';
 						$html .= '</div>';
@@ -200,7 +204,7 @@ class MOSTASHAROON_Admin_Page {
 						$html .= '<div class="form-group clearfix">';
 						$html .= '<label class="col-sm-5 control-label" for="' . $field['name'] . '">' . $field['label'] . '</label>';
 						$html .= '<div class="col-sm-7">';
-						$html .= '<input type="email" name="' . $field['name'] . '" value="' . ( $val ? $val : ( ( isset( $field['default'] ) && $field['default'] ) ? $field['default'] : '' ) ) . '" class="form-control" data-toggle="tooltip" data-placement="right" title="' . $help . '" id="' . $field['name'] . '" placeholder="">';
+						$html .= '<input type="email" name="' . $field['name'] . '" value="' . $val . '" class="form-control" data-toggle="tooltip" data-placement="right" title="' . $help . '" id="' . $field['name'] . '" placeholder="">';
 						$html .= '</div>';
 						$html .= '</div>';
 						break;
@@ -321,7 +325,7 @@ class MOSTASHAROON_Admin_Page {
 						$html .= '<div class="form-group clearfix">';
 						$html .= '<label class="col-sm-5 control-label" for="' . $field['name'] . '">' . $field['label'] . '</label>';
 						$html .= '<div class="col-sm-7">';
-						$html .= '<input type="text" name="' . $field['name'] . '" value="' . ( $val ? $val : ( ( isset( $field['default'] ) && $field['default'] ) ? $field['default'] : '' ) ) . '" class=" mostasharoon-color-field" data-toggle="tooltip" data-placement="right" title="' . $help . '" id="' . $field['name'] . '" placeholder="">';
+						$html .= '<input type="text" name="' . $field['name'] . '" value="' . $val . '" class=" mostasharoon-color-field" data-toggle="tooltip" data-placement="right" title="' . $help . '" id="' . $field['name'] . '" placeholder="">';
 						$html .= '</div>';
 						$html .= '</div>';
 						break;
@@ -380,7 +384,7 @@ class MOSTASHAROON_Admin_Page {
 						$html .= '<div class="form-group clearfix">';
 						$html .= '<label class="col-sm-5 control-label" for="' . $field['name'] . '">' . $field['label'] . '</label>';
 						$html .= '<div class="col-sm-7">';
-						$html .= '<button type="' . $field['button_type'] . '" ' . ( isset( $field['attributes'] ) ? $field['attributes'] : '' ) . ' name="' . $field['name'] . '" value="' . $field['value'] . '" class="btn btn-default ' . ( isset( $field['classes'] ) ? $field['classes'] : '' ) . '">' . $field['value'] . '</button>';
+						$html .= '<button type="' . $field['button_type'] . '" ' . ( isset( $field['attributes'] ) ? $field['attributes'] : '' ) . ' name="' . $field['name'] . '" data-toggle="tooltip" data-placement="right" title="' . $help . '" value="' . $field['value'] . '" class="btn btn-default ' . ( isset( $field['classes'] ) ? $field['classes'] : '' ) . '">' . $field['value'] . '</button>';
 						$html .= '</div>';
 						$html .= '</div>';
 						break;

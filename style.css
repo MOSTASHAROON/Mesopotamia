@@ -83,6 +83,12 @@ h1, h2, h3, h4, h5, h6 {
     padding-right: 15px;
 }
 
+@media (max-width: 768px) {
+    .post-box {
+        width: 100%;
+    }
+}
+
 /*Make images responsive*/
 img, figure {
     max-width: 100%;
@@ -407,7 +413,7 @@ object {
 --------------------------------------------------------------*/
 .single .content-area {
     margin: 0 auto;
-    max-width: 50em;
+    max-width: 85%;
     margin-top: 1em;
 }
 
