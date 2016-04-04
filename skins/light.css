@@ -1,0 +1,125 @@
+/*
+ * Theme Name: Mesopotamia
+ *
+ * Skin: Light
+ *
+*/
+
+/*--------------------------------------------------------------
+## Menus
+--------------------------------------------------------------*/
+
+.comment-navigation,
+.posts-navigation,
+.post-navigation {
+    border-top: 1px solid #eee;
+    background-color: white;
+}
+
+/*.comment-navigation .nav-previous a,*/
+/*.posts-navigation .nav-previous a,*/
+/*.post-navigation .nav-previous a,*/
+/*.comment-navigation .nav-next a,*/
+/*.posts-navigation .nav-next a,*/
+/*.post-navigation .nav-next a,*/
+/*.comment-navigation .nav-previous a:hover,*/
+/*.posts-navigation .nav-previous a:hover,*/
+/*.post-navigation .nav-previous a:hover,*/
+/*.comment-navigation .nav-next a:hover,*/
+/*.posts-navigation .nav-next a:hover,*/
+/*.post-navigation .nav-next a:hover,*/
+/*.entry-meta a, .entry-footer a {*/
+    /*color: #6a6c6d;*/
+/*}*/
+
+#site-navigation, #submit, .comment-reply-link {
+    background: none;
+}
+
+#primary-menu a:hover, #primary-menu a:active, #primary-menu li.active a {
+    background: none !important;
+    background-color: #E5E7EA !important;
+}
+
+/*--------------------------------------------------------------
+# Misc
+--------------------------------------------------------------*/
+
+body, .site-content {
+    background-color: #E5E7EA;
+}
+
+.comment-navigation .nav-previous a,
+.posts-navigation .nav-previous a,
+.post-navigation .nav-previous a,
+.comment-navigation .nav-next a,
+.posts-navigation .nav-next a,
+.post-navigation .nav-next a,
+.paging-navigation,
+.entry-footer,
+#submit, .comment-reply-link,
+aside section, article {
+    background-color: white;
+}
+
+aside section h2, .mesopotamia-widgets h2, .input-search {
+    background-color: #F3F3F5;
+}
+
+/*--------------------------------------------------------------
+# Accessibility
+--------------------------------------------------------------*/
+/* Text meant only for screen readers. */
+
+.screen-reader-text:focus {
+    background-color: #f1f1f1;
+    box-shadow: 0 0 2px 2px rgba(0, 0, 0, 0.6);
+    color: #21759b;
+}
+
+/*--------------------------------------------------------------
+## Posts and pages
+--------------------------------------------------------------*/
+
+.entry-meta, .entry-meta i, .entry-footer,
+.widget_recent_entries li:before,
+.widget_categories li:before,
+.widget_recent_comments li:before,
+.widget_archive li:before,
+.widget_rss .rss-date,
+.widget_rss cite {
+    color: #cbcccc;
+}
+
+/*--------------------------------------------------------------
+## Search form
+--------------------------------------------------------------*/
+.btn-search {
+    background-color: #666;
+    border-color: #666;
+}
+
+.input-search {
+    border-right: 1px solid #F3F3F5;
+}
+
+/*--------------------------------------------------------------
+# Widgets
+--------------------------------------------------------------*/
+
+.widget_nav_menu a,
+.widget_pages a {
+    border-bottom: solid 1px #cbcccc;
+}
+
+/*--------------------------------------------------------------
+# Footer
+--------------------------------------------------------------*/
+
+.site-footer, .site-footer a {
+    color: #b3b5b6;
+}
+
+.footer-container, #site-navigation {
+    background-color: #FFFFFF;
+}

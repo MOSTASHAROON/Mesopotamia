@@ -26,12 +26,10 @@ Nicolas Gallagher and Jonathan Neal http://necolas.github.com/normalize.css/
 
 body {
     padding-top: 60px;
-    background-color: #E5E7EA;
 }
 
 /*Sidebar*/
 aside section {
-    background-color: white;
     padding: 10px;
     margin-bottom: 1em;
 }
@@ -43,19 +41,12 @@ aside {
 aside section h2, .mesopotamia-widgets h2 {
     margin-top: 10px;
     margin-bottom: 10px;
-    background-color: #F3F3F5;
     text-align: center;
     padding: 10px;
 }
 
 aside section table {
     width: 100%;
-}
-
-/*Sidebar*/
-
-.site-content {
-    background-color: #E5E7EA;
 }
 
 .container-fluid *:not(.main-navigation *) {
@@ -101,7 +92,7 @@ select {
 }
 
 .mesopotamia-posts, .mesopotamia-widgets {
-    font-size: 80%;
+    font-size: 85%;
 }
 
 .mesopotamia-posts article h2, .mesopotamia-widgets article h2 {
@@ -127,10 +118,6 @@ article.thumbnail {
     border-radius: 0;
 }
 
-article{
-    background-color: white;
-}
-
 .thumbnail > img {
     padding: 0;
     margin: 0;
@@ -151,11 +138,8 @@ article{
 }
 
 .screen-reader-text:focus {
-    background-color: #f1f1f1;
     border-radius: 3px;
-    box-shadow: 0 0 2px 2px rgba(0, 0, 0, 0.6);
     clip: auto !important;
-    color: #21759b;
     display: block;
     font-size: 14px;
     font-size: 0.875rem;
@@ -296,14 +280,6 @@ article{
     padding: 15px;
 }
 
-.site-footer, .site-footer a {
-    color: #b3b5b6;
-}
-
-.footer-container {
-    background-color: #FFFFFF;
-}
-
 .site-info {
     margin-bottom: 5px;
 }
@@ -334,9 +310,7 @@ object {
 .comment-navigation,
 .posts-navigation,
 .post-navigation {
-    border-top: 1px solid #eee;
-    padding-top: 10px;
-    padding-bottom: 10px;
+    padding: 5px;
 }
 
 .comment-navigation .nav-previous,
@@ -360,25 +334,13 @@ object {
 .comment-navigation .nav-next a,
 .posts-navigation .nav-next a,
 .post-navigation .nav-next a {
-    color: #6a6c6d;
     padding: 15px;
-    background-color: white;
-    text-decoration: none;
+    /*text-decoration: none;*/
     display: inline-block;
-    width: 50%;
-}
-
-.comment-navigation .nav-previous a:hover,
-.posts-navigation .nav-previous a:hover,
-.post-navigation .nav-previous a:hover,
-.comment-navigation .nav-next a:hover,
-.posts-navigation .nav-next a:hover,
-.post-navigation .nav-next a:hover {
-    color: #6a6c6d;
+    /*width: 50%;*/
 }
 
 .paging-navigation {
-    background-color: white;
     text-align: center;
 }
 
@@ -387,8 +349,6 @@ object {
 }
 
 #site-navigation {
-    background: none;
-    background-color: #FFFFFF;
     border: none;
 }
 
@@ -402,10 +362,8 @@ object {
     }
 }
 
-#primary-menu a:hover, #primary-menu a:active , #primary-menu li.active a{
-    background: none !important;
+#primary-menu a:hover, #primary-menu a:active, #primary-menu li.active a {
     box-shadow: none !important;
-    background-color: #E5E7EA !important;
 }
 
 /*--------------------------------------------------------------
@@ -421,20 +379,10 @@ object {
     margin-top: 1em;
 }
 
-.entry-meta, .entry-meta i {
-    color: #cbcccc;
-}
-
 .entry-footer {
-    color: #cbcccc;
     margin-top: 10px;
     margin-bottom: 10px;
-    background-color: white;
     padding: 10px;
-}
-
-.entry-meta a, .entry-footer a {
-    color: #6a6c6d;
 }
 
 .entry-meta .post-categories {
@@ -451,21 +399,21 @@ section.error-404 .page-content > p, section.no-results .page-content > p {
     text-align: center;
 }
 
+.single .entry-header, .page .entry-header {
+    margin-top: 0;
+}
+
 /*--------------------------------------------------------------
 ## Search form
 --------------------------------------------------------------*/
 .btn-search {
-    background-color: #666;
     border-radius: 0;
-    border-color: #666;
 }
 
 .input-search {
     border-radius: 0;
-    background-color: #F3F3F5;
     box-shadow: none;
     border: none;
-    border-right: 1px solid #F3F3F5;
 }
 
 .input-search:focus {
@@ -480,50 +428,39 @@ section.error-404 .page-content > p, section.no-results .page-content > p {
 /*--------------------------------------------------------------
 ## Comments
 --------------------------------------------------------------*/
-#submit, .comment-reply-link{
+#submit, .comment-reply-link {
     border: none;
     border-radius: 0;
     box-shadow: none;
-    background: none;
-    color: #FF6700;
     padding: 15px;
-    background-color: white;
     text-decoration: none;
     display: inline-block;
 }
 
-.comment-reply-link:hover{
+.comment-reply-link:hover {
     text-decoration: none;
-    border-bottom: 4px solid #FF6700;
 }
 
-.comment-list{
+.comment-list {
     margin-top: 10px;
 }
 
-.comment-list .avatar{
+.comment-list .avatar {
     margin-left: auto;
     margin-right: auto;
 }
 
-#comments article{
+#comments article {
     padding: 20px;
     border: none;
 }
 
-.comment-form *{
-     border-radius: 0;
+.comment-form * {
+    border-radius: 0;
 }
 
 .form-control:focus {
-    border-color: #FF6700;
     outline: 0;
-    -webkit-box-shadow: inset 0 1px 1px rgba(0,0,0,.075),0 0 8px rgba(255, 103, 0,.6);
-    box-shadow: inset 0 1px 1px rgba(0,0,0,.075),0 0 8px rgba(255, 103, 0,.6);
-}
-
-#comments .bypostauthor article{
-    border-left: 4px solid #FF6700;
 }
 
 /*--------------------------------------------------------------
@@ -542,40 +479,49 @@ section.error-404 .page-content > p, section.no-results .page-content > p {
     font-size: 14px;
     font-size: 1.4rem;
     padding-right: 0.5em;
-    color: #cbcccc;
 }
 
-.widget_recent_entries li:before { content: "\f036"; }
+.widget_recent_entries li:before {
+    content: "\f036";
+}
 
-.widget_recent_comments li:before { content: "\f075"; }
+.widget_recent_comments li:before {
+    content: "\f075";
+}
 
-.widget_archive li:before { content: "\f187"; }
+.widget_archive li:before {
+    content: "\f187";
+}
 
-.widget_categories li:before { content: "\f07c"; }
+.widget_categories li:before {
+    content: "\f07c";
+}
 
 .widget_nav_menu a,
 .widget_pages a {
     display: block;
     padding: .5em 0;
-    border-bottom: solid 1px #cbcccc;
 }
 
 .widget_nav_menu li,
-.widget_pages li { padding-top: 0; }
+.widget_pages li {
+    padding-top: 0;
+}
 
-.widget_rss li { margin-bottom: .5em; }
+.widget_rss li {
+    margin-bottom: .5em;
+}
 
 .widget_rss .rss-date,
 .widget_rss cite {
     display: block;
     font-size: 85%;
-    color: #cbcccc;
 }
 
-.widget select.form-control{
-border-radius: 0;
+.widget select.form-control {
+    border-radius: 0;
 }
 
-.widget #wp-calendar{
+.widget #wp-calendar {
     margin: 1.5em;
 }

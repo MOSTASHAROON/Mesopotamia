@@ -38,12 +38,22 @@ function mesopotamia_admin_menu() {
 				'label'   => __( 'Grid', 'mesopotamia' ),
 				'name'    => 'mesopotamia_general_settings[grid]',
 				'options' => array(
+					'8X4' => __( '8X4', 'mesopotamia' ),
 					'9X3' => __( '9X3', 'mesopotamia' ),
-					'8X4' => __( '8X4', 'mesopotamia' )
 				),
 				'type'    => 'select',
 				'default' => '8X4',
-			)
+			),
+			array(
+				'label'   => __( 'Skin', 'mesopotamia' ),
+				'name'    => 'mesopotamia_general_settings[skin]',
+				'options' => array(
+					'light' => __( 'Light', 'mesopotamia' ),
+					'dark' => __( 'Dark', 'mesopotamia' )
+				),
+				'type'    => 'select',
+				'default' => '8X4',
+			),
 		),
 //		'tools'   => array(
 //			array(

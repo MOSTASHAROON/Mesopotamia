@@ -154,28 +154,42 @@ function mesopotamia_scripts() {
 		'mesopotamia-bootstrap'
 	) );
 
-	if (is_page_template('page-templates/full-width.php')) {
-		wp_enqueue_style( 'mesopotamia-layout',  get_template_directory_uri() . '/layouts/full-width.css', array(
+	if ( is_page_template( 'page-templates/full-width.php' ) ) {
+		wp_enqueue_style( 'mesopotamia-layout', get_template_directory_uri() . '/layouts/full-width.css', array(
 			'mesopotamia-bootstrap-theme',
 			'mesopotamia-google-fonts',
 			'mesopotamia-font-awesome'
 		) );
-	} elseif (is_page_template('page-templates/no-sidebar.php')){
-		wp_enqueue_style( 'mesopotamia-layout',  get_template_directory_uri() . '/layouts/no-sidebar.css', array(
+	} elseif ( is_page_template( 'page-templates/no-sidebar.php' ) ) {
+		wp_enqueue_style( 'mesopotamia-layout', get_template_directory_uri() . '/layouts/no-sidebar.css', array(
 			'mesopotamia-bootstrap-theme',
 			'mesopotamia-google-fonts',
 			'mesopotamia-font-awesome'
 		) );
 	} else {
-		wp_enqueue_style( 'mesopotamia-layout',  get_template_directory_uri() . '/layouts/content-sidebar.css', array(
+		wp_enqueue_style( 'mesopotamia-layout', get_template_directory_uri() . '/layouts/content-sidebar.css', array(
 			'mesopotamia-bootstrap-theme',
 			'mesopotamia-google-fonts',
 			'mesopotamia-font-awesome'
 		) );
 	}
 
+
+	$skin = mesopotamia_get_option( 'skin', 'mesopotamia_general_settings', 'light' );
+
+	if ( $skin == 'light' ) {
+		wp_enqueue_style( 'mesopotamia-skin', get_template_directory_uri() . '/skins/light.css', array(
+			'mesopotamia-layout'
+		) );
+	} elseif ( $skin == 'dark' ) {
+		wp_enqueue_style( 'mesopotamia-skin', get_template_directory_uri() . '/skins/dark.css', array(
+			'mesopotamia-layout'
+		) );
+	}
+	
+
 	wp_enqueue_style( 'mesopotamia-style', get_stylesheet_uri(), array(
-		'mesopotamia-layout'
+		'mesopotamia-skin'
 	) );
 
 	wp_enqueue_script( 'mesopotamia-bootstrap-js', get_template_directory_uri() . '/lib/bootstrap/js/bootstrap.min.js', array( 'jquery' ) );
@@ -186,6 +200,33 @@ function mesopotamia_scripts() {
 }
 
 add_action( 'wp_enqueue_scripts', 'mesopotamia_scripts' );
+
+/**
+ * Converts a HEX value to RGB.
+ *
+ * @since Mesopotamia 1.0
+ *
+ * @param string $color The original color, in 3- or 6-digit hexadecimal form.
+ * @return array Array containing RGB (red, green, and blue) values for the given
+ *               HEX code, empty array otherwise.
+ */
+function mesopotamia_hex2rgb( $color ) {
+	$color = trim( $color, '#' );
+
+	if ( strlen( $color ) === 3 ) {
+		$r = hexdec( substr( $color, 0, 1 ).substr( $color, 0, 1 ) );
+		$g = hexdec( substr( $color, 1, 1 ).substr( $color, 1, 1 ) );
+		$b = hexdec( substr( $color, 2, 1 ).substr( $color, 2, 1 ) );
+	} else if ( strlen( $color ) === 6 ) {
+		$r = hexdec( substr( $color, 0, 2 ) );
+		$g = hexdec( substr( $color, 2, 2 ) );
+		$b = hexdec( substr( $color, 4, 2 ) );
+	} else {
+		return array();
+	}
+
+	return array( 'red' => $r, 'green' => $g, 'blue' => $b );
+}
 
 /**
  * Implement the Custom Header feature.
