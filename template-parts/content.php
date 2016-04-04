@@ -10,13 +10,18 @@
 ?>
 <div class="post-box col-lg-4 col-md-4 col-sm-4">
 	<article id="post-<?php the_ID(); ?>" <?php post_class( 'thumbnail' ); ?>>
+		
+		<div class="featured-image">
+			<?php
+			// Check if the post has a Post Thumbnail assigned to it.
+			if ( has_post_thumbnail() ) {
+				echo '<a href="' . esc_url( get_permalink() ) . '" rel="bookmark">';
+				the_post_thumbnail();
+				echo '</a>';
+			}
+			?>
+		</div>
 
-		<?php
-		// Check if the post has a Post Thumbnail assigned to it.
-		if ( has_post_thumbnail() ) {
-			the_post_thumbnail();
-		}
-		?>
 		<div class="caption">
 			<header class="entry-header">
 				<?php
