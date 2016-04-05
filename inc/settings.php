@@ -54,6 +54,16 @@ function mesopotamia_admin_menu() {
 				'type'    => 'select',
 				'default' => '8X4',
 			),
+			array(
+				'label'   => __( 'Disable sidebar for', 'mesopotamia' ),
+				'name'    => 'mesopotamia_general_settings[disable_sidebar]',
+				'options' => array(
+					'blog' => __( 'Blog', 'mesopotamia' ),
+					'search' => __( 'Search', 'mesopotamia' ),
+					'archive' => __( 'Archive', 'mesopotamia' )
+				),
+				'type'    => 'multi_check',
+			),
 		),
 //		'tools'   => array(
 //			array(

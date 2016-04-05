@@ -43,6 +43,11 @@ a:hover, a:focus {
     box-shadow: inset 0 1px 1px rgba(0, 0, 0, .075), 0 0 8px ' . vsprintf( 'rgba( %1$s, %2$s, %3$s, 0.6)', mesopotamia_hex2rgb( $first_main_color ) ) . ';
 }
 
+/* Sticky */
+article.thumbnail .mesopotamia-sticky-icon{
+	color: %1$s;
+}
+
 /* Footer */
 .site-footer a:hover {
     color: %1$s;

@@ -11,6 +11,11 @@
 <article id="post-<?php the_ID(); ?>" <?php post_class( 'thumbnail' ); ?>>
 
 	<?php
+
+	if ( is_sticky() ) {
+		echo '<i class="fa fa-thumb-tack mesopotamia-sticky-icon"></i>';
+	}
+
 	// Check if the post has a Post Thumbnail assigned to it.
 	if ( has_post_thumbnail() ) {
 		the_post_thumbnail();

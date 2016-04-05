@@ -31,10 +31,10 @@ if ( ! function_exists( 'mesopotamia_posted_on' ) ) :
 
 		$byline = sprintf(
 			esc_html_x( '%s', 'post author', 'mesopotamia' ),
-			'<span class="author vcard"><a class="url fn n" href="' . esc_url( get_author_posts_url( get_the_author_meta( 'ID' ) ) ) . '">' . esc_html( get_the_author() ) . '</a></span>'
+			'<span class="author vcard"><i class="fa fa-user"> <a class="url fn n" href="' . esc_url( get_author_posts_url( get_the_author_meta( 'ID' ) ) ) . '">' . esc_html( get_the_author() ) . '</a></i></span>'
 		);
 
-		echo '<span class="posted-on"><i class="fa fa-calendar"></i> ' . $posted_on . '&nbsp;&nbsp;</span><span class="byline"><i class="fa fa-user"></i> ' . $byline . '</span>'; // WPCS: XSS OK.
+		echo '<span class="posted-on"><i class="fa fa-calendar"></i> ' . $posted_on . '&nbsp;&nbsp;</span><span class="byline">' . $byline . '</span>'; // WPCS: XSS OK.
 
 		$categories_list = mesopotamia_get_the_category();
 		if ( $categories_list && mesopotamia_categorized_blog() ) {

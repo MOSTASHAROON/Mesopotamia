@@ -9,11 +9,15 @@
 
 get_header(); ?>
 	<div class="row">
-<?php $grid = mesopotamia_get_option( 'grid', 'mesopotamia_general_settings', '8X4' ); ?>
-<?php if ( $grid == '8X4' ){ ?>
+<?php if ( mesopotamia_has_sidebar( 'search' ) ){ ?>
+	<?php $grid = mesopotamia_get_option( 'grid', 'mesopotamia_general_settings', '8X4' ); ?>
+	<?php if ( $grid == '8X4' ){ ?>
 	<div class="col-md-8 col-xs-12">
 	<?php }elseif ( $grid == '9X3' ){ ?>
 	<div class="col-md-9 col-xs-12">
+	<?php } ?>
+	<?php } else { ?>
+	<div class="col-md-12 col-xs-12">
 <?php } ?>
 	<section id="primary" class="content-area">
 		<main id="main" class="site-main" role="main">
@@ -50,5 +54,7 @@ get_header(); ?>
 	</section><!-- #primary -->
 	</div><!--col-md-* col-xs-12 -->
 <?php
-get_sidebar();
+if ( mesopotamia_has_sidebar( 'search' ) ) {
+	get_sidebar();
+}
 get_footer();

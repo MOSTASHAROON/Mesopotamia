@@ -116,6 +116,7 @@ article.thumbnail {
     border: none;
     box-shadow: none;
     border-radius: 0;
+    position: relative;
 }
 
 .thumbnail > img {
@@ -123,6 +124,14 @@ article.thumbnail {
     margin: 0;
     height: auto;
     width: 100%;
+}
+
+/* Sticky */
+article.thumbnail .mesopotamia-sticky-icon {
+    font-size: 2em;
+    position: absolute;
+    top: 10px;
+    right: 10px;
 }
 
 /*--------------------------------------------------------------
@@ -284,6 +293,10 @@ article.thumbnail {
     margin-bottom: 5px;
 }
 
+.footer-container {
+    margin-top: 1em;
+}
+
 /*--------------------------------------------------------------
 # Media
 --------------------------------------------------------------*/
@@ -401,6 +414,10 @@ section.error-404 .page-content > p, section.no-results .page-content > p {
 
 .single .entry-header, .page .entry-header {
     margin-top: 0;
+}
+
+.continue-reading {
+    font-size: 12px;
 }
 
 /*--------------------------------------------------------------

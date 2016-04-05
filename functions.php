@@ -186,7 +186,7 @@ function mesopotamia_scripts() {
 			'mesopotamia-layout'
 		) );
 	}
-	
+
 
 	wp_enqueue_style( 'mesopotamia-style', get_stylesheet_uri(), array(
 		'mesopotamia-skin'
@@ -207,6 +207,7 @@ add_action( 'wp_enqueue_scripts', 'mesopotamia_scripts' );
  * @since Mesopotamia 1.0
  *
  * @param string $color The original color, in 3- or 6-digit hexadecimal form.
+ *
  * @return array Array containing RGB (red, green, and blue) values for the given
  *               HEX code, empty array otherwise.
  */
@@ -214,9 +215,9 @@ function mesopotamia_hex2rgb( $color ) {
 	$color = trim( $color, '#' );
 
 	if ( strlen( $color ) === 3 ) {
-		$r = hexdec( substr( $color, 0, 1 ).substr( $color, 0, 1 ) );
-		$g = hexdec( substr( $color, 1, 1 ).substr( $color, 1, 1 ) );
-		$b = hexdec( substr( $color, 2, 1 ).substr( $color, 2, 1 ) );
+		$r = hexdec( substr( $color, 0, 1 ) . substr( $color, 0, 1 ) );
+		$g = hexdec( substr( $color, 1, 1 ) . substr( $color, 1, 1 ) );
+		$b = hexdec( substr( $color, 2, 1 ) . substr( $color, 2, 1 ) );
 	} else if ( strlen( $color ) === 6 ) {
 		$r = hexdec( substr( $color, 0, 2 ) );
 		$g = hexdec( substr( $color, 2, 2 ) );
@@ -226,6 +227,25 @@ function mesopotamia_hex2rgb( $color ) {
 	}
 
 	return array( 'red' => $r, 'green' => $g, 'blue' => $b );
+}
+
+/**
+ * Check if the sidebar is enabled for the template
+ *
+ * @since Mesopotamia 1.0
+ *
+ * @param string $template The template that you want to check, acceptable are blog, search, and archive
+ *
+ * @return bool
+ */
+function mesopotamia_has_sidebar( $template ) {
+	$disabled_sidebars = mesopotamia_get_option( 'disable_sidebar', 'mesopotamia_general_settings', array() );
+
+	if ( in_array( $template, $disabled_sidebars ) ) {
+		return false;
+	}
+
+	return true;
 }
 
 /**
