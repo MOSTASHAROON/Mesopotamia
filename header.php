@@ -56,7 +56,7 @@
 							<span class="icon-bar"></span>
 						</button>
 						<a class="navbar-brand" href="<?php echo home_url(); ?>">
-							<?php $logo_id = (int) mesopotamia_get_option( 'logo', 'mesopotamia_general_settings', '' ); ?>
+							<?php $logo_id = (int) mesopotamia_get_option( 'logo', 'mesopotamia_header_settings', '' ); ?>
 							<?php if ( $logo_id ) { ?>
 								<img src="<?php echo wp_get_attachment_url( $logo_id ); ?>" style="max-height:50px; margin-top: -15px;" alt="Brand">
 							<?php } else { ?>

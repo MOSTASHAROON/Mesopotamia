@@ -58,11 +58,11 @@ body, .site-content {
 .paging-navigation,
 .entry-footer,
 #submit, .comment-reply-link,
-aside section, article {
+aside section, .footer-widgets section, article, .mesopotamia-widgets section {
     background-color: white;
 }
 
-aside section h2, .mesopotamia-widgets h2, .input-search {
+aside section h2,.footer-widgets section h2, .mesopotamia-widgets h2, .input-search {
     background-color: #F3F3F5;
 }
 
@@ -116,10 +116,14 @@ aside section h2, .mesopotamia-widgets h2, .input-search {
 # Footer
 --------------------------------------------------------------*/
 
-.site-footer, .site-footer a {
+.site-footer .bottom-footer, .site-footer .bottom-footer a {
     color: #b3b5b6;
 }
 
 .footer-container, #site-navigation {
     background-color: #FFFFFF;
+}
+
+.site-footer >.row{
+    background-color: #F2F2F2;
 }

@@ -29,23 +29,23 @@ body {
 }
 
 /*Sidebar*/
-aside section {
+aside section, .footer-widgets section, .mesopotamia-widgets section {
     padding: 10px;
     margin-bottom: 1em;
 }
 
-aside {
+aside , .footer-widgets, .mesopotamia-widgets{
     margin-top: 1em;
 }
 
-aside section h2, .mesopotamia-widgets h2 {
+aside section h2, .mesopotamia-widgets h2, .footer-widgets h2 {
     margin-top: 10px;
     margin-bottom: 10px;
     text-align: center;
     padding: 10px;
 }
 
-aside section table {
+aside section table, .footer-widgets section table, .mesopotamia-widgets section table {
     width: 100%;
 }
 
@@ -284,13 +284,16 @@ article.thumbnail .mesopotamia-sticky-icon {
 /*--------------------------------------------------------------
 # Footer
 --------------------------------------------------------------*/
-.site-footer {
+.bottom-footer {
     text-align: center;
-    padding: 15px;
+    padding-bottom: 15px;
+    padding-left: 15px;
+    padding-right: 15px;
 }
 
-.site-info {
+.site-info, .menu-footer {
     margin-bottom: 5px;
+    margin-top: 10px;
 }
 
 .footer-container {
@@ -437,7 +440,7 @@ section.error-404 .page-content > p, section.no-results .page-content > p {
     box-shadow: none;
 }
 
-.search-form .col-lg-12, .search-form .col-lg-12 .row {
+.search-form .col-lg-12, .search-form .col-lg-12 .row, .site-footer .row {
     margin-right: auto;
     margin-left: auto;
 }
@@ -523,6 +526,10 @@ section.error-404 .page-content > p, section.no-results .page-content > p {
 .widget_nav_menu li,
 .widget_pages li {
     padding-top: 0;
+}
+
+.widget_rss ul{
+    padding: 5px;
 }
 
 .widget_rss li {

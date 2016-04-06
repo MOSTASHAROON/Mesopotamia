@@ -129,6 +129,44 @@ function mesopotamia_widgets_init() {
 		'before_title'  => '<h2 class="widget-title">',
 		'after_title'   => '</h2>',
 	) );
+
+	register_sidebar( array(
+		'name'          => esc_html__( 'No-results widgets', 'mesopotamia' ),
+		'id'            => 'no-results-sidebar',
+		'description'   => esc_html__( 'This widgets appear on the no results search page.', 'mesopotamia' ),
+		'before_widget' => '<div class="post-box col-lg-4 col-md-4 col-sm-4"><section id="%1$s" class="widget %2$s">',
+		'after_widget'  => '</section></div><!-- .post-box -->',
+		'before_title'  => '<h2 class="widget-title">',
+		'after_title'   => '</h2>',
+	) );
+	
+	register_sidebar( array(
+		'name'          => esc_html__( '404 widgets', 'mesopotamia' ),
+		'id'            => '404-sidebar',
+		'description'   => esc_html__( 'This widgets appear on the 404 page.', 'mesopotamia' ),
+		'before_widget' => '<div class="post-box col-lg-4 col-md-4 col-sm-4"><section id="%1$s" class="widget %2$s">',
+		'after_widget'  => '</section></div><!-- .post-box -->',
+		'before_title'  => '<h2 class="widget-title">',
+		'after_title'   => '</h2>',
+	) );
+
+	$top_footer = mesopotamia_get_option( 'top_footer', 'mesopotamia_footer_settings', '' );
+
+	if ( $top_footer == 'yes' ) {
+		$top_columns = (int) mesopotamia_get_option( 'top_columns', 'mesopotamia_footer_settings', '1' );
+
+		for ( $i = 1; $i <= $top_columns; $i ++ ) {
+			register_sidebar( array(
+				'name'          => esc_html__( 'Footer widget ' . $i, 'mesopotamia' ),
+				'id'            => 'footer-sidebar-' . $i,
+				'description'   => '',
+				'before_widget' => '<section id="%1$s" class="widget %2$s">',
+				'after_widget'  => '</section>',
+				'before_title'  => '<h2 class="widget-title">',
+				'after_title'   => '</h2>',
+			) );
+		}
+	}
 }
 
 add_action( 'widgets_init', 'mesopotamia_widgets_init' );

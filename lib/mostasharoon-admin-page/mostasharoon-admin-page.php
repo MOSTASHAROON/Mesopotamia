@@ -284,7 +284,7 @@ class MOSTASHAROON_Admin_Page {
 						break;
 
 					case 'checkbox':
-						$html .= '<div class="checkbox">';
+						$html .= '<div class="checkbox col-sm-7 col-sm-offset-5">';
 						$html .= '<label>';
 						$html .= '<input type="checkbox" name="' . $field['name'] . '" data-toggle="tooltip" data-placement="right" title="' . $help . '" value="yes" ' . checked( $val, 'yes', false ) . '>';
 						$html .= $field['label'];

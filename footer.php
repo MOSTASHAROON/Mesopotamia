@@ -17,10 +17,150 @@
 <a href="#" class="scrollToTop"><i class="fa fa-chevron-up"></i></a>
 <div class="container-fluid footer-container">
 	<footer id="colophon" class="site-footer" role="contentinfo">
-		<div class="site-info">
-			<?php printf( esc_html__( '© 2016 %1$s', 'mesopotamia' ), '<a href="https://mostasharoon.org" rel="designer">MOSTASHAROON</a>' ); ?>
-		</div><!-- .site-info -->
-		<?php mesopotamia_footer_menu(); ?>
+
+		<?php
+		$top_footer = mesopotamia_get_option( 'top_footer', 'mesopotamia_footer_settings', '' );
+
+		if ( $top_footer == 'yes' ) {
+			echo '<div class="row">';
+			$top_columns = mesopotamia_get_option( 'top_columns', 'mesopotamia_footer_settings', '1' );
+			switch ( $top_columns ) {
+				case '1':
+					echo '<div class="col-lg-12 col-md-12 col-sm-12">';
+					?>
+					<div class="supplementary">
+						<div class="footer-widgets widget-area clear" role="complementary">
+							<?php
+							dynamic_sidebar( 'footer-sidebar-1' );
+							?>
+						</div><!-- .footer-widgets -->
+					</div><!-- .supplementary -->
+					<?php
+					echo '</div>';
+					break;
+				case '2':
+					echo '<div class="col-lg-6 col-md-6 col-sm-6">';
+					?>
+					<div class="supplementary">
+						<div class="footer-widgets widget-area clear" role="complementary">
+							<?php
+							dynamic_sidebar( 'footer-sidebar-1' );
+							?>
+						</div><!-- .footer-widgets -->
+					</div><!-- .supplementary -->
+					<?php
+					echo '</div>';
+
+					echo '<div class="col-lg-6 col-md-6 col-sm-6">';
+					?>
+					<div class="supplementary">
+						<div class="footer-widgets widget-area clear" role="complementary">
+							<?php
+							dynamic_sidebar( 'footer-sidebar-2' );
+							?>
+						</div><!-- .footer-widgets -->
+					</div><!-- .supplementary -->
+					<?php
+					echo '</div>';
+					break;
+				case '3':
+					echo '<div class="col-lg-4 col-md-4 col-sm-4">';
+					?>
+					<div class="supplementary">
+						<div class="footer-widgets widget-area clear" role="complementary">
+							<?php
+							dynamic_sidebar( 'footer-sidebar-1' );
+							?>
+						</div><!-- .footer-widgets -->
+					</div><!-- .supplementary -->
+					<?php
+					echo '</div>';
+
+					echo '<div class="col-lg-4 col-md-4 col-sm-4">';
+					?>
+					<div class="supplementary">
+						<div class="footer-widgets widget-area clear" role="complementary">
+							<?php
+							dynamic_sidebar( 'footer-sidebar-2' );
+							?>
+						</div><!-- .footer-widgets -->
+					</div><!-- .supplementary -->
+					<?php
+					echo '</div>';
+
+					echo '<div class="col-lg-4 col-md-4 col-sm-4">';
+					?>
+					<div class="supplementary">
+						<div class="footer-widgets widget-area clear" role="complementary">
+							<?php
+							dynamic_sidebar( 'footer-sidebar-3' );
+							?>
+						</div><!-- .footer-widgets -->
+					</div><!-- .supplementary -->
+					<?php
+					echo '</div>';
+					break;
+				case '4':
+					echo '<div class="col-lg-3 col-md-3 col-sm-3">';
+					?>
+					<div class="supplementary">
+						<div class="footer-widgets widget-area clear" role="complementary">
+							<?php
+							dynamic_sidebar( 'footer-sidebar-1' );
+							?>
+						</div><!-- .footer-widgets -->
+					</div><!-- .supplementary -->
+					<?php
+					echo '</div>';
+
+					echo '<div class="col-lg-3 col-md-3 col-sm-3">';
+					?>
+					<div class="supplementary">
+						<div class="footer-widgets widget-area clear" role="complementary">
+							<?php
+							dynamic_sidebar( 'footer-sidebar-2' );
+							?>
+						</div><!-- .footer-widgets -->
+					</div><!-- .supplementary -->
+					<?php
+					echo '</div>';
+
+					echo '<div class="col-lg-3 col-md-3 col-sm-3">';
+					?>
+					<div class="supplementary">
+						<div class="footer-widgets widget-area clear" role="complementary">
+							<?php
+							dynamic_sidebar( 'footer-sidebar-3' );
+							?>
+						</div><!-- .footer-widgets -->
+					</div><!-- .supplementary -->
+					<?php
+					echo '</div>';
+
+					echo '<div class="col-lg-3 col-md-3 col-sm-3">';
+					?>
+					<div class="supplementary">
+						<div class="footer-widgets widget-area clear" role="complementary">
+							<?php
+							dynamic_sidebar( 'footer-sidebar-4' );
+							?>
+						</div><!-- .footer-widgets -->
+					</div><!-- .supplementary -->
+					<?php
+					echo '</div>';
+					break;
+			}
+
+			echo '</div>';
+		}
+		?>
+
+		<div class="bottom-footer">
+			<div class="site-info">
+				<?php echo stripslashes( str_replace( "%year%", current_time( 'Y' ), mesopotamia_get_option( 'copyright', 'mesopotamia_footer_settings', '' ) ) ); ?>
+			</div><!-- .site-info -->
+			<?php mesopotamia_footer_menu(); ?>
+		</div><!-- .bottom-footer -->
 	</footer><!-- #colophon -->
 </div><!-- .container -->
 

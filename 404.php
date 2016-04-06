@@ -30,64 +30,7 @@ get_header(); ?>
 					get_search_form();
 					?>
 					<div class="mesopotamia-widgets">
-						<div class="post-box col-lg-4 col-md-4 col-sm-4">
-							<article class="thumbnail">
-								<div class="caption">
-									<?php
-									the_widget( 'WP_Widget_Recent_Posts' );
-									?>
-								</div><!-- .caption -->
-							</article><!-- .thumbnail -->
-						</div><!-- .post-box -->
-						<div class="post-box col-lg-4 col-md-4 col-sm-4">
-							<article class="thumbnail">
-								<div class="caption">
-									<?php
-									// Only show the widget if site has multiple categories.
-									if ( mesopotamia_categorized_blog() ) :
-										?>
-
-										<div class="widget widget_categories">
-											<h2 class="widget-title"><?php esc_html_e( 'Most Used Categories', 'mesopotamia' ); ?></h2>
-											<ul>
-												<?php
-												wp_list_categories( array(
-													'orderby'    => 'count',
-													'order'      => 'DESC',
-													'show_count' => 1,
-													'title_li'   => '',
-													'number'     => 10,
-												) );
-												?>
-											</ul>
-										</div><!-- .widget -->
-
-										<?php
-									endif;
-									?>
-								</div><!-- .caption -->
-							</article><!-- .thumbnail -->
-						</div><!-- .post-box -->
-						<div class="post-box col-lg-4 col-md-4 col-sm-4">
-							<article class="thumbnail">
-								<div class="caption">
-									<?php
-									/* translators: %1$s: smiley */
-									$archive_content = '<p>' . sprintf( esc_html__( 'Try looking in the monthly archives. %1$s', 'mesopotamia' ), convert_smilies( ':)' ) ) . '</p>';
-									the_widget( 'WP_Widget_Archives', 'dropdown=1', "after_title=</h2>$archive_content" );
-									?>
-								</div><!-- .caption -->
-							</article><!-- .thumbnail -->
-						</div><!-- .post-box -->
-						<div class="post-box col-lg-4 col-md-4 col-sm-4">
-							<article class="thumbnail">
-								<div class="caption">
-									<?php
-									the_widget( 'WP_Widget_Tag_Cloud' );
-									?>
-								</div><!-- .caption -->
-							</article><!-- .thumbnail -->
-						</div><!-- .post-box -->
+						<?php dynamic_sidebar( '404-sidebar' ); ?>
 					</div><!-- .mesopotamia-widgets -->
 				</div><!-- .page-content -->
 			</section><!-- .error-404 -->

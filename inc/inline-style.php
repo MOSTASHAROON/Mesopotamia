@@ -16,7 +16,7 @@ function mesopotamia_inline_css() {
 	$css = '
 		/* Mesopotamia Inline CSS */
 /* Misc */
-aside section h2, .mesopotamia-widgets h2 {
+aside section h2,.footer-widgets section h2, .mesopotamia-widgets h2 {
     border-top: 2px solid %1$s;
     color: %1$s;
 }
@@ -25,7 +25,7 @@ article.thumbnail {
     border-top: 4px solid %2$s;
 }
 
-aside section {
+aside section, .footer-widgets section, .mesopotamia-widgets section {
     border-top: 4px solid %2$s;
 }
 

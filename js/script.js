@@ -27,7 +27,7 @@ jQuery(document).ready(function ($) {
             $('.mesopotamia-posts, .mesopotamia-widgets').masonry({
                 itemSelector: '.post-box',
                 columnWidth: '.post-box',
-                transitionDuration: 0
+                transitionDuration: '0.2s'
             });
         },
         scrollToTopButton: function () {
