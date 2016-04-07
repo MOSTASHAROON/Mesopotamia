@@ -68,7 +68,7 @@ function mesopotamia_admin_menu() {
 			),
 			array(
 				'label'   => __( 'Show search box in menu', 'mesopotamia' ),
-				'name'    => 'mesopotamia_footer_settings[search]',
+				'name'    => 'mesopotamia_header_settings[search]',
 				'default' => 'no',
 				'type'    => 'checkbox',
 			),

@@ -49,7 +49,7 @@
 					<!-- Brand and toggle get grouped for better mobile display -->
 					<div class="navbar-header">
 						<button type="button" class="navbar-toggle" data-toggle="collapse"
-						        data-target="#bs-example-navbar-collapse-1">
+						        data-target="#bs-mesopotamia-navbar-collapse-1">
 							<span class="sr-only">Toggle navigation</span>
 							<span class="icon-bar"></span>
 							<span class="icon-bar"></span>
@@ -58,28 +58,37 @@
 						<a class="navbar-brand" href="<?php echo home_url(); ?>">
 							<?php $logo_id = (int) mesopotamia_get_option( 'logo', 'mesopotamia_header_settings', '' ); ?>
 							<?php if ( $logo_id ) { ?>
-								<img src="<?php echo wp_get_attachment_url( $logo_id ); ?>" style="max-height:50px; margin-top: -15px;" alt="Brand">
+								<img src="<?php echo wp_get_attachment_url( $logo_id ); ?>"
+								     style="max-height:50px; margin-top: -15px;" alt="Brand">
 							<?php } else { ?>
 								<?php bloginfo( 'name' ); ?>
 							<?php } ?>
 						</a>
 					</div>
-
-					<?php
-					wp_nav_menu( array(
-							'menu'            => 'primary',
-							'theme_location'  => 'primary',
-							'menu_id'         => 'primary-menu',
-							'depth'           => 2,
-							'container'       => 'div',
-							'container_class' => 'collapse navbar-collapse',
-							'container_id'    => 'bs-example-navbar-collapse-1',
-							'menu_class'      => 'nav navbar-nav',
-							'fallback_cb'     => 'wp_bootstrap_navwalker::fallback',
-							'walker'          => new wp_bootstrap_navwalker()
-						)
-					);
-					?>
+					<!-- Collect the nav links, forms, and other content for toggling -->
+					<div class="collapse navbar-collapse" id="bs-mesopotamia-navbar-collapse-1">
+						<?php
+						wp_nav_menu( array(
+								'menu'           => 'primary',
+								'theme_location' => 'primary',
+								'menu_id'        => 'primary-menu',
+								'depth'          => 2,
+								'container'      => false,
+								'menu_class'     => 'nav navbar-nav navbar-right',
+								'fallback_cb'    => 'wp_bootstrap_navwalker::fallback',
+								'walker'         => new wp_bootstrap_navwalker()
+							)
+						);
+						?>
+						<?php if ( 'yes' == mesopotamia_get_option( 'search', 'mesopotamia_header_settings', '' ) ) { ?>
+							<form class="navbar-form navbar-right mesopotamia-navbar-search-form" role="search">
+								<div class="form-group">
+									<input type="search" class="search-field form-control input-search" name="s"
+									       placeholder="<?php esc_attr_e('Search …','mesopotamia') ?>">
+								</div>
+							</form>
+						<?php } ?>
+					</div><!-- /.navbar-collapse -->
 				</div>
 			</nav><!-- #site-navigation -->
 		</header><!-- #masthead -->

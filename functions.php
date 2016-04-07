@@ -325,3 +325,8 @@ require get_template_directory() . '/inc/inline-style.php';
  * Load admin settings page.
  */
 require get_template_directory() . '/inc/settings.php';
+
+/**
+ * Load social icons shortcode.
+ */
+require get_template_directory() . '/inc/icons.php';
