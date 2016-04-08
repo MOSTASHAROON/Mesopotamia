@@ -29,7 +29,7 @@
 /*.posts-navigation .nav-next a:hover,*/
 /*.post-navigation .nav-next a:hover,*/
 /*.entry-meta a, .entry-footer a {*/
-    /*color: #6a6c6d;*/
+/*color: #6a6c6d;*/
 /*}*/
 
 #site-navigation, #submit, .comment-reply-link {
@@ -55,7 +55,7 @@ body, .site-content {
     text-shadow: 0 1px 0 rgba(0, 0, 0, .25);
 }
 
-.page .thumbnail .caption, .single .thumbnail .caption , .comment-list{
+.page .thumbnail .caption, .single .thumbnail .caption, .comment-list {
     color: #fff;
 }
 
@@ -72,7 +72,7 @@ aside section, .footer-widgets section, article, .mesopotamia-widgets section {
     background-color: rgb(36, 36, 36);
 }
 
-aside section h2,.footer-widgets section h2, .mesopotamia-widgets h2, .input-search {
+aside section h2, .footer-widgets section h2, .mesopotamia-widgets h2, .input-search {
     background-color: #2d2d2d;
 }
 
@@ -80,7 +80,7 @@ aside section h2,.footer-widgets section h2, .mesopotamia-widgets h2, .input-sea
     background-color: rgb(36, 36, 36);
 }
 
-#submit{
+#submit {
     text-shadow: 0 1px 0 #000;
 }
 
@@ -99,13 +99,13 @@ aside section h2,.footer-widgets section h2, .mesopotamia-widgets h2, .input-sea
 ## Posts and pages
 --------------------------------------------------------------*/
 
-.entry-meta, .entry-meta i, .entry-footer,
+.thumbnail .entry-header .entry-meta a, .entry-meta i, .entry-footer,
 .widget_recent_entries li:before,
 .widget_categories li:before,
 .widget_recent_comments li:before,
 .widget_archive li:before,
 .widget_rss .rss-date,
-.widget_rss cite {
+.widget_rss cite, .entry-footer a {
     color: #cbcccc;
 }
 
@@ -143,6 +143,20 @@ aside section h2,.footer-widgets section h2, .mesopotamia-widgets h2, .input-sea
 }
 
 /*--------------------------------------------------------------
+# Icons
+--------------------------------------------------------------*/
+
+a.mesopotamia-icon {
+    border: 1px solid #333333 !important;
+    color: #ededed !important;
+}
+
+a.mesopotamia-icon:hover {
+    color: #232323 !important;
+    background: #fff !important;
+}
+
+/*--------------------------------------------------------------
 # Footer
 --------------------------------------------------------------*/
 
@@ -154,7 +168,7 @@ aside section h2,.footer-widgets section h2, .mesopotamia-widgets h2, .input-sea
     background-color: rgb(36, 36, 36);
 }
 
-.site-footer >.row{
+.site-footer > .row {
     background-color: rgb(48, 48, 48);
 }
 

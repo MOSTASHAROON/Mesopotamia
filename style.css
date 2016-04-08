@@ -34,7 +34,7 @@ aside section, .footer-widgets section, .mesopotamia-widgets section {
     margin-bottom: 1em;
 }
 
-aside , .footer-widgets, .mesopotamia-widgets{
+aside, .footer-widgets, .mesopotamia-widgets {
     margin-top: 1em;
 }
 
@@ -373,9 +373,9 @@ object {
 }
 
 /*@media (min-width: 768px) {*/
-    /*#primary-menu {*/
-        /*float: right;*/
-    /*}*/
+/*#primary-menu {*/
+/*float: right;*/
+/*}*/
 /*}*/
 
 #primary-menu a:hover, #primary-menu a:active, #primary-menu li.active a {
@@ -528,7 +528,7 @@ section.error-404 .page-content > p, section.no-results .page-content > p {
     padding-top: 0;
 }
 
-.widget_rss ul{
+.widget_rss ul {
     padding: 5px;
 }
 
@@ -551,9 +551,72 @@ section.error-404 .page-content > p, section.no-results .page-content > p {
 }
 
 /*.mesopotamia-navbar-search-form{*/
-    /*float: right;*/
+/*float: right;*/
 /*}*/
 
-.navbar-container-fluid .navbar-header button.navbar-toggle{
-    background: none ;
+.navbar-container-fluid .navbar-header button.navbar-toggle {
+    background: none;
+}
+
+/*--------------------------------------------------------------
+# Icons
+--------------------------------------------------------------*/
+
+a.mesopotamia-icon {
+    display: inline-block;
+    /*width: 45px ;*/
+    /*height: 45px ;*/
+    font-size: 20px;
+    line-height: 45px;
+    text-align: center;
+}
+
+a.mesopotamia-icon:hover i {
+    -webkit-animation: toBottomFromTop 0.4s forwards;
+    -moz-animation: toBottomFromTop 0.4s forwards;
+    animation: toBottomFromTop 0.4s forwards;
+}
+
+/*--------------------------------------------------------------
+# Keyframes
+--------------------------------------------------------------*/
+
+/*to bottom*/
+@-webkit-keyframes toBottomFromTop {
+    49% {
+        -webkit-transform: translateY(100%);
+    }
+    50% {
+        opacity: 0;
+        -webkit-transform: translateY(-100%);
+    }
+    51% {
+        opacity: 1;
+    }
+}
+
+@-moz-keyframes toBottomFromTop {
+    49% {
+        -moz-transform: translateY(100%);
+    }
+    50% {
+        opacity: 0;
+        -moz-transform: translateY(-100%);
+    }
+    51% {
+        opacity: 1;
+    }
+}
+
+@keyframes toBottomFromTop {
+    49% {
+        transform: translateY(100%);
+    }
+    50% {
+        opacity: 0;
+        transform: translateY(-100%);
+    }
+    51% {
+        opacity: 1;
+    }
 }

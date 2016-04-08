@@ -21,8 +21,12 @@ aside section h2,.footer-widgets section h2, .mesopotamia-widgets h2 {
     color: %1$s;
 }
 
-article.thumbnail {
-    border-top: 4px solid %2$s;
+article.thumbnail, a.mesopotamia-icon:hover {
+    border-top: 4px solid %2$s !important;
+}
+
+a.mesopotamia-icon{
+	border-top: 4px solid %1$s !important;
 }
 
 aside section, .footer-widgets section, .mesopotamia-widgets section {
@@ -33,7 +37,7 @@ a {
     color: %1$s;
 }
 
-a:hover, a:focus {
+a:hover, a:focus, .thumbnail .entry-header .entry-meta a:hover {
     color: %1$s;
 }
 
@@ -78,7 +82,7 @@ article.thumbnail .mesopotamia-sticky-icon{
 .comment-navigation .nav-next a:hover,
 .posts-navigation .nav-next a:hover,
 .post-navigation .nav-next a:hover,
-.entry-meta a, .entry-footer a {
+.entry-meta a {
     color: %1$s;
 }
 
@@ -111,7 +115,7 @@ article.thumbnail .mesopotamia-sticky-icon{
 }
 
 .entry-footer i, .entry-meta i{
-    color: %1$s;
+    /* color: %1$s; */
 }
 
 /* Search form */

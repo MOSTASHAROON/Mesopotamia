@@ -29,7 +29,7 @@
 /*.posts-navigation .nav-next a:hover,*/
 /*.post-navigation .nav-next a:hover,*/
 /*.entry-meta a, .entry-footer a {*/
-    /*color: #6a6c6d;*/
+/*color: #6a6c6d;*/
 /*}*/
 
 #site-navigation, #submit, .comment-reply-link {
@@ -62,7 +62,7 @@ aside section, .footer-widgets section, article, .mesopotamia-widgets section {
     background-color: white;
 }
 
-aside section h2,.footer-widgets section h2, .mesopotamia-widgets h2, .input-search {
+aside section h2, .footer-widgets section h2, .mesopotamia-widgets h2, .input-search {
     background-color: #F3F3F5;
 }
 
@@ -81,13 +81,13 @@ aside section h2,.footer-widgets section h2, .mesopotamia-widgets h2, .input-sea
 ## Posts and pages
 --------------------------------------------------------------*/
 
-.entry-meta, .entry-meta i, .entry-footer,
+.thumbnail .entry-header .entry-meta a, .entry-meta i, .entry-footer,
 .widget_recent_entries li:before,
 .widget_categories li:before,
 .widget_recent_comments li:before,
 .widget_archive li:before,
 .widget_rss .rss-date,
-.widget_rss cite {
+.widget_rss cite, .entry-footer a {
     color: #cbcccc;
 }
 
@@ -113,6 +113,20 @@ aside section h2,.footer-widgets section h2, .mesopotamia-widgets h2, .input-sea
 }
 
 /*--------------------------------------------------------------
+# Icons
+--------------------------------------------------------------*/
+
+a.mesopotamia-icon {
+    border: 1px solid #ededed !important;
+    color: #232323 !important;
+}
+
+a.mesopotamia-icon:hover {
+    color: #fff !important;
+    background: #232323 !important;
+}
+
+/*--------------------------------------------------------------
 # Footer
 --------------------------------------------------------------*/
 
@@ -124,6 +138,6 @@ aside section h2,.footer-widgets section h2, .mesopotamia-widgets h2, .input-sea
     background-color: #FFFFFF;
 }
 
-.site-footer >.row{
+.site-footer > .row {
     background-color: #F2F2F2;
 }
