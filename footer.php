@@ -157,7 +157,7 @@
 
 		<div class="bottom-footer">
 			<div class="site-info">
-				<?php echo stripslashes( str_replace( "%year%", current_time( 'Y' ), mesopotamia_get_option( 'copyright', 'mesopotamia_footer_settings', '' ) ) ); ?>
+				<?php echo stripslashes( str_replace( "%year%", current_time( 'Y' ), mesopotamia_get_option( 'copyright', 'mesopotamia_footer_settings', '© %year% <a href="https://mostasharoon.org" rel="designer">MOSTASHAROON</a>' ) ) ); ?>
 			</div><!-- .site-info -->
 			<?php mesopotamia_footer_menu(); ?>
 		</div><!-- .bottom-footer -->
