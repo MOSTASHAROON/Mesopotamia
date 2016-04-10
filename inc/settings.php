@@ -72,6 +72,12 @@ function mesopotamia_admin_menu() {
 				'default' => 'no',
 				'type'    => 'checkbox',
 			),
+			array(
+				'label'   => __( 'Fixed header', 'mesopotamia' ),
+				'name'    => 'mesopotamia_header_settings[fixed_header]',
+				'default' => 'yes',
+				'type'    => 'checkbox',
+			),
 		),
 		'footer'  => array(
 			array(
@@ -89,9 +95,9 @@ function mesopotamia_admin_menu() {
 				'name'    => 'mesopotamia_footer_settings[top_columns]',
 				'options' => array(
 					'1' => __( '1', 'mesopotamia' ),
-					'2'  => __( '2', 'mesopotamia' ),
-					'3'  => __( '3', 'mesopotamia' ),
-					'4'  => __( '4', 'mesopotamia' ),
+					'2' => __( '2', 'mesopotamia' ),
+					'3' => __( '3', 'mesopotamia' ),
+					'4' => __( '4', 'mesopotamia' ),
 				),
 				'type'    => 'select',
 				'default' => '1',

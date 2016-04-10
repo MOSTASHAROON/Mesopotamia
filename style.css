@@ -24,9 +24,9 @@ Nicolas Gallagher and Jonathan Neal http://necolas.github.com/normalize.css/
 # Misc
 --------------------------------------------------------------*/
 
-body {
-    padding-top: 60px;
-}
+/*body {*/
+    /*padding-top: 40px;*/
+/*}*/
 
 /*Sidebar*/
 aside section, .footer-widgets section, .mesopotamia-widgets section {

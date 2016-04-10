@@ -6,6 +6,7 @@ jQuery(document).ready(function ($) {
         init: function () {
             this.masonry();
             this.scrollToTopButton();
+            this.body_offset();
 
             //Add Hover effect to menus
             $('ul.nav li.dropdown').hover(function () {
@@ -16,13 +17,15 @@ jQuery(document).ready(function ($) {
 
             this.addClassesDynamically();
         },
-        //adjust_body_offset: function adjust_body_offset() {
-        //    $('body').css('padding-top', $('#site-navigation').outerHeight(true) + 'px');
-        //},
-        //body_offset: function () {
-        //    $(window).resize(MesopotamiaObject.adjust_body_offset);
-        //    $(document).ready(MesopotamiaObject.adjust_body_offset);
-        //},
+        adjust_body_offset: function adjust_body_offset() {
+           $('body').css('padding-top', $('#site-navigation').outerHeight(true) + 'px');
+        },
+        body_offset: function () {
+            if ( $( ".navbar-fixed-top" ).length ) {
+                $(window).resize(MesopotamiaObject.adjust_body_offset);
+                $(document).ready(MesopotamiaObject.adjust_body_offset);
+            }
+        },
         masonry: function () {
             $('.mesopotamia-posts, .mesopotamia-widgets').masonry({
                 itemSelector: '.post-box',

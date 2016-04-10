@@ -44,7 +44,9 @@
 					<?php
 				endif; ?>
 			</div><!-- .site-branding -->
-			<nav class="navbar navbar-default navbar-fixed-top main-navigation" id="site-navigation" role="navigation">
+			<?php $is_fixed_header = mesopotamia_get_option( 'fixed_header', 'mesopotamia_header_settings', 'yes' ); ?>
+			<?php $fixed_class = ($is_fixed_header=='yes')?'navbar-fixed-top':''; ?>
+			<nav class="navbar navbar-default <?php echo $fixed_class; ?> main-navigation" id="site-navigation" role="navigation">
 				<div class="container-fluid navbar-container-fluid">
 					<!-- Brand and toggle get grouped for better mobile display -->
 					<div class="navbar-header">
@@ -72,7 +74,7 @@
 								'menu'           => 'primary',
 								'theme_location' => 'primary',
 								'menu_id'        => 'primary-menu',
-								'depth'          => 2,
+								'depth'          => 3,
 								'container'      => false,
 								'menu_class'     => 'nav navbar-nav navbar-right',
 								'fallback_cb'    => 'wp_bootstrap_navwalker::fallback',
