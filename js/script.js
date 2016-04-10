@@ -3,6 +3,31 @@ jQuery(document).ready(function ($) {
         addClassesDynamically: function () {
             $('.widget_archive').find('select').addClass('form-control');
         },
+        repositionLastMenuItem: function () {
+            $("#primary-menu").find("li").on('mouseenter mouseleave', function (e) {
+                if ($('ul', this).length) {
+
+                    var elm = $('ul:first', this);
+                    var off = elm.offset();
+                    var l = off.left;
+                    var w = elm.width();
+                    var container = $(".container-fluid");
+                    var docH = container.height();
+                    var docW = container.width();
+
+                    var isEntirelyVisible = (l + w <= docW);
+                    if (!isEntirelyVisible) {
+                        $('ul:first', this).addClass('dropdown-menu-right');
+                        $('ul:first', this).removeClass('dropdown-menu-left');
+
+                    } else {
+                        $('ul:first', this).removeClass('dropdown-menu-right');
+                        $('ul:first', this).addClass('dropdown-menu-left');
+
+                    }
+                }
+            });
+        },
         init: function () {
             this.masonry();
             this.scrollToTopButton();
@@ -10,18 +35,21 @@ jQuery(document).ready(function ($) {
 
             //Add Hover effect to menus
             $('ul.nav li.dropdown').hover(function () {
-                $(this).find('.dropdown-menu').stop(true, true).delay(200).fadeIn();
+                $(this).find('.dropdown-menu').stop(true, true).fadeIn();
             }, function () {
-                $(this).find('.dropdown-menu').stop(true, true).delay(200).fadeOut();
+                $(this).find('.dropdown-menu').stop(true, true).fadeOut();
             });
+
+            //Fix the dropdown of the last menu item goes out of the screen
+            this.repositionLastMenuItem();
 
             this.addClassesDynamically();
         },
         adjust_body_offset: function adjust_body_offset() {
-           $('body').css('padding-top', $('#site-navigation').outerHeight(true) + 'px');
+            $('body').css('padding-top', $('#site-navigation').outerHeight(true) + 'px');
         },
         body_offset: function () {
-            if ( $( ".navbar-fixed-top" ).length ) {
+            if ($(".navbar-fixed-top").length) {
                 $(window).resize(MesopotamiaObject.adjust_body_offset);
                 $(document).ready(MesopotamiaObject.adjust_body_offset);
             }
