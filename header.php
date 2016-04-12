@@ -74,7 +74,7 @@
 								'menu'           => 'primary',
 								'theme_location' => 'primary',
 								'menu_id'        => 'primary-menu',
-								'depth'          => 3,
+								'depth'          => 2,
 								'container'      => false,
 								'menu_class'     => 'nav navbar-nav navbar-right',
 								'fallback_cb'    => 'wp_bootstrap_navwalker::fallback',
