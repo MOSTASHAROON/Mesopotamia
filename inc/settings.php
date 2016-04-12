@@ -75,7 +75,7 @@ function mesopotamia_admin_menu() {
 			array(
 				'label'   => __( 'Fixed header', 'mesopotamia' ),
 				'name'    => 'mesopotamia_header_settings[fixed_header]',
-				'default' => 'yes',
+				'default' => 'no',
 				'type'    => 'checkbox',
 			),
 		),

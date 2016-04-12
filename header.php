@@ -44,7 +44,7 @@
 					<?php
 				endif; ?>
 			</div><!-- .site-branding -->
-			<?php $is_fixed_header = mesopotamia_get_option( 'fixed_header', 'mesopotamia_header_settings', 'yes' ); ?>
+			<?php $is_fixed_header = mesopotamia_get_option( 'fixed_header', 'mesopotamia_header_settings', 'no' ); ?>
 			<?php $fixed_class = ($is_fixed_header=='yes')?'navbar-fixed-top':''; ?>
 			<nav class="navbar navbar-default <?php echo $fixed_class; ?> main-navigation" id="site-navigation" role="navigation">
 				<div class="container-fluid navbar-container-fluid">
