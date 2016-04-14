@@ -35,9 +35,9 @@ jQuery(document).ready(function ($) {
 
             //Add Hover effect to menus
             $('ul.nav li.dropdown').hover(function () {
-                $(this).find('.dropdown-menu').stop(true, true).fadeIn();
+                $(this).find('.dropdown-menu').stop(true, true).show();
             }, function () {
-                $(this).find('.dropdown-menu').stop(true, true).fadeOut();
+                $(this).find('.dropdown-menu').stop(true, true).hide();
             });
 
             //Fix the dropdown of the last menu item goes out of the screen
