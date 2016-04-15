@@ -78,6 +78,13 @@ function mesopotamia_admin_menu() {
 				'default' => 'no',
 				'type'    => 'checkbox',
 			),
+			array(
+				'label'   => __( 'Enable UberMenu', 'mesopotamia' ),
+				'name'    => 'mesopotamia_header_settings[UberMenu]',
+				'default' => 'no',
+				'type'    => 'checkbox',
+				'help'    => __( 'The UberMenu plugin must be enabled in order this option to work, UberMenu plugin available for free with Mesopotamia Pro', 'mesopotamia' )
+			),
 		),
 		'footer'  => array(
 			array(
