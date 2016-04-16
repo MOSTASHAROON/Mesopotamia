@@ -27,7 +27,7 @@ function mesopotamia_slider_revolution() {
 	$cmb = new_cmb2_box( array(
 		'id'           => 'mesopotamia_slider_revolution',
 		'title'        => __( 'Mesopotamia Slider Revolution Settings', 'mesopotamia' ),
-		'object_types' => array( 'page', ), // Post type
+		'object_types' => get_post_types( array( 'public' => true ) ), // Post type
 		'context'      => 'normal',
 		'priority'     => 'high',
 		'show_names'   => true, // Show field names on the left
