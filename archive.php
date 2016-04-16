@@ -8,6 +8,18 @@
  */
 
 get_header(); ?>
+
+<?php
+$rev_slider = mesopotamia_get_option( 'archive_slider_revolution', 'mesopotamia_general_settings', '' );
+
+if ( $rev_slider && function_exists( 'putRevSlider' ) ) {
+
+	echo '<div id="main-slideshow">';
+	putRevSlider( $rev_slider );
+	echo '</div>';
+}
+?>
+
 	<div class="row">
 <?php if ( mesopotamia_has_sidebar( 'archive' ) ){ ?>
 	<?php $grid = mesopotamia_get_option( 'grid', 'mesopotamia_general_settings', '8X4' ); ?>

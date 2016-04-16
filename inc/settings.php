@@ -11,6 +11,21 @@ if ( ! class_exists( 'MOSTASHAROON_Admin_Page' ) ) {
 }
 
 function mesopotamia_admin_menu() {
+
+	$rev_sliders = array();
+
+	if ( class_exists( 'RevSlider' ) ) {
+
+		$rev = new RevSlider();
+
+		$arrSliders = $rev->getArrSliders();
+		foreach ( (array) $arrSliders as $revSlider ) {
+			$rev_sliders[ $revSlider->getAlias() ] = $revSlider->getTitle();
+		}
+	}
+
+	$rev_sliders[''] = 'None';
+
 	$fields = array(
 		'general' => array(
 			array(
@@ -55,6 +70,30 @@ function mesopotamia_admin_menu() {
 				),
 				'type'    => 'multi_check',
 			),
+			array(
+				'label'   => __( 'Select Slider Revolution For Blog Page', 'mesopotamia' ),
+				'name'    => 'mesopotamia_general_settings[blog_slider_revolution]',
+				'options' => $rev_sliders,
+				'type'    => 'select',
+				'default' => '',
+				'help'    => __( 'The Slider Revolution plugin must be active in order this option to work, Slider Revolution plugin available for free with Mesopotamia Pro', 'mesopotamia' )
+			),
+			array(
+				'label'   => __( 'Select Slider Revolution For Search Page', 'mesopotamia' ),
+				'name'    => 'mesopotamia_general_settings[search_slider_revolution]',
+				'options' => $rev_sliders,
+				'type'    => 'select',
+				'default' => '',
+				'help'    => __( 'The Slider Revolution plugin must be active in order this option to work, Slider Revolution plugin available for free with Mesopotamia Pro', 'mesopotamia' )
+			),
+			array(
+				'label'   => __( 'Select Slider Revolution For Archive/Category/Tag Page', 'mesopotamia' ),
+				'name'    => 'mesopotamia_general_settings[archive_slider_revolution]',
+				'options' => $rev_sliders,
+				'type'    => 'select',
+				'default' => '',
+				'help'    => __( 'The Slider Revolution plugin must be active in order this option to work, Slider Revolution plugin available for free with Mesopotamia Pro', 'mesopotamia' )
+			),
 		),
 		'header'  => array(
 			array(
@@ -83,7 +122,7 @@ function mesopotamia_admin_menu() {
 				'name'    => 'mesopotamia_header_settings[UberMenu]',
 				'default' => 'no',
 				'type'    => 'checkbox',
-				'help'    => __( 'The UberMenu plugin must be enabled in order this option to work, UberMenu plugin available for free with Mesopotamia Pro', 'mesopotamia' )
+				'help'    => __( 'The UberMenu plugin must be active in order this option to work, UberMenu plugin available for free with Mesopotamia Pro', 'mesopotamia' )
 			),
 		),
 		'footer'  => array(
@@ -142,9 +181,16 @@ function mesopotamia_admin_menu() {
 add_action( 'admin_menu', 'mesopotamia_admin_menu' );
 
 function mesopotamia_save_settings() {
-	update_option( 'mesopotamia_general_settings', array_map( "wp_kses_post", $_POST['mesopotamia_general_settings'] ) );
-	update_option( 'mesopotamia_header_settings', array_map( "wp_kses_post", $_POST['mesopotamia_header_settings'] ) );
-	update_option( 'mesopotamia_footer_settings', array_map( "wp_kses_post", $_POST['mesopotamia_footer_settings'] ) );
+	if ( isset( $_POST['mesopotamia_general_settings'] ) && $_POST['mesopotamia_general_settings'] ) {
+		update_option( 'mesopotamia_general_settings', array_map( "wp_kses_post", $_POST['mesopotamia_general_settings'] ) );
+	}
+	if ( isset( $_POST['mesopotamia_header_settings'] ) && $_POST['mesopotamia_header_settings'] ) {
+		update_option( 'mesopotamia_header_settings', array_map( "wp_kses_post", $_POST['mesopotamia_header_settings'] ) );
+	}
+
+	if ( isset( $_POST['mesopotamia_footer_settings'] ) && $_POST['mesopotamia_footer_settings'] ) {
+		update_option( 'mesopotamia_footer_settings', array_map( "wp_kses_post", $_POST['mesopotamia_footer_settings'] ) );
+	}
 }
 
 add_action( 'mostasharoon_save_settings', 'mesopotamia_save_settings' );

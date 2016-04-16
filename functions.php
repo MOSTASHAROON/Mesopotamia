@@ -139,7 +139,7 @@ function mesopotamia_widgets_init() {
 		'before_title'  => '<h2 class="widget-title">',
 		'after_title'   => '</h2>',
 	) );
-	
+
 	register_sidebar( array(
 		'name'          => esc_html__( '404 widgets', 'mesopotamia' ),
 		'id'            => '404-sidebar',
@@ -325,6 +325,11 @@ require get_template_directory() . '/inc/inline-style.php';
  * Load admin settings page.
  */
 require get_template_directory() . '/inc/settings.php';
+
+/**
+ * Load admin settings page.
+ */
+require get_template_directory() . '/inc/metaboxes.php';
 
 /**
  * Load social icons shortcode.

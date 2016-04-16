@@ -13,6 +13,18 @@
  */
 
 get_header(); ?>
+
+<?php
+$rev_slider = get_post_meta( get_the_ID(), '_mesopotamia_slider_revolution', true );
+
+if ( $rev_slider && function_exists( 'putRevSlider' ) ) {
+
+	echo '<div id="main-slideshow">';
+	putRevSlider( $rev_slider );
+	echo '</div>';
+}
+?>
+
 	<div class="row">
 <?php $grid = mesopotamia_get_option( 'grid', 'mesopotamia_general_settings', '8X4' ); ?>
 <?php if ( $grid == '8X4' ){ ?>

@@ -13,8 +13,20 @@
  */
 
 get_header(); ?>
+
+<?php
+$rev_slider = mesopotamia_get_option( 'blog_slider_revolution', 'mesopotamia_general_settings', '' );
+
+if ( $rev_slider && function_exists( 'putRevSlider' ) ) {
+
+	echo '<div id="main-slideshow">';
+	putRevSlider( $rev_slider );
+	echo '</div>';
+}
+?>
+
 	<div class="row">
-<?php if (  mesopotamia_has_sidebar( 'blog' ) ){ ?>
+<?php if ( mesopotamia_has_sidebar( 'blog' ) ){ ?>
 	<?php $grid = mesopotamia_get_option( 'grid', 'mesopotamia_general_settings', '8X4' ); ?>
 	<?php if ( $grid == '8X4' ){ ?>
 	<div class="col-md-8 col-xs-12">
@@ -68,7 +80,7 @@ get_header(); ?>
 	</div><!-- #primary -->
 	</div><!--col-md-* col-xs-12 -->
 <?php
-if (  mesopotamia_has_sidebar( 'blog' ) ) {
+if ( mesopotamia_has_sidebar( 'blog' ) ) {
 	get_sidebar();
 }
 get_footer();
