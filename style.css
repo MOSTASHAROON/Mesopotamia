@@ -53,7 +53,7 @@ aside section table, .footer-widgets section table, .mesopotamia-widgets section
     max-width: 100%;
 }
 
-.container-fluid * {
+.container-fluid *:not(i) {
     /*font-family: 'Italianno', cursive;*/
     /*font-family: 'Courgette', cursive;*/
     /*font-family: 'Contrail One', cursive;*/
