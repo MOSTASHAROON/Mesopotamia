@@ -55,10 +55,13 @@ jQuery(document).ready(function ($) {
             }
         },
         masonry: function () {
-            $('.mesopotamia-posts, .mesopotamia-widgets').masonry({
-                itemSelector: '.post-box',
-                columnWidth: '.post-box',
-                transitionDuration: '0.2s'
+            var $container = $('.container-fluid');
+            $container.imagesLoaded(function () {
+                $('.mesopotamia-posts, .mesopotamia-widgets').masonry({
+                    itemSelector: '.post-box',
+                    columnWidth: '.post-box',
+                    transitionDuration: '0.2s'
+                });
             });
         },
         scrollToTopButton: function () {
