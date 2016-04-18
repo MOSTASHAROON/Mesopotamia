@@ -286,7 +286,7 @@ function bootstrap3_comment_format( $comment, $args, $depth ) {
 	$GLOBALS['comment'] = $comment; ?>
 
 <li <?php comment_class( 'media' ); ?> id="comment-<?php comment_ID(); ?>">
-	<article class="thumbnail">
+	<article class="thumbnail mesopotamia-comment">
 		<div class="comment-meta media-left">
 			<?php echo get_avatar( $comment, 48 ); ?>
 			<p class="text-center comment-author"><?php comment_author_link(); ?></p>

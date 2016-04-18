@@ -21,7 +21,7 @@ aside section h2,.footer-widgets section h2, .mesopotamia-widgets h2 {
     color: %1$s;
 }
 
-article.thumbnail, a.mesopotamia-icon:hover {
+article.thumbnail:not(.mesopotamia-comment), a.mesopotamia-icon:hover {
     border-top: 4px solid %2$s !important;
 }
 
@@ -138,11 +138,12 @@ article.thumbnail .mesopotamia-sticky-icon{
 
 /* Comments */
 #submit, .comment-reply-link{
-    border-bottom: 4px solid #00aeef;
+    border-bottom: 4px solid %2$s;
 }
 
-.comment-reply-link:hover{
+#submit:hover, .comment-reply-link:hover{
     color:  %2$s;
+    border-bottom: 4px solid %1$s;
 }
 
 #comments .bypostauthor article {
