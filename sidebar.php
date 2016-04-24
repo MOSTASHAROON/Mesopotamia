@@ -13,15 +13,18 @@ if ( ! is_active_sidebar( 'sidebar-1' ) ) {
 ?>
 
 <?php $grid = mesopotamia_get_option( 'grid', 'mesopotamia_general_settings', '8X4' ); ?>
-<?php if ( $grid == '8X4' ){ ?>
-<div class="col-md-4 col-xs-12">
-	<?php }elseif ( $grid == '9X3' ){ ?>
+<?php if ( $grid == '8X4' ) { ?>
+	<div class="col-md-4 col-xs-12">
+<?php } elseif ( $grid == '9X3' ) { ?>
 	<div class="col-md-3 col-xs-12">
-		<?php } ?>
+<?php } ?>
 
 
-		<aside id="secondary" class="widget-area" role="complementary">
-			<?php dynamic_sidebar( 'sidebar-1' ); ?>
-		</aside><!-- #secondary -->
+	<aside id="secondary" class="widget-area" role="complementary">
+		<?php dynamic_sidebar( 'sidebar-1' ); ?>
+	</aside><!-- #secondary -->
 	</div><!-- .col-md-*>-->
-</div><!-- .row -->
+
+<?php if ( ! is_page_template( 'page-templates/sidebar-content.php' ) ) { ?>
+	</div><!-- .row -->
+<?php } ?>

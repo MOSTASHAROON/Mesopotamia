@@ -3,8 +3,9 @@
  * Template Name: Left Sidebar
  */
 
-get_header();
+get_header(); ?>
 
+<?php
 $rev_slider = get_post_meta( get_the_ID(), '_mesopotamia_slider_revolution', true );
 
 if ( $rev_slider && function_exists( 'putRevSlider' ) ) {
@@ -13,9 +14,10 @@ if ( $rev_slider && function_exists( 'putRevSlider' ) ) {
 	putRevSlider( $rev_slider );
 	echo '</div>';
 }
+?>
 
-get_sidebar(); ?>
 	<div class="row">
+<?php get_sidebar(); ?>
 <?php $grid = mesopotamia_get_option( 'grid', 'mesopotamia_general_settings', '8X4' ); ?>
 <?php if ( $grid == '8X4' ){ ?>
 	<div class="col-md-8 col-xs-12">
@@ -41,5 +43,6 @@ get_sidebar(); ?>
 		</main><!-- #main -->
 	</div><!-- #primary -->
 	</div><!--col-md-* col-xs-12 -->
+	</div><!-- .row -->
 <?php
 get_footer();
