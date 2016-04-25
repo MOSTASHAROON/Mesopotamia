@@ -366,6 +366,7 @@ object {
 
 #site-navigation {
     border: none;
+    margin-bottom: 0;
 }
 
 .navbar-brand {
