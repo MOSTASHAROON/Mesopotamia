@@ -20,9 +20,9 @@ if ( $rev_slider && function_exists( 'putRevSlider' ) ) {
 <?php get_sidebar(); ?>
 <?php $grid = mesopotamia_get_option( 'grid', 'mesopotamia_general_settings', '8X4' ); ?>
 <?php if ( $grid == '8X4' ){ ?>
-	<div class="col-md-8 col-xs-12">
+	<div class="col-md-8 col-xs-12 left-sidebar">
 	<?php }elseif ( $grid == '9X3' ){ ?>
-	<div class="col-md-9 col-xs-12">
+	<div class="col-md-9 col-xs-12 left-sidebar">
 <?php } ?>
 	<div id="primary" class="content-area">
 		<main id="main" class="site-main" role="main">

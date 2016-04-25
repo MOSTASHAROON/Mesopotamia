@@ -28,6 +28,25 @@ jQuery(document).ready(function ($) {
                 }
             });
         },
+        //Without this function the sidebar jump up and the content area goes down on small screen size
+        fixLeftSidebarLayout: function () {
+            var winWidth, row, content, sidebar;
+            // var winHeight = $(window).height();
+            winWidth = $(window).outerWidth();
+
+            if (winWidth < 992) {
+                row = $("#content").find(".row");
+                sidebar = $(".col-md-4.col-xs-12, .col-md-3.col-xs-12").prop('outerHTML');
+                content = $(".col-md-8.col-xs-12, .col-md-9.col-xs-12").prop('outerHTML');
+                row.empty().append(content).append(sidebar);
+            } else if (winWidth >= 992) {
+                // console.log('Yes');
+                row = $("#content").find(".row");
+                sidebar = $(".col-md-4.col-xs-12, .col-md-3.col-xs-12").prop('outerHTML');
+                content = $(".col-md-8.col-xs-12, .col-md-9.col-xs-12").prop('outerHTML');
+                row.empty().append(sidebar).append(content);
+            }
+        },
         init: function () {
             this.masonry();
             this.scrollToTopButton();
@@ -44,6 +63,11 @@ jQuery(document).ready(function ($) {
             this.repositionLastMenuItem();
 
             this.addClassesDynamically();
+
+            if ($(".left-sidebar").length) {
+                this.fixLeftSidebarLayout();
+                $(window).on("resize", this.fixLeftSidebarLayout);
+            }
         },
         adjust_body_offset: function adjust_body_offset() {
             $('body').css('padding-top', $('#site-navigation').outerHeight(true) + 'px');
