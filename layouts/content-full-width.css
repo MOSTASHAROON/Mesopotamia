@@ -1,0 +1,16 @@
+/*
+ * Theme Name: Mesopotamia
+ *
+ * Layout: Content Full Width
+ *
+ * Learn more: https://developer.wordpress.org/themes/basics/template-files/
+*/
+
+.page .content-area {
+    margin: 0 auto;
+    max-width: 85em;
+}
+
+.container-fluid.footer-container {
+    margin-top: 0;
+}
