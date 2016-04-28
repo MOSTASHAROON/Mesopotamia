@@ -1,0 +1,29 @@
+/*
+ * Theme Name: Mesopotamia
+ *
+ * Layout: Scratch
+ *
+ * Learn more: https://developer.wordpress.org/themes/basics/template-files/
+*/
+
+.page .content-area {
+    margin: 0 auto;
+    max-width: none;
+}
+
+.col-xs-12, #content {
+    padding: 0;
+}
+
+.container-fluid.footer-container {
+    margin-top: 0;
+}
+
+.row {
+    max-width: 100%;
+    margin: 0;
+}
+
+#main article {
+    background: none;
+}
