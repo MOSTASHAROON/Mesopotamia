@@ -26,7 +26,7 @@ if ( ! function_exists( 'mesopotamia_posted_on' ) ) :
 
 		$posted_on = sprintf(
 			esc_html_x( '%s', 'post date', 'mesopotamia' ),
-			'<a href="' . esc_url( get_permalink() ) . '" rel="bookmark">' . $time_string . '</a>'
+			'<a href="' . esc_url( mesopotamia_get_post_day_link() ) . '" rel="bookmark">' . $time_string . '</a>'
 		);
 
 		$byline = sprintf(
@@ -73,6 +73,19 @@ if ( ! function_exists( 'mesopotamia_entry_footer' ) ) :
 			'</span>'
 		);
 	}
+endif;
+
+if ( ! function_exists( 'mesopotamia_get_post_day_link' ) ) :
+
+	function mesopotamia_get_post_day_link() {
+
+		$archive_year  = get_the_time( 'Y' );
+		$archive_month = get_the_time( 'm' );
+		$archive_day   = get_the_time( 'd' );
+
+		return get_day_link( $archive_year, $archive_month, $archive_day );
+	}
+
 endif;
 
 /**
