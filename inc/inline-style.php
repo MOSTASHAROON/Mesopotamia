@@ -136,6 +136,17 @@ article.thumbnail .mesopotamia-sticky-icon{
     color: %2$s;
 }
 
+/* Buttons */
+.mes-btn{
+	border-bottom: 4px solid %2$s;
+	color:  %1$s;
+}
+
+.mes-btn:hover{
+	color:  %2$s;
+    border-bottom: 4px solid %1$s;
+}
+
 /* Comments */
 #submit, .comment-reply-link{
     border-bottom: 4px solid %2$s;

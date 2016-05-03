@@ -425,6 +425,23 @@ section.error-404 .page-content > p, section.no-results .page-content > p {
 }
 
 /*--------------------------------------------------------------
+## Buttons
+--------------------------------------------------------------*/
+.mes-btn {
+    border: none;
+    border-radius: 0;
+    box-shadow: none;
+    padding: 15px;
+    text-decoration: none;
+    display: inline-block;
+    background: none;
+}
+
+.mes-btn:hover {
+    text-decoration: none;
+}
+
+/*--------------------------------------------------------------
 ## Search form
 --------------------------------------------------------------*/
 .btn-search {
