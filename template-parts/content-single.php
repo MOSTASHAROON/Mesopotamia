@@ -13,7 +13,7 @@
 	<?php
 
 	if ( is_sticky() ) {
-		echo '<i class="fa fa-thumb-tack mesopotamia-sticky-icon"></i>';
+		echo '<span class="mesopotamia-sticky-icon">' . __( 'Sticky', 'mesopotamia' ) . '</span>';
 	}
 
 	// Check if the post has a Post Thumbnail assigned to it.

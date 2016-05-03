@@ -84,6 +84,11 @@ aside section h2, .footer-widgets section h2, .mesopotamia-widgets h2, .input-se
     text-shadow: 0 1px 0 #000;
 }
 
+/* Sticky */
+article.thumbnail .mesopotamia-sticky-icon {
+    color: white;
+}
+
 /*--------------------------------------------------------------
 # Accessibility
 --------------------------------------------------------------*/

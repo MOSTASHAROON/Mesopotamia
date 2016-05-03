@@ -49,7 +49,7 @@ a:hover, a:focus, .thumbnail .entry-header .entry-meta a:hover {
 
 /* Sticky */
 article.thumbnail .mesopotamia-sticky-icon{
-	color: %1$s;
+	background-color: %2$s;
 }
 
 /* Footer */

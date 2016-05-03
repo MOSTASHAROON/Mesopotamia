@@ -66,6 +66,11 @@ aside section h2, .footer-widgets section h2, .mesopotamia-widgets h2, .input-se
     background-color: #F3F3F5;
 }
 
+/* Sticky */
+article.thumbnail .mesopotamia-sticky-icon {
+    color: white;
+}
+
 /*--------------------------------------------------------------
 # Accessibility
 --------------------------------------------------------------*/
@@ -147,5 +152,5 @@ a.mesopotamia-icon:hover {
 --------------------------------------------------------------*/
 
 .mes-btn {
-    background-color:white;
+    background-color: white;
 }
