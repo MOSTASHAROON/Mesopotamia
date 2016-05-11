@@ -385,6 +385,10 @@ object {
     box-shadow: none !important;
 }
 
+.dropdown-menu{
+    border-radius: 0 !important;
+}
+
 /*--------------------------------------------------------------
 ## Posts and pages
 --------------------------------------------------------------*/
