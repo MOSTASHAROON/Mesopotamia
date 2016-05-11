@@ -111,7 +111,7 @@ article.thumbnail .mesopotamia-sticky-icon {
 .widget_archive li:before,
 .widget_rss .rss-date,
 .widget_rss cite, .entry-footer a {
-    color: #cbcccc;
+    color: #666666;
 }
 
 .not-found, .search, .comments-title, .archive {

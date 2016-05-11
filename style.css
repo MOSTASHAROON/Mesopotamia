@@ -365,6 +365,7 @@ object {
 
 #site-navigation {
     border: none;
+    border-radius: 0;
     margin-bottom: 0;
 }
 
