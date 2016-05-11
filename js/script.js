@@ -47,6 +47,10 @@ jQuery(document).ready(function ($) {
                 row.empty().append(sidebar).append(content);
             }
         },
+        //Disable the click event on the links that contain only # in href attribute
+        disableClickOnNoWhereLinks: function (e) {
+            e.preventDefault();
+        },
         init: function () {
             this.masonry();
             this.scrollToTopButton();
@@ -63,6 +67,8 @@ jQuery(document).ready(function ($) {
             this.repositionLastMenuItem();
 
             this.addClassesDynamically();
+
+            $('a[href="#"]').on("click", this.disableClickOnNoWhereLinks);
 
             if ($(".left-sidebar").length) {
                 this.fixLeftSidebarLayout();
