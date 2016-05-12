@@ -311,6 +311,10 @@ article.thumbnail .mesopotamia-sticky-icon {
     padding: 0;
 }
 
+iframe {
+    border-width: 0;
+}
+
 /* Make sure embeds and iframes fit their containers. */
 embed,
 iframe,
@@ -368,7 +372,7 @@ object {
     border-radius: 0;
     margin-bottom: 0;
     box-shadow: 0 2px 3px 0px rgba(0, 0, 0, 0.16);
-    z-index: 5;
+    z-index: 100;
 }
 
 .navbar-brand {
@@ -385,7 +389,7 @@ object {
     box-shadow: none !important;
 }
 
-.dropdown-menu{
+.dropdown-menu {
     border-radius: 0 !important;
 }
 
