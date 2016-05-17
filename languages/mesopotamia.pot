@@ -1,10 +1,10 @@
-# Copyright (C) 2016 Mohammed Al-Mahdawi
+# Copyright (C) 2016 Mohammed Al-Mahdawi(Mohammed Thaer)
 # This file is distributed under the GNU General Public License v2 or later.
 msgid ""
 msgstr ""
-"Project-Id-Version: Mesopotamia 0.2\n"
+"Project-Id-Version: Mesopotamia 1.0\n"
 "Report-Msgid-Bugs-To: https://wordpress.org/support/theme/style\n"
-"POT-Creation-Date: 2016-04-14 21:15:46+00:00\n"
+"POT-Creation-Date: 2016-05-17 10:29:00+00:00\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=utf-8\n"
 "Content-Transfer-Encoding: 8bit\n"
@@ -13,19 +13,19 @@ msgstr ""
 "Language-Team: LANGUAGE <LL@li.org>\n"
 "X-Generator: grunt-wp-i18n 0.5.4\n"
 
-#: inc/settings.php:97
+#: inc/settings.php:143
 msgid "1"
 msgstr ""
 
-#: inc/settings.php:98
+#: inc/settings.php:144
 msgid "2"
 msgstr ""
 
-#: inc/settings.php:99
+#: inc/settings.php:145
 msgid "3"
 msgstr ""
 
-#: inc/settings.php:100
+#: inc/settings.php:146
 msgid "4"
 msgstr ""
 
@@ -83,99 +83,136 @@ msgstr ""
 msgid "This widgets appear on the 404 page."
 msgstr ""
 
-#: header.php:27
+#: header.php:28
 msgid "Skip to content"
 msgstr ""
 
-#: header.php:89
+#: header.php:94
 msgid "Search …"
 msgstr ""
 
-#: inc/settings.php:17
-msgid "First Main Color"
+#: inc/metaboxes.php:29
+msgid "Mesopotamia Slider Revolution Settings"
 msgstr ""
 
-#: inc/settings.php:23
-msgid "Second Main Color"
+#: inc/metaboxes.php:51
+msgid "Select Slider"
 msgstr ""
 
-#: inc/settings.php:29
-msgid "Grid"
+#: inc/metaboxes.php:52 inc/settings.php:79 inc/settings.php:87
+#: inc/settings.php:95
+msgid ""
+"The Slider Revolution plugin must be active in order this option to work, "
+"Slider Revolution plugin available for free with Mesopotamia Pro"
 msgstr ""
 
 #: inc/settings.php:32
+msgid "First Main Color"
+msgstr ""
+
+#: inc/settings.php:38
+msgid "Second Main Color"
+msgstr ""
+
+#: inc/settings.php:44
+msgid "Grid"
+msgstr ""
+
+#: inc/settings.php:47
 msgid "8X4"
 msgstr ""
 
-#: inc/settings.php:33
+#: inc/settings.php:48
 msgid "9X3"
 msgstr ""
 
-#: inc/settings.php:39
+#: inc/settings.php:54
 msgid "Skin"
 msgstr ""
 
-#: inc/settings.php:42
+#: inc/settings.php:57
 msgid "Light"
 msgstr ""
 
-#: inc/settings.php:43
+#: inc/settings.php:58
 msgid "Dark"
 msgstr ""
 
-#: inc/settings.php:49
+#: inc/settings.php:64
 msgid "Disable sidebar for"
 msgstr ""
 
-#: inc/settings.php:52
+#: inc/settings.php:67
 msgid "Blog"
 msgstr ""
 
-#: inc/settings.php:53
+#: inc/settings.php:68
 msgid "Search"
 msgstr ""
 
-#: inc/settings.php:54
+#: inc/settings.php:69
 msgid "Archive/Category/Tag"
 msgstr ""
 
-#: inc/settings.php:61
+#: inc/settings.php:74
+msgid "Select Slider Revolution For Blog Page"
+msgstr ""
+
+#: inc/settings.php:82
+msgid "Select Slider Revolution For Search Page"
+msgstr ""
+
+#: inc/settings.php:90
+msgid "Select Slider Revolution For Archive/Category/Tag Page"
+msgstr ""
+
+#: inc/settings.php:100
 msgid "Logo"
 msgstr ""
 
-#: inc/settings.php:67
+#: inc/settings.php:106
 msgid "Perfect logo height for Mesopotamia theme is 50px"
 msgstr ""
 
-#: inc/settings.php:70
+#: inc/settings.php:109
 msgid "Show search box in menu"
 msgstr ""
 
-#: inc/settings.php:76
+#: inc/settings.php:115
 msgid "Fixed header"
 msgstr ""
 
-#: inc/settings.php:84
+#: inc/settings.php:121
+msgid "Enable UberMenu"
+msgstr ""
+
+#: inc/settings.php:125
+msgid ""
+"The UberMenu plugin must be active in order this option to work, UberMenu "
+"plugin available for free with Mesopotamia Pro"
+msgstr ""
+
+#: inc/settings.php:130
 msgid "Top Footer"
 msgstr ""
 
-#: inc/settings.php:88
+#: inc/settings.php:134
 msgid "Enable top footer"
 msgstr ""
 
-#: inc/settings.php:94
+#: inc/settings.php:140
 msgid "Number of columns"
 msgstr ""
 
-#: inc/settings.php:106
+#: inc/settings.php:152
 msgid "Bottom Footer"
 msgstr ""
 
-#: inc/settings.php:110
+#: inc/settings.php:156
 msgid "Copyright"
 msgstr ""
 
-#: inc/settings.php:114
+#: inc/settings.php:160
 msgid "Use %year% to refer to the current year."
 msgstr ""
 
@@ -201,47 +238,492 @@ msgstr ""
 msgid "Edit %s"
 msgstr ""
 
-#: inc/template-tags.php:171
+#: inc/template-tags.php:184
 msgid "Post navigation"
 msgstr ""
 
-#: inc/template-tags.php:234
+#: inc/template-tags.php:247
 msgid "&larr; Previous"
 msgstr ""
 
-#: inc/template-tags.php:235
+#: inc/template-tags.php:248
 msgid "Next &rarr;"
 msgstr ""
 
-#: inc/template-tags.php:242
+#: inc/template-tags.php:255
 msgid "Posts navigation"
 msgstr ""
 
-#: inc/template-tags.php:261
+#: inc/template-tags.php:274
 msgid "Name"
 msgstr ""
 
-#: inc/template-tags.php:263
+#: inc/template-tags.php:276
 msgid "Email"
 msgstr ""
 
-#: inc/template-tags.php:265
+#: inc/template-tags.php:278
 msgid "Website"
 msgstr ""
 
-#: inc/template-tags.php:300
+#: inc/template-tags.php:313
 msgid "Your comment is awaiting moderation."
 msgstr ""
 
-#: inc/template-tags.php:305
+#: inc/template-tags.php:318
 msgid "<i class=\"icon-reply\"></i>&nbsp; Reply"
 msgstr ""
 
+#: lib/cmb2/example-functions.php:80
+msgid "Test Metabox"
+msgstr ""
+
+#: lib/cmb2/example-functions.php:91 lib/cmb2/example-functions.php:383
+msgid "Test Text"
+msgstr ""
+
+#: lib/cmb2/example-functions.php:92 lib/cmb2/example-functions.php:104
+#: lib/cmb2/example-functions.php:112 lib/cmb2/example-functions.php:120
+#: lib/cmb2/example-functions.php:129 lib/cmb2/example-functions.php:137
+#: lib/cmb2/example-functions.php:152 lib/cmb2/example-functions.php:160
+#: lib/cmb2/example-functions.php:168 lib/cmb2/example-functions.php:185
+#: lib/cmb2/example-functions.php:194 lib/cmb2/example-functions.php:207
+#: lib/cmb2/example-functions.php:214 lib/cmb2/example-functions.php:221
+#: lib/cmb2/example-functions.php:235 lib/cmb2/example-functions.php:248
+#: lib/cmb2/example-functions.php:261 lib/cmb2/example-functions.php:273
+#: lib/cmb2/example-functions.php:282 lib/cmb2/example-functions.php:290
+#: lib/cmb2/example-functions.php:299 lib/cmb2/example-functions.php:306
+#: lib/cmb2/example-functions.php:320 lib/cmb2/example-functions.php:384
+#: lib/cmb2/example-functions.php:475 lib/cmb2/example-functions.php:483
+#: lib/cmb2/example-functions.php:490 lib/cmb2/example-functions.php:497
+#: lib/cmb2/example-functions.php:504 lib/cmb2/example-functions.php:511
+#: lib/cmb2/example-functions.php:518 lib/cmb2/example-functions.php:545
+#: lib/cmb2/example-functions.php:553 lib/cmb2/example-functions.php:560
+#: lib/cmb2/example-functions.php:597
+msgid "field description (optional)"
+msgstr ""
+
+#: lib/cmb2/example-functions.php:103
+msgid "Test Text Small"
+msgstr ""
+
+#: lib/cmb2/example-functions.php:111
+msgid "Test Text Medium"
+msgstr ""
+
+#: lib/cmb2/example-functions.php:119
+msgid "Website URL"
+msgstr ""
+
+#: lib/cmb2/example-functions.php:128
+msgid "Test Text Email"
+msgstr ""
+
+#: lib/cmb2/example-functions.php:136
+msgid "Test Time"
+msgstr ""
+
+#: lib/cmb2/example-functions.php:144 lib/cmb2/example-functions.php:145
+msgid "Time zone"
+msgstr ""
+
+#: lib/cmb2/example-functions.php:151
+msgid "Test Date Picker"
+msgstr ""
+
+#: lib/cmb2/example-functions.php:159
+msgid "Test Date Picker (UNIX timestamp)"
+msgstr ""
+
+#: lib/cmb2/example-functions.php:167
+msgid "Test Date/Time Picker Combo (UNIX timestamp)"
+msgstr ""
+
+#: lib/cmb2/example-functions.php:184
+msgid "Test Money"
+msgstr ""
+
+#: lib/cmb2/example-functions.php:193
+msgid "Test Color Picker"
+msgstr ""
+
+#: lib/cmb2/example-functions.php:206
+msgid "Test Text Area"
+msgstr ""
+
+#: lib/cmb2/example-functions.php:213
+msgid "Test Text Area Small"
+msgstr ""
+
+#: lib/cmb2/example-functions.php:220
+msgid "Test Text Area for Code"
+msgstr ""
+
+#: lib/cmb2/example-functions.php:227
+msgid "Test Title Weeeee"
+msgstr ""
+
+#: lib/cmb2/example-functions.php:228
+msgid "This is a title description"
+msgstr ""
+
+#: lib/cmb2/example-functions.php:234
+msgid "Test Select"
+msgstr ""
+
+#: lib/cmb2/example-functions.php:240 lib/cmb2/example-functions.php:253
+#: lib/cmb2/example-functions.php:265
+msgid "Option One"
+msgstr ""
+
+#: lib/cmb2/example-functions.php:241 lib/cmb2/example-functions.php:254
+#: lib/cmb2/example-functions.php:266
+msgid "Option Two"
+msgstr ""
+
+#: lib/cmb2/example-functions.php:242 lib/cmb2/example-functions.php:255
+#: lib/cmb2/example-functions.php:267
+msgid "Option Three"
+msgstr ""
+
+#: lib/cmb2/example-functions.php:247
+msgid "Test Radio inline"
+msgstr ""
+
+#: lib/cmb2/example-functions.php:260
+msgid "Test Radio"
+msgstr ""
+
+#: lib/cmb2/example-functions.php:272
+msgid "Test Taxonomy Radio"
+msgstr ""
+
+#: lib/cmb2/example-functions.php:281
+msgid "Test Taxonomy Select"
+msgstr ""
+
+#: lib/cmb2/example-functions.php:289
+msgid "Test Taxonomy Multi Checkbox"
+msgstr ""
+
+#: lib/cmb2/example-functions.php:298
+msgid "Test Checkbox"
+msgstr ""
+
+#: lib/cmb2/example-functions.php:305
+msgid "Test Multi Checkbox"
+msgstr ""
+
+#: lib/cmb2/example-functions.php:311
+msgid "Check One"
+msgstr ""
+
+#: lib/cmb2/example-functions.php:312
+msgid "Check Two"
+msgstr ""
+
+#: lib/cmb2/example-functions.php:313
+msgid "Check Three"
+msgstr ""
+
+#: lib/cmb2/example-functions.php:319
+msgid "Test wysiwyg"
+msgstr ""
+
+#: lib/cmb2/example-functions.php:327
+msgid "Test Image"
+msgstr ""
+
+#: lib/cmb2/example-functions.php:328
+msgid "Upload an image or enter a URL."
+msgstr ""
+
+#: lib/cmb2/example-functions.php:334
+msgid "Multiple Files"
+msgstr ""
+
+#: lib/cmb2/example-functions.php:335
+msgid "Upload or add multiple images/attachments."
+msgstr ""
+
+#: lib/cmb2/example-functions.php:342
+msgid "oEmbed"
+msgstr ""
+
+#: lib/cmb2/example-functions.php:343
+msgid ""
+"Enter a youtube, twitter, or instagram URL. Supports services listed at <a "
+"href=\"http://codex.wordpress.org/Embeds\">http://codex.wordpress.org/"
+"Embeds</a>."
+msgstr ""
+
+#: lib/cmb2/example-functions.php:374
+msgid "About Page Metabox"
+msgstr ""
+
+#: lib/cmb2/example-functions.php:403
+msgid "Repeating Field Group"
+msgstr ""
+
+#: lib/cmb2/example-functions.php:411
+msgid "Generates reusable form entries"
+msgstr ""
+
+#: lib/cmb2/example-functions.php:413
+msgid "Entry {#}"
+msgstr ""
+
+#: lib/cmb2/example-functions.php:414
+msgid "Add Another Entry"
+msgstr ""
+
+#: lib/cmb2/example-functions.php:415
+msgid "Remove Entry"
+msgstr ""
+
+#: lib/cmb2/example-functions.php:428
+msgid "Entry Title"
+msgstr ""
+
+#: lib/cmb2/example-functions.php:435
+msgid "Description"
+msgstr ""
+
+#: lib/cmb2/example-functions.php:436
+msgid "Write a short description for this entry"
+msgstr ""
+
+#: lib/cmb2/example-functions.php:442
+msgid "Entry Image"
+msgstr ""
+
+#: lib/cmb2/example-functions.php:448
+msgid "Image Caption"
+msgstr ""
+
+#: lib/cmb2/example-functions.php:467
+msgid "User Profile Metabox"
+msgstr ""
+
+#: lib/cmb2/example-functions.php:474 lib/cmb2/example-functions.php:544
+msgid "Extra Info"
+msgstr ""
+
+#: lib/cmb2/example-functions.php:482
+msgid "Avatar"
+msgstr ""
+
+#: lib/cmb2/example-functions.php:489
+msgid "Facebook URL"
+msgstr ""
+
+#: lib/cmb2/example-functions.php:496
+msgid "Twitter URL"
+msgstr ""
+
+#: lib/cmb2/example-functions.php:503
+msgid "Google+ URL"
+msgstr ""
+
+#: lib/cmb2/example-functions.php:510
+msgid "Linkedin URL"
+msgstr ""
+
+#: lib/cmb2/example-functions.php:517
+msgid "User Field"
+msgstr ""
+
+#: lib/cmb2/example-functions.php:537
+msgid "Category Metabox"
+msgstr ""
+
+#: lib/cmb2/example-functions.php:552
+msgid "Term Image"
+msgstr ""
+
+#: lib/cmb2/example-functions.php:559
+msgid "Arbitrary Term Field"
+msgstr ""
+
+#: lib/cmb2/example-functions.php:581
+msgid "Theme Options Metabox"
+msgstr ""
+
+#: lib/cmb2/example-functions.php:596
+msgid "Site Background Color"
+msgstr ""
+
+#: lib/cmb2/includes/CMB2.php:122
+msgid "Metabox configuration is required to have an ID parameter"
+msgstr ""
+
+#: lib/cmb2/includes/CMB2.php:375
+msgid "Click to toggle"
+msgstr ""
+
+#: lib/cmb2/includes/CMB2_Ajax.php:65
+msgid "Please Try Again"
+msgstr ""
+
+#: lib/cmb2/includes/CMB2_Ajax.php:155
+msgid "Remove Embed"
+msgstr ""
+
+#: lib/cmb2/includes/CMB2_Ajax.php:159
+msgid "No oEmbed Results Found for %s. View more info at"
+msgstr ""
+
+#: lib/cmb2/includes/CMB2_Field.php:1030
+msgid "Add Group"
+msgstr ""
+
+#: lib/cmb2/includes/CMB2_Field.php:1031
+msgid "Remove Group"
+msgstr ""
+
+#: lib/cmb2/includes/CMB2_Field.php:1053 lib/cmb2/includes/CMB2_Field.php:1057
+msgid "None"
+msgstr ""
+
+#: lib/cmb2/includes/CMB2_JS.php:86 lib/cmb2/includes/CMB2_JS.php:119
+msgid "Clear"
+msgstr ""
+
+#: lib/cmb2/includes/CMB2_JS.php:87
+msgid "Default"
+msgstr ""
+
+#: lib/cmb2/includes/CMB2_JS.php:88
+msgid "Select Color"
+msgstr ""
+
+#: lib/cmb2/includes/CMB2_JS.php:89
+msgid "Current Color"
+msgstr ""
+
+#: lib/cmb2/includes/CMB2_JS.php:110
+msgid "Sunday, Monday, Tuesday, Wednesday, Thursday, Friday, Saturday"
+msgstr ""
+
+#: lib/cmb2/includes/CMB2_JS.php:111
+msgid "Su, Mo, Tu, We, Th, Fr, Sa"
+msgstr ""
+
+#: lib/cmb2/includes/CMB2_JS.php:112
+msgid "Sun, Mon, Tue, Wed, Thu, Fri, Sat"
+msgstr ""
+
+#: lib/cmb2/includes/CMB2_JS.php:113
+msgid ""
+"January, February, March, April, May, June, July, August, September, "
+"October, November, December"
+msgstr ""
+
+#: lib/cmb2/includes/CMB2_JS.php:114
+msgid "Jan, Feb, Mar, Apr, May, Jun, Jul, Aug, Sep, Oct, Nov, Dec"
+msgstr ""
+
+#: lib/cmb2/includes/CMB2_JS.php:115
+msgid "Next"
+msgstr ""
+
+#: lib/cmb2/includes/CMB2_JS.php:116
+msgid "Prev"
+msgstr ""
+
+#: lib/cmb2/includes/CMB2_JS.php:117
+msgid "Today"
+msgstr ""
+
+#: lib/cmb2/includes/CMB2_JS.php:118 lib/cmb2/includes/CMB2_JS.php:128
+msgid "Done"
+msgstr ""
+
+#: lib/cmb2/includes/CMB2_JS.php:122
+msgid "Choose Time"
+msgstr ""
+
+#: lib/cmb2/includes/CMB2_JS.php:123
+msgid "Time"
+msgstr ""
+
+#: lib/cmb2/includes/CMB2_JS.php:124
+msgid "Hour"
+msgstr ""
+
+#: lib/cmb2/includes/CMB2_JS.php:125
+msgid "Minute"
+msgstr ""
+
+#: lib/cmb2/includes/CMB2_JS.php:126
+msgid "Second"
+msgstr ""
+
+#: lib/cmb2/includes/CMB2_JS.php:127
+msgid "Now"
+msgstr ""
+
+#: lib/cmb2/includes/CMB2_JS.php:135
+msgid "Use this file"
+msgstr ""
+
+#: lib/cmb2/includes/CMB2_JS.php:136
+msgid "Use these files"
+msgstr ""
+
+#: lib/cmb2/includes/CMB2_JS.php:137 lib/cmb2/includes/CMB2_Types.php:1021
+msgid "Remove Image"
+msgstr ""
+
+#: lib/cmb2/includes/CMB2_JS.php:138 lib/cmb2/includes/CMB2_Types.php:357
+#: lib/cmb2/includes/CMB2_Types.php:1040
 #: lib/mostasharoon-admin-page/mostasharoon-admin-page.php:341
 msgid "Remove"
 msgstr ""
 
-#: search.php:29
+#: lib/cmb2/includes/CMB2_JS.php:139 lib/cmb2/includes/CMB2_Types.php:1035
+msgid "File:"
+msgstr ""
+
+#: lib/cmb2/includes/CMB2_JS.php:140 lib/cmb2/includes/CMB2_Types.php:1038
+msgid "Download"
+msgstr ""
+
+#: lib/cmb2/includes/CMB2_JS.php:141
+msgid "Select / Deselect All"
+msgstr ""
+
+#: lib/cmb2/includes/CMB2_Types.php:298
+msgid "Add Row"
+msgstr ""
+
+#: lib/cmb2/includes/CMB2_Types.php:768 lib/cmb2/includes/CMB2_Types.php:816
+msgid "No terms"
+msgstr ""
+
+#: lib/cmb2/includes/CMB2_Types.php:884
+msgid "Add or Upload Files"
+msgstr ""
+
+#: lib/cmb2/includes/CMB2_Types.php:945
+msgid "Add or Upload File"
+msgstr ""
+
+#: lib/cmb2/includes/CMB2_hookup.php:120
+msgid ""
+"Term Metadata is a WordPress > 4.4 feature. Please upgrade your WordPress "
+"install."
+msgstr ""
+
+#: lib/cmb2/includes/CMB2_hookup.php:124
+msgid "Term metaboxes configuration requires a 'taxonomies' parameter"
+msgstr ""
+
+#: lib/cmb2/includes/helper-functions.php:250
+msgid "Save"
+msgstr ""
+
+#: search.php:41
 msgid "Search Results for: %s"
 msgstr ""
 
@@ -273,6 +755,10 @@ msgstr ""
 msgid "Continue Reading "
 msgstr ""
 
+#: template-parts/content-single.php:16 template-parts/content.php:22
+msgid "Sticky"
+msgstr ""
+
 #: template-parts/content-single.php:45
 #. translators: %s: Name of current post.
 msgid "Continue reading %s <span class=\"meta-nav\">&rarr;</span>"
@@ -282,16 +768,38 @@ msgstr ""
 msgid "Mesopotamia"
 msgstr ""
 
+#. Theme URI of the plugin/theme
+msgid "https://mostasharoon.org/mesopotamia/"
+msgstr ""
+
+#. Description of the plugin/theme
+msgid ""
+"Mesopotamia is a free WordPress modern, multipurpose, responsive, "
+"Underscores and Bootstrap base, Pinterest-style Masonry grid theme. "
+"Mesopotamia theme is what our main website powered with, Mesopotamia does "
+"not require any technical skills in order to use it, it is very easy to use "
+"and comes with seven default widget areas, you can even specify the widgets "
+"that will appear on the 404 and no-result pages, top and bottom footers "
+"with grid base four columns top footer, two skins light and dark and two "
+"main site grid options(9X3 and 8X4), six page templates to choose "
+"from(right sidebar, left sidebar, no sidebar, full width, content full "
+"width, and scratch), footer menu,unlimited combinations of colors for the "
+"main and secondary colors of the theme and more . . . To view many full "
+"live demos and to check Mesopotamia features list and to find much more "
+"information about Mesopotamia please click on the \"Theme Homepage\" link "
+"right above."
+msgstr ""
+
+#. Author of the plugin/theme
+msgid "Mohammed Al-Mahdawi(Mohammed Thaer)"
+msgstr ""
+
 #. Author URI of the plugin/theme
 msgid "https://mostasharoon.org"
 msgstr ""
 
-#. Description of the plugin/theme
-msgid "Multi purpose, responsive, Bootstrap base, Pinterest style theme."
-msgstr ""
-
-#. Author of the plugin/theme
-msgid "Mohammed Al-Mahdawi"
+#. Template Name of the plugin/theme
+msgid "Content Full Width"
 msgstr ""
 
 #. Template Name of the plugin/theme
@@ -300,6 +808,10 @@ msgstr ""
 
 #. Template Name of the plugin/theme
 msgid "No Sidebar"
+msgstr ""
+
+#. Template Name of the plugin/theme
+msgid "Scratch"
 msgstr ""
 
 #. Template Name of the plugin/theme
@@ -323,19 +835,31 @@ msgctxt "post author"
 msgid "%s"
 msgstr ""
 
-#: inc/template-tags.php:175
+#: inc/template-tags.php:188
 msgctxt "Previous post"
 msgid "Previous"
 msgstr ""
 
-#: inc/template-tags.php:176
+#: inc/template-tags.php:189
 msgctxt "Next post"
 msgid "Next"
 msgstr ""
 
-#: inc/template-tags.php:275
+#: inc/template-tags.php:288
 msgctxt "noun"
 msgid "Comment"
+msgstr ""
+
+#: lib/cmb2/includes/CMB2_JS.php:109
+msgctxt "Valid formatDate string for jquery-ui datepicker"
+msgid "mm/dd/yy"
+msgstr ""
+
+#: lib/cmb2/includes/CMB2_JS.php:129
+msgctxt ""
+"Valid formatting string, as per "
+"http://trentrichardson.com/examples/timepicker/"
+msgid "hh:mm TT"
 msgstr ""
 
 #: searchform.php:19
