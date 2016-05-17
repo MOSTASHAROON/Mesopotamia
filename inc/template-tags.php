@@ -271,11 +271,11 @@ function bootstrap3_comment_form_fields( $fields ) {
 	$html5    = current_theme_supports( 'html5', 'comment-form' ) ? 1 : 0;
 
 	$fields = array(
-		'author' => '<div class="form-group comment-form-author">' . '<label for="author">' . __( 'Name' ) . ( $req ? ' <span class="required">*</span>' : '' ) . '</label> ' .
+		'author' => '<div class="form-group comment-form-author">' . '<label for="author">' . __( 'Name','mesopotamia' ) . ( $req ? ' <span class="required">*</span>' : '' ) . '</label> ' .
 		            '<input class="form-control" id="author" name="author" type="text" value="' . esc_attr( $commenter['comment_author'] ) . '" size="30"' . $aria_req . ' /></div>',
-		'email'  => '<div class="form-group comment-form-email"><label for="email">' . __( 'Email' ) . ( $req ? ' <span class="required">*</span>' : '' ) . '</label> ' .
+		'email'  => '<div class="form-group comment-form-email"><label for="email">' . __( 'Email','mesopotamia' ) . ( $req ? ' <span class="required">*</span>' : '' ) . '</label> ' .
 		            '<input class="form-control" id="email" name="email" ' . ( $html5 ? 'type="email"' : 'type="text"' ) . ' value="' . esc_attr( $commenter['comment_author_email'] ) . '" size="30"' . $aria_req . ' /></div>',
-		'url'    => '<div class="form-group comment-form-url"><label for="url">' . __( 'Website' ) . '</label> ' .
+		'url'    => '<div class="form-group comment-form-url"><label for="url">' . __( 'Website','mesopotamia' ) . '</label> ' .
 		            '<input class="form-control" id="url" name="url" ' . ( $html5 ? 'type="url"' : 'type="text"' ) . ' value="' . esc_attr( $commenter['comment_author_url'] ) . '" size="30" /></div>'
 	);
 
@@ -285,7 +285,7 @@ function bootstrap3_comment_form_fields( $fields ) {
 add_filter( 'comment_form_defaults', 'bootstrap3_comment_form' );
 function bootstrap3_comment_form( $args ) {
 	$args['comment_field'] = '<div class="form-group comment-form-comment">
-            <label for="comment">' . _x( 'Comment', 'noun' ) . '</label> 
+            <label for="comment">' . _x( 'Comment', 'noun', 'mesopotamia' ) . '</label> 
             <textarea class="form-control" id="comment" name="comment" cols="45" rows="8" aria-required="true"></textarea>
         </div>';
 	$args['class_submit']  = 'btn btn-default'; // since WP 4.1
@@ -310,12 +310,12 @@ function bootstrap3_comment_format( $comment, $args, $depth ) {
 				         href="<?php echo htmlspecialchars( get_comment_link( $comment->comment_ID ) ) ?>"
 				         title="Comment Permalink"><i class="icon-link"></i></a></p>
 			<?php if ( $comment->comment_approved == '0' ) { // Awaiting Moderation ?>
-				<em><?php _e( 'Your comment is awaiting moderation.' ) ?></em>
+				<em><?php _e( 'Your comment is awaiting moderation.','mesopotamia' ) ?></em>
 			<?php } ?>
 			<?php comment_text(); ?>
 			<div class="reply pull-right">
 				<?php comment_reply_link( array_merge( $args, array(
-					'reply_text' => __( '<i class="icon-reply"></i>&nbsp; Reply' ),
+					'reply_text' => __( '<i class="icon-reply"></i>&nbsp; Reply' ,'mesopotamia'),
 					'depth'      => $depth,
 					'max_depth'  => $args['max_depth']
 				) ) ); ?>

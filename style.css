@@ -4,7 +4,7 @@ Theme URI: https://mostasharoon.org/mesopotamia/
 Author: Mohammed Al-Mahdawi(Mohammed Thaer)
 Author URI: https://mostasharoon.org
 Description: Mesopotamia is a free WordPress modern, multipurpose, responsive, Underscores and Bootstrap base, Pinterest-style Masonry grid theme. Mesopotamia theme is what our main website powered with, Mesopotamia does not require any technical skills in order to use it, it is very easy to use and comes with seven default widget areas, you can even specify the widgets that will appear on the 404 and no-result pages, top and bottom footers with grid base four columns top footer, two skins light and dark and two main site grid options(9X3 and 8X4), six page templates to choose from(right sidebar, left sidebar, no sidebar, full width, content full width, and scratch), footer menu,unlimited combinations of colors for the main and secondary colors of the theme and much more . . . To view many full live demos and to check Mesopotamia features list and to find much more information about Mesopotamia please visit Mesopotamia homepage at: https://mostasharoon.org/mesopotamia/
-Version: 1.0.1
+Version: 1.0.2
 License: GNU General Public License v2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 Text Domain: mesopotamia
@@ -131,6 +131,14 @@ article.thumbnail .mesopotamia-sticky-icon {
     font-size: 1em;
     position: absolute;
     padding: 5px 10px 5px 10px;
+}
+
+.sticky{
+
+}
+
+.bypostauthor{
+
 }
 
 /*--------------------------------------------------------------

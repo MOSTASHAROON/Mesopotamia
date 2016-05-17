@@ -175,7 +175,7 @@ function mesopotamia_admin_menu() {
 	     ->setActiveTab( 'general' )
 	     ->setFields( $fields )
 	     ->setPageTitle( 'Mesopotamia' )
-	     ->add_sub_menu_page( 'themes.php', 'manage_options', 'mesopotamia' );
+	     ->add_theme_page( 'manage_options', 'mesopotamia' );
 }
 
 add_action( 'admin_menu', 'mesopotamia_admin_menu' );

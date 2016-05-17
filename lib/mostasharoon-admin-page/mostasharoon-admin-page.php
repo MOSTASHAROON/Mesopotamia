@@ -31,31 +31,11 @@ class MOSTASHAROON_Admin_Page {
 //		add_action( 'admin_menu', array( $this, 'add_admin_menu' ), 11 );
 	}
 
-	function add_sub_menu_page( $parent_slug, $capability, $menu_slug ) {
-
-		$this->menu_slug = $menu_slug;
-
-		$mostasharoon_settings_page_hook_suffix = add_submenu_page( $parent_slug, $this->page_title, $this->page_title, $capability, $menu_slug, array(
+	function add_theme_page( $capability, $menu_slug ) {
+		$mostasharoon_settings_page_hook_suffix = add_theme_page( $this->page_title, $this->page_title, $capability, $menu_slug, array(
 			$this,
 			'render'
 		) );
-
-		add_action( 'admin_print_scripts-' . $mostasharoon_settings_page_hook_suffix, array(
-			$this,
-			'admin_scripts'
-		) );
-
-		return $this;
-	}
-
-	function addMenuPage( $capability, $menu_slug, $icon_url = '', $position = null ) {
-
-		$this->menu_slug = $menu_slug;
-
-		$mostasharoon_settings_page_hook_suffix = add_menu_page( $this->page_title, $this->page_title, $capability, $menu_slug, array(
-			$this,
-			'render'
-		), $icon_url, $position );
 
 		add_action( 'admin_print_scripts-' . $mostasharoon_settings_page_hook_suffix, array(
 			$this,
@@ -88,18 +68,6 @@ class MOSTASHAROON_Admin_Page {
 		) );
 
 		do_action( 'end_mostasharoon_enqueue', $this );
-	}
-
-	function admin_menu() {
-		$mostasharoon_settings_page_hook_suffix = add_submenu_page( 'edit.php?post_type=mostasharoon_products', 'Settings', 'Settings', apply_filters( 'mostasharoon_settings_capability', 'manage_options' ), 'mostasharoon_settings', array(
-			$this,
-			'page'
-		) );
-
-		add_action( 'admin_print_scripts-' . $mostasharoon_settings_page_hook_suffix, array(
-			$this,
-			'admin_scripts'
-		) );
 	}
 
 
