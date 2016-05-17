@@ -11,7 +11,7 @@ if ( ! defined( 'ABSPATH' ) ) {
 class MOSTASHAROON_Admin_Page {
 
 	public $page_title = 'Settings';
-	public $text_domain = '';
+	public $text_domain = 'mesopotamia';
 	public $wrapper_id = 'mostasharoon-user-settings';
 	public $container_class = 'mostasharoon-container';
 	public $main_wrapper_class = 'MOSTASHAROON';
@@ -77,7 +77,7 @@ class MOSTASHAROON_Admin_Page {
 			<div class="<?php echo $this->main_wrapper_class; ?>">
 				<div class="<?php echo $this->container_class; ?>">
 					<div class="row">
-						<h3><?php esc_html_e( $this->page_title, $this->text_domain ); ?></h3>
+						<h3><?php esc_html_e( 'Mesopotamia Settings', 'mesopotamia' ); ?></h3>
 					</div>
 					<form id="form-horizontal" class="<?php echo $this->form_class; ?>" role="form">
 						<div class="row">
@@ -90,7 +90,7 @@ class MOSTASHAROON_Admin_Page {
 											<li role="presentation" class="<?php echo $active; ?>"><a
 													href="#<?php echo $id; ?>" aria-controls="<?php echo $id; ?>"
 													role="tab"
-													data-toggle="tab"><?php esc_html_e( $tab_header, $this->text_domain ); ?></a>
+													data-toggle="tab"><?php echo $tab_header; ?></a>
 											</li>
 										<?php } ?>
 									</ul>
@@ -116,7 +116,7 @@ class MOSTASHAROON_Admin_Page {
 									<div class="<?php echo $this->save_button_wrapper_class; ?>">
 										<button type="button" id="<?php echo $this->save_button_id; ?>"
 										        class="btn btn-primary mostasharoon-save-changes">
-											<i class="fa fa-floppy-o"></i> <?php esc_html_e( $this->save_button_label, $this->text_domain ); ?>
+											<i class="fa fa-floppy-o"></i> <?php esc_html_e( 'Save All Changes', 'mesopotamia' ); ?>
 										</button>
 										<span class="mostasharoon-saving" style="display: none;">
 								  Saving ...
@@ -306,7 +306,7 @@ class MOSTASHAROON_Admin_Page {
 						$html .= '<button type="' . $field['button_type'] . '" data-toggle="tooltip" data-placement="right" title="' . $help . '" ' . ( isset( $field['attributes'] ) ? $field['attributes'] : '' ) . ' value="' . $field['value'] . '" class="mostasharoon-upload-file btn btn-default ' . ( isset( $field['classes'] ) ? $field['classes'] : '' ) . '">' . $field['value'] . '</button>';
 						$html .= '<input type="hidden" name="' . $field['name'] . '" value="' . $val . '">';
 						$html .= '<div class="img-wrap pull-right"  ' . ( $val ? '' : 'style="display: none;"' ) . '>';
-						$html .= '<i class="fa fa-times-circle mostasharoon-remove-image" data-toggle="tooltip" data-placement="right" title="' . __( 'Remove', $this->text_domain ) . '"></i>';
+						$html .= '<i class="fa fa-times-circle mostasharoon-remove-image" data-toggle="tooltip" data-placement="right" title="' . __( 'Remove', 'mesopotamia' ) . '"></i>';
 						$html .= '<img src="' . wp_get_attachment_url( (int) $val ) . '">';
 						$html .= '</div>';
 						$html .= '</div>';

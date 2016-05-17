@@ -350,8 +350,3 @@ require get_template_directory() . '/inc/settings.php';
  * Load admin settings page.
  */
 require get_template_directory() . '/inc/metaboxes.php';
-
-/**
- * Load social icons shortcode.
- */
-require get_template_directory() . '/inc/icons.php';
