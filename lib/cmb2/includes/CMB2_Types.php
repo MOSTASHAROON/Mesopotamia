@@ -295,7 +295,7 @@ class CMB2_Types {
 			</div>
 		</div>
 		<p class="cmb-add-row">
-			<button type="button" data-selector="<?php echo $table_id; ?>" class="cmb-add-row-button button"><?php echo esc_html( $this->_text( 'add_row_text', __( 'Add Row', 'cmb2' ) ) ); ?></button>
+			<button type="button" data-selector="<?php echo $table_id; ?>" class="cmb-add-row-button button"><?php echo esc_html( $this->_text( 'add_row_text', __( 'Add Row', 'mesopotamia' ) ) ); ?></button>
 		</p>
 
 		<?php
@@ -354,7 +354,7 @@ class CMB2_Types {
 				<?php $this->_render(); ?>
 			</div>
 			<div class="cmb-td cmb-remove-row">
-				<button type="button" class="button cmb-remove-row-button<?php echo $disabled; ?>"><?php echo esc_html( $this->_text( 'remove_row_text', __( 'Remove', 'cmb2' ) ) ); ?></button>
+				<button type="button" class="button cmb-remove-row-button<?php echo $disabled; ?>"><?php echo esc_html( $this->_text( 'remove_row_text', __( 'Remove', 'mesopotamia' ) ) ); ?></button>
 			</div>
 		</div>
 
@@ -765,7 +765,7 @@ class CMB2_Types {
 		$options    = ''; $i = 1;
 
 		if ( ! $terms ) {
-			$options .= sprintf( '<li><label>%s</label></li>', esc_html( $this->_text( 'no_terms_text', __( 'No terms', 'cmb2' ) ) ) );
+			$options .= sprintf( '<li><label>%s</label></li>', esc_html( $this->_text( 'no_terms_text', __( 'No terms', 'mesopotamia' ) ) ) );
 		} else {
 			$option_none  = $this->field->args( 'show_option_none' );
 			if ( ! empty( $option_none ) ) {
@@ -813,7 +813,7 @@ class CMB2_Types {
 		$options     = ''; $i = 1;
 
 		if ( ! $terms ) {
-			$options .= sprintf( '<li><label>%s</label></li>', esc_html( $this->_text( 'no_terms_text', __( 'No terms', 'cmb2' ) ) ) );
+			$options .= sprintf( '<li><label>%s</label></li>', esc_html( $this->_text( 'no_terms_text', __( 'No terms', 'mesopotamia' ) ) ) );
 		} else {
 
 			foreach ( $terms as $term ) {
@@ -881,7 +881,7 @@ class CMB2_Types {
 		$this->input( array(
 			'type'  => 'button',
 			'class' => 'cmb2-upload-button button cmb2-upload-list',
-			'value'  => esc_html( $this->_text( 'add_upload_files_text', __( 'Add or Upload Files', 'cmb2' ) ) ),
+			'value'  => esc_html( $this->_text( 'add_upload_files_text', __( 'Add or Upload Files', 'mesopotamia' ) ) ),
 			'name'  => '', 'id'  => '',
 		) );
 
@@ -942,7 +942,7 @@ class CMB2_Types {
 			'js_dependencies'  => 'media-editor',
 		) );
 
-		printf( '<input class="cmb2-upload-button button" type="button" value="%s" />', esc_attr( $this->_text( 'add_upload_file_text', __( 'Add or Upload File', 'cmb2' ) ) ) );
+		printf( '<input class="cmb2-upload-button button" type="button" value="%s" />', esc_attr( $this->_text( 'add_upload_file_text', __( 'Add or Upload File', 'mesopotamia' ) ) ) );
 
 		$this->_desc( true, true );
 
@@ -1018,7 +1018,7 @@ class CMB2_Types {
 			$args['tag'],
 			$args['image'],
 			isset( $args['cached_id'] ) ? ' rel="' . $args['cached_id'] . '"' : '',
-			esc_html( $this->_text( 'remove_image_text', __( 'Remove Image', 'cmb2' ) ) ),
+			esc_html( $this->_text( 'remove_image_text', __( 'Remove Image', 'mesopotamia' ) ) ),
 			isset( $args['id_input'] ) ? $args['id_input'] : ''
 		);
 	}
@@ -1032,12 +1032,12 @@ class CMB2_Types {
 	public function file_status_output( $args ) {
 		printf( '<%1$s class="file-status"><span>%2$s <strong>%3$s</strong></span>&nbsp;&nbsp; (<a href="%4$s" target="_blank" rel="external">%5$s</a> / <a href="#" class="cmb2-remove-file-button"%6$s>%7$s</a>)%8$s</%1$s>',
 			$args['tag'],
-			esc_html( $this->_text( 'file_text', __( 'File:', 'cmb2' ) ) ),
+			esc_html( $this->_text( 'file_text', __( 'File:', 'mesopotamia' ) ) ),
 			$this->get_file_name_from_path( $args['value'] ),
 			$args['value'],
-			esc_html( $this->_text( 'file_download_text', __( 'Download', 'cmb2' ) ) ),
+			esc_html( $this->_text( 'file_download_text', __( 'Download', 'mesopotamia' ) ) ),
 			isset( $args['cached_id'] ) ? ' rel="' . $args['cached_id'] . '"' : '',
-			esc_html( $this->_text( 'remove_text', __( 'Remove', 'cmb2' ) ) ),
+			esc_html( $this->_text( 'remove_text', __( 'Remove', 'mesopotamia' ) ) ),
 			isset( $args['id_input'] ) ? $args['id_input'] : ''
 		);
 	}

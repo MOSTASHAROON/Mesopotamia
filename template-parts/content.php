@@ -48,7 +48,7 @@
 					<?php
 					the_excerpt();
 					?>
-					<?php echo '<a href="' . get_permalink() . '" class="continue-reading" title="' . __( 'Continue Reading ', 'my-simone' ) . get_the_title() . '" rel="bookmark">Continue Reading</a>'; ?>
+					<?php echo '<a href="' . get_permalink() . '" class="continue-reading" title="' . __( 'Continue Reading ', 'mesopotamia' ) . get_the_title() . '" rel="bookmark">Continue Reading</a>'; ?>
 				</div><!-- .entry-content -->
 
 				<footer class="entry-footer">

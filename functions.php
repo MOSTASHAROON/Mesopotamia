@@ -157,7 +157,7 @@ function mesopotamia_widgets_init() {
 
 		for ( $i = 1; $i <= $top_columns; $i ++ ) {
 			register_sidebar( array(
-				'name'          => esc_html__( 'Footer widget ' . $i, 'mesopotamia' ),
+				'name'          => esc_html__( 'Footer widget ', 'mesopotamia' ). $i,
 				'id'            => 'footer-sidebar-' . $i,
 				'description'   => '',
 				'before_widget' => '<section id="%1$s" class="widget %2$s">',

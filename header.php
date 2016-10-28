@@ -91,7 +91,7 @@
 								<form class="navbar-form navbar-right mesopotamia-navbar-search-form" role="search">
 									<div class="form-group">
 										<input type="search" class="search-field form-control input-search" name="s"
-										       placeholder="<?php esc_attr_e( 'Search …', 'mesopotamia' ) ?>">
+										       placeholder="<?php esc_attr_e( 'Search ...', 'mesopotamia' ) ?>">
 									</div>
 								</form>
 							<?php } ?>

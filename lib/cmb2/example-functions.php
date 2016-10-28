@@ -77,7 +77,7 @@ function yourprefix_register_demo_metabox() {
 	 */
 	$cmb_demo = new_cmb2_box( array(
 		'id'            => $prefix . 'metabox',
-		'title'         => __( 'Test Metabox', 'cmb2' ),
+		'title'         => __( 'Test Metabox', 'mesopotamia' ),
 		'object_types'  => array( 'page', ), // Post type
 		// 'show_on_cb' => 'yourprefix_show_if_front_page', // function should return a bool value
 		// 'context'    => 'normal',
@@ -88,8 +88,8 @@ function yourprefix_register_demo_metabox() {
 	) );
 
 	$cmb_demo->add_field( array(
-		'name'       => __( 'Test Text', 'cmb2' ),
-		'desc'       => __( 'field description (optional)', 'cmb2' ),
+		'name'       => __( 'Test Text', 'mesopotamia' ),
+		'desc'       => __( 'field description (optional)', 'mesopotamia' ),
 		'id'         => $prefix . 'text',
 		'type'       => 'text',
 		'show_on_cb' => 'yourprefix_hide_if_no_cats', // function should return a bool value
@@ -100,24 +100,24 @@ function yourprefix_register_demo_metabox() {
 	) );
 
 	$cmb_demo->add_field( array(
-		'name' => __( 'Test Text Small', 'cmb2' ),
-		'desc' => __( 'field description (optional)', 'cmb2' ),
+		'name' => __( 'Test Text Small', 'mesopotamia' ),
+		'desc' => __( 'field description (optional)', 'mesopotamia' ),
 		'id'   => $prefix . 'textsmall',
 		'type' => 'text_small',
 		// 'repeatable' => true,
 	) );
 
 	$cmb_demo->add_field( array(
-		'name' => __( 'Test Text Medium', 'cmb2' ),
-		'desc' => __( 'field description (optional)', 'cmb2' ),
+		'name' => __( 'Test Text Medium', 'mesopotamia' ),
+		'desc' => __( 'field description (optional)', 'mesopotamia' ),
 		'id'   => $prefix . 'textmedium',
 		'type' => 'text_medium',
 		// 'repeatable' => true,
 	) );
 
 	$cmb_demo->add_field( array(
-		'name' => __( 'Website URL', 'cmb2' ),
-		'desc' => __( 'field description (optional)', 'cmb2' ),
+		'name' => __( 'Website URL', 'mesopotamia' ),
+		'desc' => __( 'field description (optional)', 'mesopotamia' ),
 		'id'   => $prefix . 'url',
 		'type' => 'text_url',
 		// 'protocols' => array('http', 'https', 'ftp', 'ftps', 'mailto', 'news', 'irc', 'gopher', 'nntp', 'feed', 'telnet'), // Array of allowed protocols
@@ -125,47 +125,47 @@ function yourprefix_register_demo_metabox() {
 	) );
 
 	$cmb_demo->add_field( array(
-		'name' => __( 'Test Text Email', 'cmb2' ),
-		'desc' => __( 'field description (optional)', 'cmb2' ),
+		'name' => __( 'Test Text Email', 'mesopotamia' ),
+		'desc' => __( 'field description (optional)', 'mesopotamia' ),
 		'id'   => $prefix . 'email',
 		'type' => 'text_email',
 		// 'repeatable' => true,
 	) );
 
 	$cmb_demo->add_field( array(
-		'name' => __( 'Test Time', 'cmb2' ),
-		'desc' => __( 'field description (optional)', 'cmb2' ),
+		'name' => __( 'Test Time', 'mesopotamia' ),
+		'desc' => __( 'field description (optional)', 'mesopotamia' ),
 		'id'   => $prefix . 'time',
 		'type' => 'text_time',
 		// 'time_format' => 'H:i', // Set to 24hr format
 	) );
 
 	$cmb_demo->add_field( array(
-		'name' => __( 'Time zone', 'cmb2' ),
-		'desc' => __( 'Time zone', 'cmb2' ),
+		'name' => __( 'Time zone', 'mesopotamia' ),
+		'desc' => __( 'Time zone', 'mesopotamia' ),
 		'id'   => $prefix . 'timezone',
 		'type' => 'select_timezone',
 	) );
 
 	$cmb_demo->add_field( array(
-		'name' => __( 'Test Date Picker', 'cmb2' ),
-		'desc' => __( 'field description (optional)', 'cmb2' ),
+		'name' => __( 'Test Date Picker', 'mesopotamia' ),
+		'desc' => __( 'field description (optional)', 'mesopotamia' ),
 		'id'   => $prefix . 'textdate',
 		'type' => 'text_date',
 		// 'date_format' => 'Y-m-d',
 	) );
 
 	$cmb_demo->add_field( array(
-		'name' => __( 'Test Date Picker (UNIX timestamp)', 'cmb2' ),
-		'desc' => __( 'field description (optional)', 'cmb2' ),
+		'name' => __( 'Test Date Picker (UNIX timestamp)', 'mesopotamia' ),
+		'desc' => __( 'field description (optional)', 'mesopotamia' ),
 		'id'   => $prefix . 'textdate_timestamp',
 		'type' => 'text_date_timestamp',
 		// 'timezone_meta_key' => $prefix . 'timezone', // Optionally make this field honor the timezone selected in the select_timezone specified above
 	) );
 
 	$cmb_demo->add_field( array(
-		'name' => __( 'Test Date/Time Picker Combo (UNIX timestamp)', 'cmb2' ),
-		'desc' => __( 'field description (optional)', 'cmb2' ),
+		'name' => __( 'Test Date/Time Picker Combo (UNIX timestamp)', 'mesopotamia' ),
+		'desc' => __( 'field description (optional)', 'mesopotamia' ),
 		'id'   => $prefix . 'datetime_timestamp',
 		'type' => 'text_datetime_timestamp',
 	) );
@@ -174,15 +174,15 @@ function yourprefix_register_demo_metabox() {
 	// is only compatible with PHP versions 5.3 or above.
 	// Feel free to uncomment and use if your server meets the requirement
 	// $cmb_demo->add_field( array(
-	// 	'name' => __( 'Test Date/Time Picker/Time zone Combo (serialized DateTime object)', 'cmb2' ),
-	// 	'desc' => __( 'field description (optional)', 'cmb2' ),
+	// 	'name' => __( 'Test Date/Time Picker/Time zone Combo (serialized DateTime object)', 'mesopotamia' ),
+	// 	'desc' => __( 'field description (optional)', 'mesopotamia' ),
 	// 	'id'   => $prefix . 'datetime_timestamp_timezone',
 	// 	'type' => 'text_datetime_timestamp_timezone',
 	// ) );
 
 	$cmb_demo->add_field( array(
-		'name' => __( 'Test Money', 'cmb2' ),
-		'desc' => __( 'field description (optional)', 'cmb2' ),
+		'name' => __( 'Test Money', 'mesopotamia' ),
+		'desc' => __( 'field description (optional)', 'mesopotamia' ),
 		'id'   => $prefix . 'textmoney',
 		'type' => 'text_money',
 		// 'before_field' => '£', // override '$' symbol if needed
@@ -190,8 +190,8 @@ function yourprefix_register_demo_metabox() {
 	) );
 
 	$cmb_demo->add_field( array(
-		'name'    => __( 'Test Color Picker', 'cmb2' ),
-		'desc'    => __( 'field description (optional)', 'cmb2' ),
+		'name'    => __( 'Test Color Picker', 'mesopotamia' ),
+		'desc'    => __( 'field description (optional)', 'mesopotamia' ),
 		'id'      => $prefix . 'colorpicker',
 		'type'    => 'colorpicker',
 		'default' => '#ffffff',
@@ -203,74 +203,74 @@ function yourprefix_register_demo_metabox() {
 	) );
 
 	$cmb_demo->add_field( array(
-		'name' => __( 'Test Text Area', 'cmb2' ),
-		'desc' => __( 'field description (optional)', 'cmb2' ),
+		'name' => __( 'Test Text Area', 'mesopotamia' ),
+		'desc' => __( 'field description (optional)', 'mesopotamia' ),
 		'id'   => $prefix . 'textarea',
 		'type' => 'textarea',
 	) );
 
 	$cmb_demo->add_field( array(
-		'name' => __( 'Test Text Area Small', 'cmb2' ),
-		'desc' => __( 'field description (optional)', 'cmb2' ),
+		'name' => __( 'Test Text Area Small', 'mesopotamia' ),
+		'desc' => __( 'field description (optional)', 'mesopotamia' ),
 		'id'   => $prefix . 'textareasmall',
 		'type' => 'textarea_small',
 	) );
 
 	$cmb_demo->add_field( array(
-		'name' => __( 'Test Text Area for Code', 'cmb2' ),
-		'desc' => __( 'field description (optional)', 'cmb2' ),
+		'name' => __( 'Test Text Area for Code', 'mesopotamia' ),
+		'desc' => __( 'field description (optional)', 'mesopotamia' ),
 		'id'   => $prefix . 'textarea_code',
 		'type' => 'textarea_code',
 	) );
 
 	$cmb_demo->add_field( array(
-		'name' => __( 'Test Title Weeeee', 'cmb2' ),
-		'desc' => __( 'This is a title description', 'cmb2' ),
+		'name' => __( 'Test Title Weeeee', 'mesopotamia' ),
+		'desc' => __( 'This is a title description', 'mesopotamia' ),
 		'id'   => $prefix . 'title',
 		'type' => 'title',
 	) );
 
 	$cmb_demo->add_field( array(
-		'name'             => __( 'Test Select', 'cmb2' ),
-		'desc'             => __( 'field description (optional)', 'cmb2' ),
+		'name'             => __( 'Test Select', 'mesopotamia' ),
+		'desc'             => __( 'field description (optional)', 'mesopotamia' ),
 		'id'               => $prefix . 'select',
 		'type'             => 'select',
 		'show_option_none' => true,
 		'options'          => array(
-			'standard' => __( 'Option One', 'cmb2' ),
-			'custom'   => __( 'Option Two', 'cmb2' ),
-			'none'     => __( 'Option Three', 'cmb2' ),
+			'standard' => __( 'Option One', 'mesopotamia' ),
+			'custom'   => __( 'Option Two', 'mesopotamia' ),
+			'none'     => __( 'Option Three', 'mesopotamia' ),
 		),
 	) );
 
 	$cmb_demo->add_field( array(
-		'name'             => __( 'Test Radio inline', 'cmb2' ),
-		'desc'             => __( 'field description (optional)', 'cmb2' ),
+		'name'             => __( 'Test Radio inline', 'mesopotamia' ),
+		'desc'             => __( 'field description (optional)', 'mesopotamia' ),
 		'id'               => $prefix . 'radio_inline',
 		'type'             => 'radio_inline',
 		'show_option_none' => 'No Selection',
 		'options'          => array(
-			'standard' => __( 'Option One', 'cmb2' ),
-			'custom'   => __( 'Option Two', 'cmb2' ),
-			'none'     => __( 'Option Three', 'cmb2' ),
+			'standard' => __( 'Option One', 'mesopotamia' ),
+			'custom'   => __( 'Option Two', 'mesopotamia' ),
+			'none'     => __( 'Option Three', 'mesopotamia' ),
 		),
 	) );
 
 	$cmb_demo->add_field( array(
-		'name'    => __( 'Test Radio', 'cmb2' ),
-		'desc'    => __( 'field description (optional)', 'cmb2' ),
+		'name'    => __( 'Test Radio', 'mesopotamia' ),
+		'desc'    => __( 'field description (optional)', 'mesopotamia' ),
 		'id'      => $prefix . 'radio',
 		'type'    => 'radio',
 		'options' => array(
-			'option1' => __( 'Option One', 'cmb2' ),
-			'option2' => __( 'Option Two', 'cmb2' ),
-			'option3' => __( 'Option Three', 'cmb2' ),
+			'option1' => __( 'Option One', 'mesopotamia' ),
+			'option2' => __( 'Option Two', 'mesopotamia' ),
+			'option3' => __( 'Option Three', 'mesopotamia' ),
 		),
 	) );
 
 	$cmb_demo->add_field( array(
-		'name'     => __( 'Test Taxonomy Radio', 'cmb2' ),
-		'desc'     => __( 'field description (optional)', 'cmb2' ),
+		'name'     => __( 'Test Taxonomy Radio', 'mesopotamia' ),
+		'desc'     => __( 'field description (optional)', 'mesopotamia' ),
 		'id'       => $prefix . 'text_taxonomy_radio',
 		'type'     => 'taxonomy_radio',
 		'taxonomy' => 'category', // Taxonomy Slug
@@ -278,16 +278,16 @@ function yourprefix_register_demo_metabox() {
 	) );
 
 	$cmb_demo->add_field( array(
-		'name'     => __( 'Test Taxonomy Select', 'cmb2' ),
-		'desc'     => __( 'field description (optional)', 'cmb2' ),
+		'name'     => __( 'Test Taxonomy Select', 'mesopotamia' ),
+		'desc'     => __( 'field description (optional)', 'mesopotamia' ),
 		'id'       => $prefix . 'taxonomy_select',
 		'type'     => 'taxonomy_select',
 		'taxonomy' => 'category', // Taxonomy Slug
 	) );
 
 	$cmb_demo->add_field( array(
-		'name'     => __( 'Test Taxonomy Multi Checkbox', 'cmb2' ),
-		'desc'     => __( 'field description (optional)', 'cmb2' ),
+		'name'     => __( 'Test Taxonomy Multi Checkbox', 'mesopotamia' ),
+		'desc'     => __( 'field description (optional)', 'mesopotamia' ),
 		'id'       => $prefix . 'multitaxonomy',
 		'type'     => 'taxonomy_multicheck',
 		'taxonomy' => 'post_tag', // Taxonomy Slug
@@ -295,52 +295,52 @@ function yourprefix_register_demo_metabox() {
 	) );
 
 	$cmb_demo->add_field( array(
-		'name' => __( 'Test Checkbox', 'cmb2' ),
-		'desc' => __( 'field description (optional)', 'cmb2' ),
+		'name' => __( 'Test Checkbox', 'mesopotamia' ),
+		'desc' => __( 'field description (optional)', 'mesopotamia' ),
 		'id'   => $prefix . 'checkbox',
 		'type' => 'checkbox',
 	) );
 
 	$cmb_demo->add_field( array(
-		'name'    => __( 'Test Multi Checkbox', 'cmb2' ),
-		'desc'    => __( 'field description (optional)', 'cmb2' ),
+		'name'    => __( 'Test Multi Checkbox', 'mesopotamia' ),
+		'desc'    => __( 'field description (optional)', 'mesopotamia' ),
 		'id'      => $prefix . 'multicheckbox',
 		'type'    => 'multicheck',
 		// 'multiple' => true, // Store values in individual rows
 		'options' => array(
-			'check1' => __( 'Check One', 'cmb2' ),
-			'check2' => __( 'Check Two', 'cmb2' ),
-			'check3' => __( 'Check Three', 'cmb2' ),
+			'check1' => __( 'Check One', 'mesopotamia' ),
+			'check2' => __( 'Check Two', 'mesopotamia' ),
+			'check3' => __( 'Check Three', 'mesopotamia' ),
 		),
 		// 'inline'  => true, // Toggles display to inline
 	) );
 
 	$cmb_demo->add_field( array(
-		'name'    => __( 'Test wysiwyg', 'cmb2' ),
-		'desc'    => __( 'field description (optional)', 'cmb2' ),
+		'name'    => __( 'Test wysiwyg', 'mesopotamia' ),
+		'desc'    => __( 'field description (optional)', 'mesopotamia' ),
 		'id'      => $prefix . 'wysiwyg',
 		'type'    => 'wysiwyg',
 		'options' => array( 'textarea_rows' => 5, ),
 	) );
 
 	$cmb_demo->add_field( array(
-		'name' => __( 'Test Image', 'cmb2' ),
-		'desc' => __( 'Upload an image or enter a URL.', 'cmb2' ),
+		'name' => __( 'Test Image', 'mesopotamia' ),
+		'desc' => __( 'Upload an image or enter a URL.', 'mesopotamia' ),
 		'id'   => $prefix . 'image',
 		'type' => 'file',
 	) );
 
 	$cmb_demo->add_field( array(
-		'name'         => __( 'Multiple Files', 'cmb2' ),
-		'desc'         => __( 'Upload or add multiple images/attachments.', 'cmb2' ),
+		'name'         => __( 'Multiple Files', 'mesopotamia' ),
+		'desc'         => __( 'Upload or add multiple images/attachments.', 'mesopotamia' ),
 		'id'           => $prefix . 'file_list',
 		'type'         => 'file_list',
 		'preview_size' => array( 100, 100 ), // Default: array( 50, 50 )
 	) );
 
 	$cmb_demo->add_field( array(
-		'name' => __( 'oEmbed', 'cmb2' ),
-		'desc' => __( 'Enter a youtube, twitter, or instagram URL. Supports services listed at <a href="http://codex.wordpress.org/Embeds">http://codex.wordpress.org/Embeds</a>.', 'cmb2' ),
+		'name' => __( 'oEmbed', 'mesopotamia' ),
+		'desc' => __( 'Enter a youtube, twitter, or instagram URL. Supports services listed at <a href="http://codex.wordpress.org/Embeds">http://codex.wordpress.org/Embeds</a>.', 'mesopotamia' ),
 		'id'   => $prefix . 'embed',
 		'type' => 'oembed',
 	) );
@@ -371,7 +371,7 @@ function yourprefix_register_about_page_metabox() {
 	 */
 	$cmb_about_page = new_cmb2_box( array(
 		'id'           => $prefix . 'metabox',
-		'title'        => __( 'About Page Metabox', 'cmb2' ),
+		'title'        => __( 'About Page Metabox', 'mesopotamia' ),
 		'object_types' => array( 'page', ), // Post type
 		'context'      => 'normal',
 		'priority'     => 'high',
@@ -380,8 +380,8 @@ function yourprefix_register_about_page_metabox() {
 	) );
 
 	$cmb_about_page->add_field( array(
-		'name' => __( 'Test Text', 'cmb2' ),
-		'desc' => __( 'field description (optional)', 'cmb2' ),
+		'name' => __( 'Test Text', 'mesopotamia' ),
+		'desc' => __( 'field description (optional)', 'mesopotamia' ),
 		'id'   => $prefix . 'text',
 		'type' => 'text',
 	) );
@@ -400,7 +400,7 @@ function yourprefix_register_repeatable_group_field_metabox() {
 	 */
 	$cmb_group = new_cmb2_box( array(
 		'id'           => $prefix . 'metabox',
-		'title'        => __( 'Repeating Field Group', 'cmb2' ),
+		'title'        => __( 'Repeating Field Group', 'mesopotamia' ),
 		'object_types' => array( 'page', ),
 	) );
 
@@ -408,11 +408,11 @@ function yourprefix_register_repeatable_group_field_metabox() {
 	$group_field_id = $cmb_group->add_field( array(
 		'id'          => $prefix . 'demo',
 		'type'        => 'group',
-		'description' => __( 'Generates reusable form entries', 'cmb2' ),
+		'description' => __( 'Generates reusable form entries', 'mesopotamia' ),
 		'options'     => array(
-			'group_title'   => __( 'Entry {#}', 'cmb2' ), // {#} gets replaced by row number
-			'add_button'    => __( 'Add Another Entry', 'cmb2' ),
-			'remove_button' => __( 'Remove Entry', 'cmb2' ),
+			'group_title'   => __( 'Entry {#}', 'mesopotamia' ), // {#} gets replaced by row number
+			'add_button'    => __( 'Add Another Entry', 'mesopotamia' ),
+			'remove_button' => __( 'Remove Entry', 'mesopotamia' ),
 			'sortable'      => true, // beta
 			// 'closed'     => true, // true to have the groups closed by default
 		),
@@ -425,27 +425,27 @@ function yourprefix_register_repeatable_group_field_metabox() {
 	 * The parent field's id needs to be passed as the first argument.
 	 */
 	$cmb_group->add_group_field( $group_field_id, array(
-		'name'       => __( 'Entry Title', 'cmb2' ),
+		'name'       => __( 'Entry Title', 'mesopotamia' ),
 		'id'         => 'title',
 		'type'       => 'text',
 		// 'repeatable' => true, // Repeatable fields are supported w/in repeatable groups (for most types)
 	) );
 
 	$cmb_group->add_group_field( $group_field_id, array(
-		'name'        => __( 'Description', 'cmb2' ),
-		'description' => __( 'Write a short description for this entry', 'cmb2' ),
+		'name'        => __( 'Description', 'mesopotamia' ),
+		'description' => __( 'Write a short description for this entry', 'mesopotamia' ),
 		'id'          => 'description',
 		'type'        => 'textarea_small',
 	) );
 
 	$cmb_group->add_group_field( $group_field_id, array(
-		'name' => __( 'Entry Image', 'cmb2' ),
+		'name' => __( 'Entry Image', 'mesopotamia' ),
 		'id'   => 'image',
 		'type' => 'file',
 	) );
 
 	$cmb_group->add_group_field( $group_field_id, array(
-		'name' => __( 'Image Caption', 'cmb2' ),
+		'name' => __( 'Image Caption', 'mesopotamia' ),
 		'id'   => 'image_caption',
 		'type' => 'text',
 	) );
@@ -464,58 +464,58 @@ function yourprefix_register_user_profile_metabox() {
 	 */
 	$cmb_user = new_cmb2_box( array(
 		'id'               => $prefix . 'edit',
-		'title'            => __( 'User Profile Metabox', 'cmb2' ), // Doesn't output for user boxes
+		'title'            => __( 'User Profile Metabox', 'mesopotamia' ), // Doesn't output for user boxes
 		'object_types'     => array( 'user' ), // Tells CMB2 to use user_meta vs post_meta
 		'show_names'       => true,
 		'new_user_section' => 'add-new-user', // where form will show on new user page. 'add-existing-user' is only other valid option.
 	) );
 
 	$cmb_user->add_field( array(
-		'name'     => __( 'Extra Info', 'cmb2' ),
-		'desc'     => __( 'field description (optional)', 'cmb2' ),
+		'name'     => __( 'Extra Info', 'mesopotamia' ),
+		'desc'     => __( 'field description (optional)', 'mesopotamia' ),
 		'id'       => $prefix . 'extra_info',
 		'type'     => 'title',
 		'on_front' => false,
 	) );
 
 	$cmb_user->add_field( array(
-		'name'    => __( 'Avatar', 'cmb2' ),
-		'desc'    => __( 'field description (optional)', 'cmb2' ),
+		'name'    => __( 'Avatar', 'mesopotamia' ),
+		'desc'    => __( 'field description (optional)', 'mesopotamia' ),
 		'id'      => $prefix . 'avatar',
 		'type'    => 'file',
 	) );
 
 	$cmb_user->add_field( array(
-		'name' => __( 'Facebook URL', 'cmb2' ),
-		'desc' => __( 'field description (optional)', 'cmb2' ),
+		'name' => __( 'Facebook URL', 'mesopotamia' ),
+		'desc' => __( 'field description (optional)', 'mesopotamia' ),
 		'id'   => $prefix . 'facebookurl',
 		'type' => 'text_url',
 	) );
 
 	$cmb_user->add_field( array(
-		'name' => __( 'Twitter URL', 'cmb2' ),
-		'desc' => __( 'field description (optional)', 'cmb2' ),
+		'name' => __( 'Twitter URL', 'mesopotamia' ),
+		'desc' => __( 'field description (optional)', 'mesopotamia' ),
 		'id'   => $prefix . 'twitterurl',
 		'type' => 'text_url',
 	) );
 
 	$cmb_user->add_field( array(
-		'name' => __( 'Google+ URL', 'cmb2' ),
-		'desc' => __( 'field description (optional)', 'cmb2' ),
+		'name' => __( 'Google+ URL', 'mesopotamia' ),
+		'desc' => __( 'field description (optional)', 'mesopotamia' ),
 		'id'   => $prefix . 'googleplusurl',
 		'type' => 'text_url',
 	) );
 
 	$cmb_user->add_field( array(
-		'name' => __( 'Linkedin URL', 'cmb2' ),
-		'desc' => __( 'field description (optional)', 'cmb2' ),
+		'name' => __( 'Linkedin URL', 'mesopotamia' ),
+		'desc' => __( 'field description (optional)', 'mesopotamia' ),
 		'id'   => $prefix . 'linkedinurl',
 		'type' => 'text_url',
 	) );
 
 	$cmb_user->add_field( array(
-		'name' => __( 'User Field', 'cmb2' ),
-		'desc' => __( 'field description (optional)', 'cmb2' ),
+		'name' => __( 'User Field', 'mesopotamia' ),
+		'desc' => __( 'field description (optional)', 'mesopotamia' ),
 		'id'   => $prefix . 'user_text_field',
 		'type' => 'text',
 	) );
@@ -534,30 +534,30 @@ function yourprefix_register_taxonomy_metabox() {
 	 */
 	$cmb_term = new_cmb2_box( array(
 		'id'               => $prefix . 'edit',
-		'title'            => __( 'Category Metabox', 'cmb2' ), // Doesn't output for term boxes
+		'title'            => __( 'Category Metabox', 'mesopotamia' ), // Doesn't output for term boxes
 		'object_types'     => array( 'term' ), // Tells CMB2 to use term_meta vs post_meta
 		'taxonomies'       => array( 'category', 'post_tag' ), // Tells CMB2 which taxonomies should have these fields
 		// 'new_term_section' => true, // Will display in the "Add New Category" section
 	) );
 
 	$cmb_term->add_field( array(
-		'name'     => __( 'Extra Info', 'cmb2' ),
-		'desc'     => __( 'field description (optional)', 'cmb2' ),
+		'name'     => __( 'Extra Info', 'mesopotamia' ),
+		'desc'     => __( 'field description (optional)', 'mesopotamia' ),
 		'id'       => $prefix . 'extra_info',
 		'type'     => 'title',
 		'on_front' => false,
 	) );
 
 	$cmb_term->add_field( array(
-		'name' => __( 'Term Image', 'cmb2' ),
-		'desc' => __( 'field description (optional)', 'cmb2' ),
+		'name' => __( 'Term Image', 'mesopotamia' ),
+		'desc' => __( 'field description (optional)', 'mesopotamia' ),
 		'id'   => $prefix . 'avatar',
 		'type' => 'file',
 	) );
 
 	$cmb_term->add_field( array(
-		'name' => __( 'Arbitrary Term Field', 'cmb2' ),
-		'desc' => __( 'field description (optional)', 'cmb2' ),
+		'name' => __( 'Arbitrary Term Field', 'mesopotamia' ),
+		'desc' => __( 'field description (optional)', 'mesopotamia' ),
 		'id'   => $prefix . 'term_text_field',
 		'type' => 'text',
 	) );
@@ -578,7 +578,7 @@ function yourprefix_register_theme_options_metabox() {
 	 */
 	$cmb_options = new_cmb2_box( array(
 		'id'      => $option_key . 'page',
-		'title'   => __( 'Theme Options Metabox', 'cmb2' ),
+		'title'   => __( 'Theme Options Metabox', 'mesopotamia' ),
 		'hookup'  => false, // Do not need the normal user/post hookup
 		'show_on' => array(
 			// These are important, don't remove
@@ -593,8 +593,8 @@ function yourprefix_register_theme_options_metabox() {
 	 * Prefix is not needed.
 	 */
 	$cmb_options->add_field( array(
-		'name'    => __( 'Site Background Color', 'cmb2' ),
-		'desc'    => __( 'field description (optional)', 'cmb2' ),
+		'name'    => __( 'Site Background Color', 'mesopotamia' ),
+		'desc'    => __( 'field description (optional)', 'mesopotamia' ),
 		'id'      => 'bg_color',
 		'type'    => 'colorpicker',
 		'default' => '#ffffff',

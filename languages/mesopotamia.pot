@@ -2,9 +2,9 @@
 # This file is distributed under the GNU General Public License v2 or later.
 msgid ""
 msgstr ""
-"Project-Id-Version: Mesopotamia 1.0\n"
+"Project-Id-Version: Mesopotamia 1.0.3\n"
 "Report-Msgid-Bugs-To: https://wordpress.org/support/theme/style\n"
-"POT-Creation-Date: 2016-05-17 10:29:00+00:00\n"
+"POT-Creation-Date: 2016-10-28 17:27:57+00:00\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=utf-8\n"
 "Content-Transfer-Encoding: 8bit\n"
@@ -55,6 +55,14 @@ msgstr ""
 msgid "Comments are closed."
 msgstr ""
 
+#. Author URI of the plugin/theme
+msgid "https://mostasharoon.org"
+msgstr ""
+
+#: footer.php:160 inc/settings.php:159
+msgid "MOSTASHAROON"
+msgstr ""
+
 #: functions.php:47
 msgid "Primary"
 msgstr ""
@@ -83,12 +91,16 @@ msgstr ""
 msgid "This widgets appear on the 404 page."
 msgstr ""
 
+#: functions.php:160
+msgid "Footer widget "
+msgstr ""
+
 #: header.php:28
 msgid "Skip to content"
 msgstr ""
 
 #: header.php:94
-msgid "Search …"
+msgid "Search ..."
 msgstr ""
 
 #: inc/metaboxes.php:29
@@ -677,7 +689,7 @@ msgstr ""
 
 #: lib/cmb2/includes/CMB2_JS.php:138 lib/cmb2/includes/CMB2_Types.php:357
 #: lib/cmb2/includes/CMB2_Types.php:1040
-#: lib/mostasharoon-admin-page/mostasharoon-admin-page.php:341
+#: lib/mostasharoon-admin-page/mostasharoon-admin-page.php:309
 msgid "Remove"
 msgstr ""
 
@@ -721,6 +733,14 @@ msgstr ""
 
 #: lib/cmb2/includes/helper-functions.php:250
 msgid "Save"
+msgstr ""
+
+#: lib/mostasharoon-admin-page/mostasharoon-admin-page.php:80
+msgid "Mesopotamia Settings"
+msgstr ""
+
+#: lib/mostasharoon-admin-page/mostasharoon-admin-page.php:119
+msgid "Save All Changes"
 msgstr ""
 
 #: search.php:41
@@ -784,18 +804,14 @@ msgid ""
 "main site grid options(9X3 and 8X4), six page templates to choose "
 "from(right sidebar, left sidebar, no sidebar, full width, content full "
 "width, and scratch), footer menu,unlimited combinations of colors for the "
-"main and secondary colors of the theme and more . . . To view many full "
-"live demos and to check Mesopotamia features list and to find much more "
-"information about Mesopotamia please click on the \"Theme Homepage\" link "
-"right above."
+"main and secondary colors of the theme and much more . . . To view many "
+"full live demos and to check Mesopotamia features list and to find much "
+"more information about Mesopotamia please visit Mesopotamia homepage at: "
+"https://mostasharoon.org/mesopotamia/"
 msgstr ""
 
 #. Author of the plugin/theme
 msgid "Mohammed Al-Mahdawi(Mohammed Thaer)"
-msgstr ""
-
-#. Author URI of the plugin/theme
-msgid "https://mostasharoon.org"
 msgstr ""
 
 #. Template Name of the plugin/theme

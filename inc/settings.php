@@ -156,7 +156,7 @@ function mesopotamia_admin_menu() {
 				'label'   => __( 'Copyright', 'mesopotamia' ),
 				'name'    => 'mesopotamia_footer_settings[copyright]',
 				'type'    => 'textarea',
-				'default' => '© %year% <a href="https://mostasharoon.org" rel="designer">MOSTASHAROON</a>',
+				'default' => '© %year% <a href="'.esc_url(__('https://mostasharoon.org', 'mesopotamia' )).'" rel="designer">'.__('MOSTASHAROON', 'mesopotamia' ).'</a>',
 				'help'    => __( 'Use %year% to refer to the current year.', 'mesopotamia' ),
 			),
 		),
