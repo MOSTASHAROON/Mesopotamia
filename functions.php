@@ -250,12 +250,8 @@ function mesopotamia_scripts() {
 	wp_enqueue_script( 'mesopotamia-bootstrap-js', get_template_directory_uri() . '/lib/bootstrap/js/bootstrap.min.js',
 		array( 'jquery' ) );
 
-
-	wp_register_script( 'imagesLoaded', get_template_directory_uri() . '/lib/imagesloaded.pkgd.min.js', array(),
-		'4.1.0', true );
-
 	wp_enqueue_script( 'mesopotamia-js', get_template_directory_uri() . '/js/script.js', array(
-		'imagesLoaded',
+		'imagesloaded',
 		'masonry',
 		'mesopotamia-bootstrap-js'
 	) );
