@@ -28,9 +28,8 @@
 		   href="#content"><?php esc_html_e( 'Skip to content', 'mesopotamia' ); ?></a>
 
 		<header id="masthead" class="site-header" role="banner">
-			<?php if ( function_exists( 'ubermenu' ) && ( true == get_theme_mod( 'UberMenu' ) ) ): ?>
-				<?php ubermenu( 'main', array( 'theme_location' => 'primary' ) ); ?>
-			<?php else: ?>
+            <?php do_action( 'mesopotamia_start_header_tag' ); ?>
+			<?php if ( !function_exists( 'ubermenu' ) || ( true != get_theme_mod( 'UberMenu' ) ) ): ?>
 				<div class="site-branding screen-reader-text">
 					<?php
 					if ( is_front_page() && is_home() ) : ?>

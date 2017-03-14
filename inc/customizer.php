@@ -113,11 +113,6 @@ function register_mesopotamia_settings( $wp_customize ) {
 		"transport" => "refresh",
 	) );
 
-	$wp_customize->add_setting( "UberMenu", array(
-		"default"   => false,
-		"transport" => "refresh",
-	) );
-
 	$wp_customize->add_setting( "top_footer", array(
 		"default"   => false,
 		"transport" => "refresh",
@@ -129,9 +124,12 @@ function register_mesopotamia_settings( $wp_customize ) {
 	) );
 
 	$wp_customize->add_setting( "copyright", array(
-		"default"   => '© %year% <a href="'.esc_url(__('https://mostasharoon.org', 'mesopotamia' )).'" rel="designer">'.__('MOSTASHAROON', 'mesopotamia' ).'</a>',
+		"default"   => '© %year% <a href="' . esc_url( __( 'https://mostasharoon.org',
+				'mesopotamia' ) ) . '" rel="designer">' . __( 'MOSTASHAROON', 'mesopotamia' ) . '</a>',
 		"transport" => "refresh",
 	) );
+
+	do_action( 'register_mesopotamia_settings', $wp_customize );
 }
 
 add_action( "customize_register", "register_mesopotamia_settings" );
@@ -289,15 +287,6 @@ function register_mesopotamia_controls( $wp_customize ) {
 	);
 
 	$wp_customize->add_control(
-		'UberMenu',
-		array(
-			'type'    => 'checkbox',
-			'label'   => __( 'Enable UberMenu', 'mesopotamia' ),
-			'section' => 'header'
-		)
-	);
-
-	$wp_customize->add_control(
 		'top_footer',
 		array(
 			'type'    => 'checkbox',
@@ -321,16 +310,18 @@ function register_mesopotamia_controls( $wp_customize ) {
 		)
 	);
 
-	$wp_customize->add_control(new WP_Customize_Control(
+	$wp_customize->add_control( new WP_Customize_Control(
 		$wp_customize,
 		"copyright",
 		array(
-			"label" => __( 'Copyright', 'mesopotamia' ),
-			"section" => "footer",
+			"label"    => __( 'Copyright', 'mesopotamia' ),
+			"section"  => "footer",
 			"settings" => "copyright",
-			"type" => "textarea",
+			"type"     => "textarea",
 		)
-	));
+	) );
+
+	do_action( 'register_mesopotamia_controls', $wp_customize );
 }
 
 add_action( "customize_register", "register_mesopotamia_controls" );
