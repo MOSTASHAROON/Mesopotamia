@@ -28,7 +28,7 @@
 		   href="#content"><?php esc_html_e( 'Skip to content', 'mesopotamia' ); ?></a>
 
 		<header id="masthead" class="site-header" role="banner">
-			<?php if ( function_exists( 'ubermenu' ) && ( 'yes' == mesopotamia_get_option( 'UberMenu', 'mesopotamia_header_settings', 'no' ) ) ): ?>
+			<?php if ( function_exists( 'ubermenu' ) && ( true == get_theme_mod( 'UberMenu' ) ) ): ?>
 				<?php ubermenu( 'main', array( 'theme_location' => 'primary' ) ); ?>
 			<?php else: ?>
 				<div class="site-branding screen-reader-text">
@@ -48,8 +48,8 @@
 						<?php
 					endif; ?>
 				</div><!-- .site-branding -->
-				<?php $is_fixed_header = mesopotamia_get_option( 'fixed_header', 'mesopotamia_header_settings', 'no' ); ?>
-				<?php $fixed_class = ( $is_fixed_header == 'yes' ) ? 'navbar-fixed-top' : ''; ?>
+				<?php $is_fixed_header = get_theme_mod( 'fixed_header' ); ?>
+				<?php $fixed_class = ( $is_fixed_header == true ) ? 'navbar-fixed-top' : ''; ?>
 				<nav class="navbar navbar-default <?php echo $fixed_class; ?> main-navigation" id="site-navigation"
 				     role="navigation">
 					<div class="container-fluid navbar-container-fluid">
@@ -63,9 +63,9 @@
 								<span class="icon-bar"></span>
 							</button>
 							<a class="navbar-brand" href="<?php echo home_url(); ?>">
-								<?php $logo_id = (int) mesopotamia_get_option( 'logo', 'mesopotamia_header_settings', '' ); ?>
-								<?php if ( $logo_id ) { ?>
-									<img src="<?php echo wp_get_attachment_url( $logo_id ); ?>"
+								<?php $logo = get_theme_mod( 'logo' ); ?>
+								<?php if ( $logo ) { ?>
+									<img src="<?php echo $logo; ?>"
 									     style="max-height:50px; margin-top: -15px;" alt="Brand">
 								<?php } else { ?>
 									<?php bloginfo( 'name' ); ?>
@@ -87,7 +87,7 @@
 								)
 							);
 							?>
-							<?php if ( 'yes' == mesopotamia_get_option( 'search', 'mesopotamia_header_settings', '' ) ) { ?>
+							<?php if ( true == get_theme_mod( 'search' ) ) { ?>
 								<form class="navbar-form navbar-right mesopotamia-navbar-search-form" role="search">
 									<div class="form-group">
 										<input type="search" class="search-field form-control input-search" name="s"

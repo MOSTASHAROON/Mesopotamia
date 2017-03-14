@@ -39,4 +39,10 @@
             }
         });
     });
+
+    // wp.customize("copyright", function(value) {
+    //     value.bind(function(newval) {
+    //         $("#copyright").html(newval);
+    //     } );
+    // });
 })(jQuery);

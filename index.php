@@ -15,7 +15,7 @@
 get_header(); ?>
 
 <?php
-$rev_slider = mesopotamia_get_option( 'blog_slider_revolution', 'mesopotamia_general_settings', '' );
+$rev_slider = get_theme_mod( 'blog_slider_revolution' );
 
 if ( $rev_slider && function_exists( 'putRevSlider' ) ) {
 
@@ -27,7 +27,7 @@ if ( $rev_slider && function_exists( 'putRevSlider' ) ) {
 
 	<div class="row">
 <?php if ( mesopotamia_has_sidebar( 'blog' ) ){ ?>
-	<?php $grid = mesopotamia_get_option( 'grid', 'mesopotamia_general_settings', '8X4' ); ?>
+	<?php $grid = get_theme_mod("grid"); ?>
 	<?php if ( $grid == '8X4' ){ ?>
 	<div class="col-md-8 col-xs-12">
 	<?php }elseif ( $grid == '9X3' ){ ?>

@@ -19,11 +19,11 @@
 	<footer id="colophon" class="site-footer" role="contentinfo">
 
 		<?php
-		$top_footer = mesopotamia_get_option( 'top_footer', 'mesopotamia_footer_settings', '' );
+		$top_footer = get_theme_mod( 'top_footer' );
 
-		if ( $top_footer == 'yes' ) {
+		if ( $top_footer == true ) {
 			echo '<div class="row">';
-			$top_columns = mesopotamia_get_option( 'top_columns', 'mesopotamia_footer_settings', '1' );
+			$top_columns = get_theme_mod( 'top_columns' );
 			switch ( $top_columns ) {
 				case '1':
 					echo '<div class="col-lg-12 col-md-12 col-sm-12">';
@@ -156,8 +156,8 @@
 		?>
 
 		<div class="bottom-footer">
-			<div class="site-info">
-				<?php echo stripslashes( str_replace( "%year%", current_time( 'Y' ), mesopotamia_get_option( 'copyright', 'mesopotamia_footer_settings', '© %year% <a href="'.esc_url(__('https://mostasharoon.org', 'mesopotamia' )).'" rel="designer">'.__('MOSTASHAROON', 'mesopotamia' ).'</a>' ) ) ); ?>
+			<div class="site-info" id="copyright">
+				<?php echo stripslashes( str_replace( "%year%", current_time( 'Y' ), get_theme_mod( 'copyright' ) ) ); ?>
 			</div><!-- .site-info -->
 			<?php mesopotamia_footer_menu(); ?>
 		</div><!-- .bottom-footer -->

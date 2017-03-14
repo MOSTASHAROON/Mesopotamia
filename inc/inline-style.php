@@ -10,8 +10,8 @@ if ( ! defined( 'ABSPATH' ) ) {
  */
 function mesopotamia_inline_css() {
 
-	$first_main_color  = mesopotamia_get_option( 'first_main_color', 'mesopotamia_general_settings', '#ff6700' );
-	$second_main_color = mesopotamia_get_option( 'second_main_color', 'mesopotamia_general_settings', '#00aeef' );
+	$first_main_color  = get_theme_mod("first_main_color");
+	$second_main_color = get_theme_mod( 'second_main_color');
 
 	$css = '
 		/* Mesopotamia Inline CSS */
