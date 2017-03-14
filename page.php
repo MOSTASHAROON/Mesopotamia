@@ -14,16 +14,7 @@
 
 get_header(); ?>
 
-<?php
-$rev_slider = get_post_meta( get_the_ID(), '_mesopotamia_slider_revolution', true );
-
-if ( $rev_slider && function_exists( 'putRevSlider' ) ) {
-
-	echo '<div id="main-slideshow">';
-	putRevSlider( $rev_slider );
-	echo '</div>';
-}
-?>
+<?php do_action( 'mesopotamia_start_page_page' ); ?>
 
 	<div class="row">
 <?php $grid = get_theme_mod("grid"); ?>

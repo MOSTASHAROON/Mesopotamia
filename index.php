@@ -14,16 +14,7 @@
 
 get_header(); ?>
 
-<?php
-$rev_slider = get_theme_mod( 'blog_slider_revolution' );
-
-if ( $rev_slider && function_exists( 'putRevSlider' ) ) {
-
-	echo '<div id="main-slideshow">';
-	putRevSlider( $rev_slider );
-	echo '</div>';
-}
-?>
+<?php do_action( 'mesopotamia_start_index_page' ); ?>
 
 	<div class="row">
 <?php if ( mesopotamia_has_sidebar( 'blog' ) ){ ?>

@@ -349,8 +349,3 @@ require get_template_directory() . '/inc/wp_bootstrap_navwalker.php';
  * Load inline style.
  */
 require get_template_directory() . '/inc/inline-style.php';
-
-/**
- * Load admin settings page.
- */
-require get_template_directory() . '/inc/metaboxes.php';

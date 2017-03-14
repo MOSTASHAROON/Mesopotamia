@@ -9,16 +9,7 @@
 
 get_header(); ?>
 
-<?php
-$rev_slider = get_theme_mod( 'archive_slider_revolution' );
-
-if ( $rev_slider && function_exists( 'putRevSlider' ) ) {
-
-	echo '<div id="main-slideshow">';
-	putRevSlider( $rev_slider );
-	echo '</div>';
-}
-?>
+<?php do_action( 'mesopotamia_start_archive_page' ); ?>
 
 	<div class="row">
 <?php if ( mesopotamia_has_sidebar( 'archive' ) ){ ?>

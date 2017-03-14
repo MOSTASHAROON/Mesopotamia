@@ -5,16 +5,8 @@
 
 get_header(); ?>
 
-<?php
-$rev_slider = get_post_meta( get_the_ID(), '_mesopotamia_slider_revolution', true );
+<?php do_action( 'mesopotamia_start_content_full_width_page' ); ?>
 
-if ( $rev_slider && function_exists( 'putRevSlider' ) ) {
-
-	echo '<div id="main-slideshow">';
-	putRevSlider( $rev_slider );
-	echo '</div>';
-}
-?>
 	<div class="row">
 	<div class="col-xs-12">
 		<div id="primary" class="content-area">

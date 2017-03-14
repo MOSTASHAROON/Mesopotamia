@@ -83,21 +83,6 @@ function register_mesopotamia_settings( $wp_customize ) {
 		"transport" => "refresh",
 	) );
 
-	$wp_customize->add_setting( "blog_slider_revolution", array(
-		"default"   => "",
-		"transport" => "refresh",
-	) );
-
-	$wp_customize->add_setting( "search_slider_revolution", array(
-		"default"   => "",
-		"transport" => "refresh",
-	) );
-
-	$wp_customize->add_setting( "archive_slider_revolution", array(
-		"default"   => "",
-		"transport" => "refresh",
-	) );
-
 	$wp_customize->add_setting( "logo", array(
 		"default"   => "",
 		"transport" => "refresh",
@@ -207,50 +192,6 @@ function register_mesopotamia_controls( $wp_customize ) {
 			'type'    => 'checkbox',
 			'label'   => __( 'Disable sidebar for archive', 'mesopotamia' ),
 			'section' => 'general'
-		)
-	);
-
-	$rev_sliders = array();
-
-	if ( class_exists( 'RevSlider' ) ) {
-
-		$rev = new RevSlider();
-
-		$arrSliders = $rev->getArrSliders();
-		foreach ( (array) $arrSliders as $revSlider ) {
-			$rev_sliders[ $revSlider->getAlias() ] = $revSlider->getTitle();
-		}
-	}
-
-	$rev_sliders[''] = 'None';
-
-	$wp_customize->add_control(
-		'blog_slider_revolution',
-		array(
-			'type'    => 'select',
-			'label'   => __( 'Select Slider Revolution For Blog Page', 'mesopotamia' ),
-			'section' => 'general',
-			'choices' => $rev_sliders,
-		)
-	);
-
-	$wp_customize->add_control(
-		'search_slider_revolution',
-		array(
-			'type'    => 'select',
-			'label'   => __( 'Select Slider Revolution For Search Page', 'mesopotamia' ),
-			'section' => 'general',
-			'choices' => $rev_sliders,
-		)
-	);
-
-	$wp_customize->add_control(
-		'archive_slider_revolution',
-		array(
-			'type'    => 'select',
-			'label'   => __( 'Select Slider Revolution For Archive/Category/Tag Page', 'mesopotamia' ),
-			'section' => 'general',
-			'choices' => $rev_sliders,
 		)
 	);
 
