@@ -297,7 +297,11 @@ function mesopotamia_hex2rgb( $color ) {
  * @return bool
  */
 function mesopotamia_has_sidebar( $template ) {
-	$disabled_sidebars = mesopotamia_get_array_of_options(array('disable_blog_sidebar','disable_search_sidebar', 'disable_archive_sidebar'));
+	$disabled_sidebars = mesopotamia_get_array_of_options( array(
+		'disable_blog_sidebar',
+		'disable_search_sidebar',
+		'disable_archive_sidebar'
+	) );
 
 	if ( in_array( $template, $disabled_sidebars ) ) {
 		return false;
@@ -313,6 +317,10 @@ function mesopotamia_get_array_of_options( $options ) {
 	}
 
 	return $results;
+}
+
+function mesopotamia_sanitize_boolean( $bool ) {
+	return filter_var( $bool, FILTER_VALIDATE_BOOLEAN );
 }
 
 /**

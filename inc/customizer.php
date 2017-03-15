@@ -51,67 +51,80 @@ function register_mesopotamia_settings( $wp_customize ) {
 	$wp_customize->add_setting( "first_main_color", array(
 		"default"   => "#ff6700",
 		"transport" => "refresh",
+		'sanitize_callback' => 'sanitize_text_field',
 	) );
 
 	$wp_customize->add_setting( "second_main_color", array(
 		"default"   => "#00aeef",
 		"transport" => "refresh",
+		'sanitize_callback' => 'sanitize_text_field',
 	) );
 
 	$wp_customize->add_setting( "grid", array(
 		"default"   => "8X4",
 		"transport" => "refresh",
+		'sanitize_callback' => 'sanitize_text_field',
 	) );
 
 	$wp_customize->add_setting( "skin", array(
 		"default"   => "dark",
 		"transport" => "refresh",
+		'sanitize_callback' => 'sanitize_text_field',
 	) );
 
 	$wp_customize->add_setting( "disable_blog_sidebar", array(
 		"default"   => "",
 		"transport" => "refresh",
+		'sanitize_callback' => 'mesopotamia_sanitize_boolean',
 	) );
 
 	$wp_customize->add_setting( "disable_search_sidebar", array(
 		"default"   => "",
 		"transport" => "refresh",
+		'sanitize_callback' => 'mesopotamia_sanitize_boolean',
 	) );
 
 	$wp_customize->add_setting( "disable_archive_sidebar", array(
 		"default"   => "",
 		"transport" => "refresh",
+		'sanitize_callback' => 'mesopotamia_sanitize_boolean',
 	) );
 
 	$wp_customize->add_setting( "logo", array(
 		"default"   => "",
 		"transport" => "refresh",
+		'sanitize_callback' => 'sanitize_text_field',
 	) );
 
 	$wp_customize->add_setting( "search", array(
 		"default"   => false,
 		"transport" => "refresh",
+		'sanitize_callback' => 'mesopotamia_sanitize_boolean',
 	) );
 
 	$wp_customize->add_setting( "fixed_header", array(
 		"default"   => false,
 		"transport" => "refresh",
+		'sanitize_callback' => 'mesopotamia_sanitize_boolean',
 	) );
 
 	$wp_customize->add_setting( "top_footer", array(
 		"default"   => false,
 		"transport" => "refresh",
+		'sanitize_callback' => 'mesopotamia_sanitize_boolean',
 	) );
 
 	$wp_customize->add_setting( "top_columns", array(
 		"default"   => '1',
 		"transport" => "refresh",
+		'sanitize_callback' => 'sanitize_text_field',
 	) );
 
 	$wp_customize->add_setting( "copyright", array(
 		"default"   => '© %year% <a href="' . esc_url( __( 'https://mostasharoon.org',
 				'mesopotamia' ) ) . '" rel="designer">' . __( 'MOSTASHAROON', 'mesopotamia' ) . '</a>',
 		"transport" => "refresh",
+		'sanitize_callback' => 'wp_kses_post',
 	) );
 
 	do_action( 'register_mesopotamia_settings', $wp_customize );
