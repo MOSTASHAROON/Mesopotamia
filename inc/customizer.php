@@ -200,7 +200,7 @@ function register_mesopotamia_controls( $wp_customize ) {
 			$wp_customize,
 			'logo',
 			array(
-				'label'       => __( 'Upload a logo', 'theme_name' ),
+				'label'       => __( 'Upload a logo', 'mesopotamia' ),
 				'section'     => 'header',
 				'settings'    => 'logo',
 				'description' => __( 'Perfect logo height for Mesopotamia theme is 50px', 'mesopotamia' )
