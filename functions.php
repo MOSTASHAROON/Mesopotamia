@@ -186,46 +186,46 @@ function mesopotamia_scripts() {
 		wp_enqueue_script( 'comment-reply' );
 	}
 
-//	wp_enqueue_style( 'mesopotamia-google-fonts', 'https://fonts.googleapis.com/css?family=Ranga:400,700|Contrail+One|Courgette|Italianno|Romanesco' );
-	wp_enqueue_style( 'mesopotamia-google-fonts',
+//	wp_enqueue_style( 'google-fonts', 'https://fonts.googleapis.com/css?family=Ranga:400,700|Contrail+One|Courgette|Italianno|Romanesco' );
+	wp_enqueue_style( 'google-fonts',
 		'https://fonts.googleapis.com/css?family=Ubuntu:400,700,700italic,500italic,500,400italic,300italic,300' );
-	wp_enqueue_style( 'mesopotamia-font-awesome',
+	wp_enqueue_style( 'font-awesome',
 		get_template_directory_uri() . '/lib/font-awesome/css/font-awesome.min.css' );
-	wp_enqueue_style( 'mesopotamia-bootstrap', get_template_directory_uri() . '/lib/bootstrap/css/bootstrap.min.css' );
-	wp_enqueue_style( 'mesopotamia-bootstrap-theme',
+	wp_enqueue_style( 'bootstrap', get_template_directory_uri() . '/lib/bootstrap/css/bootstrap.min.css' );
+	wp_enqueue_style( 'bootstrap-theme',
 		get_template_directory_uri() . '/lib/bootstrap/css/bootstrap-theme.min.css', array(
-			'mesopotamia-bootstrap'
+			'bootstrap'
 		) );
 
 	if ( is_page_template( 'page-templates/full-width.php' ) ) {
 		wp_enqueue_style( 'mesopotamia-layout', get_template_directory_uri() . '/layouts/full-width.css', array(
-			'mesopotamia-bootstrap-theme',
-			'mesopotamia-google-fonts',
-			'mesopotamia-font-awesome'
+			'bootstrap-theme',
+			'google-fonts',
+			'font-awesome'
 		) );
 	} elseif ( is_page_template( 'page-templates/no-sidebar.php' ) ) {
 		wp_enqueue_style( 'mesopotamia-layout', get_template_directory_uri() . '/layouts/no-sidebar.css', array(
-			'mesopotamia-bootstrap-theme',
-			'mesopotamia-google-fonts',
-			'mesopotamia-font-awesome'
+			'bootstrap-theme',
+			'google-fonts',
+			'font-awesome'
 		) );
 	} elseif ( is_page_template( 'page-templates/scratch.php' ) ) {
 		wp_enqueue_style( 'mesopotamia-layout', get_template_directory_uri() . '/layouts/scratch.css', array(
-			'mesopotamia-bootstrap-theme',
-			'mesopotamia-google-fonts',
-			'mesopotamia-font-awesome'
+			'bootstrap-theme',
+			'google-fonts',
+			'font-awesome'
 		) );
 	} elseif ( is_page_template( 'page-templates/content-full-width.php' ) ) {
 		wp_enqueue_style( 'mesopotamia-layout', get_template_directory_uri() . '/layouts/content-full-width.css', array(
-			'mesopotamia-bootstrap-theme',
-			'mesopotamia-google-fonts',
-			'mesopotamia-font-awesome'
+			'bootstrap-theme',
+			'google-fonts',
+			'font-awesome'
 		) );
 	} else {
 		wp_enqueue_style( 'mesopotamia-layout', get_template_directory_uri() . '/layouts/content-sidebar.css', array(
-			'mesopotamia-bootstrap-theme',
-			'mesopotamia-google-fonts',
-			'mesopotamia-font-awesome'
+			'bootstrap-theme',
+			'google-fonts',
+			'font-awesome'
 		) );
 	}
 
@@ -247,13 +247,13 @@ function mesopotamia_scripts() {
 		'mesopotamia-skin'
 	) );
 
-	wp_enqueue_script( 'mesopotamia-bootstrap-js', get_template_directory_uri() . '/lib/bootstrap/js/bootstrap.min.js',
+	wp_enqueue_script( 'bootstrap-js', get_template_directory_uri() . '/lib/bootstrap/js/bootstrap.min.js',
 		array( 'jquery' ) );
 
 	wp_enqueue_script( 'mesopotamia-js', get_template_directory_uri() . '/js/script.js', array(
 		'imagesloaded',
 		'masonry',
-		'mesopotamia-bootstrap-js'
+		'bootstrap-js'
 	) );
 }
 
