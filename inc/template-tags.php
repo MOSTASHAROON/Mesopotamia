@@ -25,12 +25,12 @@ if ( ! function_exists( 'mesopotamia_posted_on' ) ) :
 		);
 
 		$posted_on = sprintf(
-			esc_html_x( '%s', 'post date', 'mesopotamia' ),
+			'%s',
 			'<a href="' . esc_url( mesopotamia_get_post_day_link() ) . '" rel="bookmark">' . $time_string . '</a>'
 		);
 
 		$byline = sprintf(
-			esc_html_x( '%s', 'post author', 'mesopotamia' ),
+			'%s',
 			'<span class="author vcard"><i class="fa fa-user"> <a class="url fn n" href="' . esc_url( get_author_posts_url( get_the_author_meta( 'ID' ) ) ) . '">' . esc_html( get_the_author() ) . '</a></i></span>'
 		);
 
@@ -51,15 +51,18 @@ if ( ! function_exists( 'mesopotamia_entry_footer' ) ) :
 		// Hide category and tag text for pages.
 		if ( 'post' === get_post_type() ) {
 			/* translators: used between list items, there is a space after the comma */
-			$tags_list = get_the_tag_list( '<ul class="list-inline"><li><i class="fa fa-tag"></i> ', '</li><li><i class="fa fa-tag"></i> ', '</li></ul>' );
+			$tags_list = get_the_tag_list( '<ul class="list-inline"><li><i class="fa fa-tag"></i> ',
+				'</li><li><i class="fa fa-tag"></i> ', '</li></ul>' );
 			if ( $tags_list ) {
-				printf( '<span class="tags-links"> ' . esc_html__( '%1$s', 'mesopotamia' ) . '</span>', $tags_list ); // WPCS: XSS OK.
+				printf( '<span class="tags-links"> ' . esc_html__( '%1$s', 'mesopotamia' ) . '</span>',
+					$tags_list ); // WPCS: XSS OK.
 			}
 		}
 
 		if ( ! is_single() && ! post_password_required() && ( comments_open() || get_comments_number() ) ) {
 			echo '<span class="comments-link"><i class="fa fa-comments"></i> ';
-			comments_popup_link( esc_html__( 'Leave a comment', 'mesopotamia' ), esc_html__( '1 Comment', 'mesopotamia' ), esc_html__( '% Comments', 'mesopotamia' ) );
+			comments_popup_link( esc_html__( 'Leave a comment', 'mesopotamia' ),
+				esc_html__( '1 Comment', 'mesopotamia' ), esc_html__( '% Comments', 'mesopotamia' ) );
 			echo '</span>';
 		}
 
@@ -179,18 +182,20 @@ function mesopotamia_get_the_category() {
 
 function mesopotamia_post_nav() {
 	?>
-	<nav class="navigation post-navigation clearfix" role="navigation">
-		<div class="post-nav-box">
-			<h1 class="screen-reader-text"><?php _e( 'Post navigation', 'mesopotamia' ); ?></h1>
-			<div class="nav-links">
+    <nav class="navigation post-navigation clearfix" role="navigation">
+        <div class="post-nav-box">
+            <h1 class="screen-reader-text"><?php _e( 'Post navigation', 'mesopotamia' ); ?></h1>
+            <div class="nav-links">
 				<?php
 				//				previous_post_link( '<div class="nav-previous"><div class="nav-indicator">' . _x( 'Previous', 'Previous post', 'mesopotamia' ) . '</div>%link</div>', '%title' );
-				previous_post_link( '<div class="nav-previous"><div class="nav-indicator">%link</div></div>', _x( 'Previous', 'Previous post', 'mesopotamia' ) );
-				next_post_link( '<div class="nav-next"><div class="nav-indicator">%link</div></div>', _x( 'Next', 'Next post', 'mesopotamia' ) );
+				previous_post_link( '<div class="nav-previous"><div class="nav-indicator">%link</div></div>',
+					_x( 'Previous', 'Previous post', 'mesopotamia' ) );
+				next_post_link( '<div class="nav-next"><div class="nav-indicator">%link</div></div>',
+					_x( 'Next', 'Next post', 'mesopotamia' ) );
 				?>
-			</div><!-- .nav-links -->
-		</div><!-- .post-nav-box -->
-	</nav><!-- .navigation -->
+            </div><!-- .nav-links -->
+        </div><!-- .post-nav-box -->
+    </nav><!-- .navigation -->
 	<?php
 }
 
@@ -234,7 +239,8 @@ if ( ! function_exists( 'mesopotamia_paging_nav' ) ) :
 		$pagenum_link = trailingslashit( $pagenum_link ) . '%_%';
 
 		$format = $wp_rewrite->using_index_permalinks() && ! strpos( $pagenum_link, 'index.php' ) ? 'index.php/' : '';
-		$format .= $wp_rewrite->using_permalinks() ? user_trailingslashit( $wp_rewrite->pagination_base . '/%#%', 'paged' ) : '?paged=%#%';
+		$format .= $wp_rewrite->using_permalinks() ? user_trailingslashit( $wp_rewrite->pagination_base . '/%#%',
+			'paged' ) : '?paged=%#%';
 
 		// Set up paginated links.
 		$links = paginate_links( array(
@@ -251,12 +257,12 @@ if ( ! function_exists( 'mesopotamia_paging_nav' ) ) :
 		if ( $links ) :
 
 			?>
-			<nav class="navigation paging-navigation" role="navigation">
-				<h1 class="screen-reader-text"><?php _e( 'Posts navigation', 'mesopotamia' ); ?></h1>
-				<div class="pagination loop-pagination">
+            <nav class="navigation paging-navigation" role="navigation">
+                <h1 class="screen-reader-text"><?php _e( 'Posts navigation', 'mesopotamia' ); ?></h1>
+                <div class="pagination loop-pagination">
 					<?php echo $links; ?>
-				</div><!-- .pagination -->
-			</nav><!-- .navigation -->
+                </div><!-- .pagination -->
+            </nav><!-- .navigation -->
 			<?php
 		endif;
 	}
@@ -271,11 +277,14 @@ function bootstrap3_comment_form_fields( $fields ) {
 	$html5    = current_theme_supports( 'html5', 'comment-form' ) ? 1 : 0;
 
 	$fields = array(
-		'author' => '<div class="form-group comment-form-author">' . '<label for="author">' . __( 'Name','mesopotamia' ) . ( $req ? ' <span class="required">*</span>' : '' ) . '</label> ' .
+		'author' => '<div class="form-group comment-form-author">' . '<label for="author">' . __( 'Name',
+				'mesopotamia' ) . ( $req ? ' <span class="required">*</span>' : '' ) . '</label> ' .
 		            '<input class="form-control" id="author" name="author" type="text" value="' . esc_attr( $commenter['comment_author'] ) . '" size="30"' . $aria_req . ' /></div>',
-		'email'  => '<div class="form-group comment-form-email"><label for="email">' . __( 'Email','mesopotamia' ) . ( $req ? ' <span class="required">*</span>' : '' ) . '</label> ' .
+		'email'  => '<div class="form-group comment-form-email"><label for="email">' . __( 'Email',
+				'mesopotamia' ) . ( $req ? ' <span class="required">*</span>' : '' ) . '</label> ' .
 		            '<input class="form-control" id="email" name="email" ' . ( $html5 ? 'type="email"' : 'type="text"' ) . ' value="' . esc_attr( $commenter['comment_author_email'] ) . '" size="30"' . $aria_req . ' /></div>',
-		'url'    => '<div class="form-group comment-form-url"><label for="url">' . __( 'Website','mesopotamia' ) . '</label> ' .
+		'url'    => '<div class="form-group comment-form-url"><label for="url">' . __( 'Website',
+				'mesopotamia' ) . '</label> ' .
 		            '<input class="form-control" id="url" name="url" ' . ( $html5 ? 'type="url"' : 'type="text"' ) . ' value="' . esc_attr( $commenter['comment_author_url'] ) . '" size="30" /></div>'
 	);
 
@@ -299,29 +308,30 @@ function bootstrap3_comment_format( $comment, $args, $depth ) {
 	$GLOBALS['comment'] = $comment; ?>
 
 <li <?php comment_class( 'media' ); ?> id="comment-<?php comment_ID(); ?>">
-	<article class="thumbnail mesopotamia-comment">
-		<div class="comment-meta media-left">
+    <article class="thumbnail mesopotamia-comment">
+        <div class="comment-meta media-left">
 			<?php echo get_avatar( $comment, 48 ); ?>
-			<p class="text-center comment-author"><?php comment_author_link(); ?></p>
-		</div> <!-- .comment-meta -->
-		<div class="comment-content media-body">
-			<p class="comment-date text-right text-muted pull-right"><?php echo human_time_diff( get_comment_time( 'U' ), current_time( 'timestamp' ) ) . ' ago'; ?>
-				&nbsp;<a class="comment-permalink"
-				         href="<?php echo htmlspecialchars( get_comment_link( $comment->comment_ID ) ) ?>"
-				         title="Comment Permalink"><i class="icon-link"></i></a></p>
+            <p class="text-center comment-author"><?php comment_author_link(); ?></p>
+        </div> <!-- .comment-meta -->
+        <div class="comment-content media-body">
+            <p class="comment-date text-right text-muted pull-right"><?php echo human_time_diff( get_comment_time( 'U' ),
+						current_time( 'timestamp' ) ) . ' ago'; ?>
+                &nbsp;<a class="comment-permalink"
+                         href="<?php echo htmlspecialchars( get_comment_link( $comment->comment_ID ) ) ?>"
+                         title="Comment Permalink"><i class="icon-link"></i></a></p>
 			<?php if ( $comment->comment_approved == '0' ) { // Awaiting Moderation ?>
-				<em><?php _e( 'Your comment is awaiting moderation.','mesopotamia' ) ?></em>
+                <em><?php _e( 'Your comment is awaiting moderation.', 'mesopotamia' ) ?></em>
 			<?php } ?>
 			<?php comment_text(); ?>
-			<div class="reply pull-right">
+            <div class="reply pull-right">
 				<?php comment_reply_link( array_merge( $args, array(
-					'reply_text' => __( '<i class="icon-reply"></i>&nbsp; Reply' ,'mesopotamia'),
+					'reply_text' => __( '<i class="icon-reply"></i>&nbsp; Reply', 'mesopotamia' ),
 					'depth'      => $depth,
 					'max_depth'  => $args['max_depth']
 				) ) ); ?>
-			</div>
-		</div> <!-- .comment-content -->
-	</article>
+            </div>
+        </div> <!-- .comment-content -->
+    </article>
 <?php }
 
 // Add Class to Gravatar
