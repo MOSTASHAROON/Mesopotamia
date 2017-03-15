@@ -2,9 +2,9 @@
 # This file is distributed under the GNU General Public License v2 or later.
 msgid ""
 msgstr ""
-"Project-Id-Version: Mesopotamia 1.0.7\n"
+"Project-Id-Version: Mesopotamia 1.0.8\n"
 "Report-Msgid-Bugs-To: https://wordpress.org/support/theme/style\n"
-"POT-Creation-Date: 2017-03-15 18:33:57+00:00\n"
+"POT-Creation-Date: 2017-03-15 21:23:28+00:00\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=utf-8\n"
 "Content-Transfer-Encoding: 8bit\n"
@@ -13,19 +13,19 @@ msgstr ""
 "Language-Team: LANGUAGE <LL@li.org>\n"
 "X-Generator: grunt-wp-i18n 0.5.4\n"
 
-#: inc/customizer.php:246
+#: inc/customizer.php:259
 msgid "1"
 msgstr ""
 
-#: inc/customizer.php:247
+#: inc/customizer.php:260
 msgid "2"
 msgstr ""
 
-#: inc/customizer.php:248
+#: inc/customizer.php:261
 msgid "3"
 msgstr ""
 
-#: inc/customizer.php:249
+#: inc/customizer.php:262
 msgid "4"
 msgstr ""
 
@@ -115,79 +115,79 @@ msgstr ""
 msgid "https://mostasharoon.org"
 msgstr ""
 
-#: inc/customizer.php:113
+#: inc/customizer.php:125
 msgid "MOSTASHAROON"
 msgstr ""
 
-#: inc/customizer.php:128
+#: inc/customizer.php:141
 msgid "First Main Color"
 msgstr ""
 
-#: inc/customizer.php:139
+#: inc/customizer.php:152
 msgid "Second Main Color"
 msgstr ""
 
-#: inc/customizer.php:149
+#: inc/customizer.php:162
 msgid "Grid"
 msgstr ""
 
-#: inc/customizer.php:152
+#: inc/customizer.php:165
 msgid "8X4"
 msgstr ""
 
-#: inc/customizer.php:153
+#: inc/customizer.php:166
 msgid "9X3"
 msgstr ""
 
-#: inc/customizer.php:162
+#: inc/customizer.php:175
 msgid "Skin"
 msgstr ""
 
-#: inc/customizer.php:165
+#: inc/customizer.php:178
 msgid "Light"
 msgstr ""
 
-#: inc/customizer.php:166
+#: inc/customizer.php:179
 msgid "Dark"
 msgstr ""
 
-#: inc/customizer.php:175
+#: inc/customizer.php:188
 msgid "Disable sidebar for blog"
 msgstr ""
 
-#: inc/customizer.php:184
+#: inc/customizer.php:197
 msgid "Disable sidebar for search"
 msgstr ""
 
-#: inc/customizer.php:193
+#: inc/customizer.php:206
 msgid "Disable sidebar for archive"
 msgstr ""
 
-#: inc/customizer.php:203
+#: inc/customizer.php:216
 msgid "Upload a logo"
 msgstr ""
 
-#: inc/customizer.php:206
+#: inc/customizer.php:219
 msgid "Perfect logo height for Mesopotamia theme is 50px"
 msgstr ""
 
-#: inc/customizer.php:216
+#: inc/customizer.php:229
 msgid "Show search box in menu"
 msgstr ""
 
-#: inc/customizer.php:225
+#: inc/customizer.php:238
 msgid "Fixed header"
 msgstr ""
 
-#: inc/customizer.php:234
+#: inc/customizer.php:247
 msgid "Enable top footer"
 msgstr ""
 
-#: inc/customizer.php:243
+#: inc/customizer.php:256
 msgid "Number of columns"
 msgstr ""
 
-#: inc/customizer.php:258
+#: inc/customizer.php:271
 msgid "Copyright"
 msgstr ""
 
