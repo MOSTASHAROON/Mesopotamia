@@ -56,7 +56,7 @@
 						<div class="navbar-header">
 							<button type="button" class="navbar-toggle" data-toggle="collapse"
 							        data-target="#bs-mesopotamia-navbar-collapse-1">
-								<span class="sr-only">Toggle navigation</span>
+								<span class="sr-only"><?php esc_html_e( 'Toggle navigation', 'mesopotamia' ); ?></span>
 								<span class="icon-bar"></span>
 								<span class="icon-bar"></span>
 								<span class="icon-bar"></span>
@@ -65,7 +65,7 @@
 								<?php $logo = get_theme_mod( 'logo' ); ?>
 								<?php if ( $logo ) { ?>
 									<img src="<?php echo $logo; ?>"
-									     style="max-height:50px; margin-top: -15px;" alt="Brand">
+									     style="max-height:50px; margin-top: -15px;" alt="<?php esc_attr_e( 'Brand', 'mesopotamia' ); ?>">
 								<?php } else { ?>
 									<?php bloginfo( 'name' ); ?>
 								<?php } ?>
