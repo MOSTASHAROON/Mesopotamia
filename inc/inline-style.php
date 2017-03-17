@@ -13,6 +13,10 @@ function mesopotamia_inline_css() {
 	$first_main_color  = get_theme_mod("first_main_color");
 	$second_main_color = get_theme_mod( 'second_main_color');
 
+	if(!$first_main_color || !$second_main_color){
+		return;
+	}
+
 	$css = '
 		/* Mesopotamia Inline CSS */
 /* Misc */
