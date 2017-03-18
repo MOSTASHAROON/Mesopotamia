@@ -295,7 +295,7 @@ function mesopotamia_comment_form( $args ) {
 
 // Customize Comment Output
 function mesopotamia_comment_format( $comment, $args, $depth ) {
-	$GLOBALS['comment'] = $comment; ?>
+?>
 
 <li <?php comment_class( 'media' ); ?> id="comment-<?php comment_ID(); ?>">
     <article class="thumbnail mesopotamia-comment">
