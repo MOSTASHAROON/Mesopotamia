@@ -180,7 +180,7 @@ function mesopotamia_scripts() {
 		wp_enqueue_script( 'comment-reply' );
 	}
 
-	wp_enqueue_style( 'google-fonts',
+	wp_enqueue_style( 'mesopotamia-google-fonts',
 		'https://fonts.googleapis.com/css?family=Ubuntu:400,700,700italic,500italic,500,400italic,300italic,300' );
 	wp_enqueue_style( 'font-awesome',
 		get_template_directory_uri() . '/lib/font-awesome/css/font-awesome.min.css' );
@@ -193,31 +193,31 @@ function mesopotamia_scripts() {
 	if ( is_page_template( 'page-templates/full-width.php' ) ) {
 		wp_enqueue_style( 'mesopotamia-layout', get_template_directory_uri() . '/layouts/full-width.css', array(
 			'bootstrap-theme',
-			'google-fonts',
+			'mesopotamia-google-fonts',
 			'font-awesome'
 		) );
 	} elseif ( is_page_template( 'page-templates/no-sidebar.php' ) ) {
 		wp_enqueue_style( 'mesopotamia-layout', get_template_directory_uri() . '/layouts/no-sidebar.css', array(
 			'bootstrap-theme',
-			'google-fonts',
+			'mesopotamia-google-fonts',
 			'font-awesome'
 		) );
 	} elseif ( is_page_template( 'page-templates/scratch.php' ) ) {
 		wp_enqueue_style( 'mesopotamia-layout', get_template_directory_uri() . '/layouts/scratch.css', array(
 			'bootstrap-theme',
-			'google-fonts',
+			'mesopotamia-google-fonts',
 			'font-awesome'
 		) );
 	} elseif ( is_page_template( 'page-templates/content-full-width.php' ) ) {
 		wp_enqueue_style( 'mesopotamia-layout', get_template_directory_uri() . '/layouts/content-full-width.css', array(
 			'bootstrap-theme',
-			'google-fonts',
+			'mesopotamia-google-fonts',
 			'font-awesome'
 		) );
 	} else {
 		wp_enqueue_style( 'mesopotamia-layout', get_template_directory_uri() . '/layouts/content-sidebar.css', array(
 			'bootstrap-theme',
-			'google-fonts',
+			'mesopotamia-google-fonts',
 			'font-awesome'
 		) );
 	}
