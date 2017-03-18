@@ -23,5 +23,6 @@ To view many full live demos and to check Mesopotamia features list and to find 
 
 * Based on Underscores http://underscores.me/, (C) 2012-2016 Automattic, Inc., [GPLv2 or later](https://www.gnu.org/licenses/gpl-2.0.html)
 * Bootstrap v3.3.6 (http://getbootstrap.com), Copyright 2011-2015 Twitter, Inc., Licensed under MIT (https://github.com/twbs/bootstrap/blob/master/LICENSE)
-* Font Awesome icons, Copyright Dave Gandy, License: SIL Open Font License, version 1.1., Source: http://fontawesome.io/
+* Font Awesome Font, Copyright Dave Gandy, License: SIL Open Font License, Source: http://fontawesome.io/
+* Font Awesome CSS, Copyright Dave Gandy,  License: MIT License, Source: http://fontawesome.io/
 * wp_bootstrap_navwalker Class(https://github.com/twittem/wp-bootstrap-navwalker), Version: 2.0.4, Author: Edward McIntyre - @twittem, License: GPL-2.0+
