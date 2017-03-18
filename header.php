@@ -75,7 +75,6 @@
 						<div class="collapse navbar-collapse" id="bs-mesopotamia-navbar-collapse-1">
 							<?php
 							wp_nav_menu( array(
-									'menu'           => 'primary',
 									'theme_location' => 'primary',
 									'menu_id'        => 'primary-menu',
 									'depth'          => 2,
