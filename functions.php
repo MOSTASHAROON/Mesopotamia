@@ -247,7 +247,7 @@ function mesopotamia_scripts() {
 		'mesopotamia-skin'
 	) );
 
-	wp_enqueue_script( 'bootstrap-js', get_template_directory_uri() . '/lib/bootstrap/js/bootstrap.min.js',
+	wp_enqueue_script( 'bootstrap', get_template_directory_uri() . '/lib/bootstrap/js/bootstrap.min.js',
 		array( 'jquery' ) );
 
 	wp_enqueue_script( 'mesopotamia-js', get_template_directory_uri() . '/js/script.js', array(

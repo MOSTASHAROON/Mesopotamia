@@ -199,16 +199,6 @@ function mesopotamia_post_nav() {
 	<?php
 }
 
-//function mesopotamia_add_post_classes( $classes, $class, $post_id ) {
-//	if ( ! is_single() ) {
-//		$classes[] = 'thumbnail';
-//	}
-//
-//	return $classes;
-//}
-//
-//add_filter( 'post_class', 'mesopotamia_add_post_classes', 10, 3 );
-
 if ( ! function_exists( 'mesopotamia_paging_nav' ) ) :
 	/**
 	 * Display navigation to next/previous set of posts when applicable.
@@ -268,8 +258,8 @@ if ( ! function_exists( 'mesopotamia_paging_nav' ) ) :
 	}
 endif;
 
-add_filter( 'comment_form_default_fields', 'bootstrap3_comment_form_fields' );
-function bootstrap3_comment_form_fields( $fields ) {
+add_filter( 'comment_form_default_fields', 'mesopotamia_comment_form_fields' );
+function mesopotamia_comment_form_fields( $fields ) {
 	$commenter = wp_get_current_commenter();
 
 	$req      = get_option( 'require_name_email' );
@@ -291,8 +281,8 @@ function bootstrap3_comment_form_fields( $fields ) {
 	return $fields;
 }
 
-add_filter( 'comment_form_defaults', 'bootstrap3_comment_form' );
-function bootstrap3_comment_form( $args ) {
+add_filter( 'comment_form_defaults', 'mesopotamia_comment_form' );
+function mesopotamia_comment_form( $args ) {
 	$args['comment_field'] = '<div class="form-group comment-form-comment">
             <label for="comment">' . _x( 'Comment', 'noun', 'mesopotamia' ) . '</label> 
             <textarea class="form-control" id="comment" name="comment" cols="45" rows="8" aria-required="true"></textarea>
@@ -304,7 +294,7 @@ function bootstrap3_comment_form( $args ) {
 }
 
 // Customize Comment Output
-function bootstrap3_comment_format( $comment, $args, $depth ) {
+function mesopotamia_comment_format( $comment, $args, $depth ) {
 	$GLOBALS['comment'] = $comment; ?>
 
 <li <?php comment_class( 'media' ); ?> id="comment-<?php comment_ID(); ?>">

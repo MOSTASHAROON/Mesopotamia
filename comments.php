@@ -64,7 +64,7 @@ if ( post_password_required() ) {
 				'style'       => 'ol',
 				'short_ping'  => true,
 				'avatar_size' => 48,
-				'callback'    => 'bootstrap3_comment_format',
+				'callback'    => 'mesopotamia_comment_format',
 			) );
 			?>
         </ol><!-- .comment-list -->

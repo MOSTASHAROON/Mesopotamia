@@ -16,22 +16,6 @@
     background-color: white;
 }
 
-/*.comment-navigation .nav-previous a,*/
-/*.posts-navigation .nav-previous a,*/
-/*.post-navigation .nav-previous a,*/
-/*.comment-navigation .nav-next a,*/
-/*.posts-navigation .nav-next a,*/
-/*.post-navigation .nav-next a,*/
-/*.comment-navigation .nav-previous a:hover,*/
-/*.posts-navigation .nav-previous a:hover,*/
-/*.post-navigation .nav-previous a:hover,*/
-/*.comment-navigation .nav-next a:hover,*/
-/*.posts-navigation .nav-next a:hover,*/
-/*.post-navigation .nav-next a:hover,*/
-/*.entry-meta a, .entry-footer a {*/
-/*color: #6a6c6d;*/
-/*}*/
-
 #site-navigation, #submit, .comment-reply-link {
     background: none;
 }
