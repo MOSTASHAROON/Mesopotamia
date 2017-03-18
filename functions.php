@@ -253,7 +253,7 @@ function mesopotamia_scripts() {
 	wp_enqueue_script( 'mesopotamia-js', get_template_directory_uri() . '/js/script.js', array(
 		'imagesloaded',
 		'masonry',
-		'bootstrap-js'
+		'bootstrap'
 	) );
 }
 
