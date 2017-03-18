@@ -67,12 +67,6 @@ if ( ! function_exists( 'mesopotamia_setup' ) ) :
 		add_theme_support( 'post-formats', array(
 			'aside'
 		) );
-
-		// Set up the WordPress core custom background feature.
-//		add_theme_support( 'custom-background', apply_filters( 'mesopotamia_custom_background_args', array(
-//			'default-color' => 'ffffff',
-//			'default-image' => '',
-//		) ) );
 	}
 endif;
 add_action( 'after_setup_theme', 'mesopotamia_setup' );
@@ -186,7 +180,6 @@ function mesopotamia_scripts() {
 		wp_enqueue_script( 'comment-reply' );
 	}
 
-//	wp_enqueue_style( 'google-fonts', 'https://fonts.googleapis.com/css?family=Ranga:400,700|Contrail+One|Courgette|Italianno|Romanesco' );
 	wp_enqueue_style( 'google-fonts',
 		'https://fonts.googleapis.com/css?family=Ubuntu:400,700,700italic,500italic,500,400italic,300italic,300' );
 	wp_enqueue_style( 'font-awesome',
@@ -322,11 +315,6 @@ function mesopotamia_get_array_of_options( $options ) {
 function mesopotamia_sanitize_boolean( $bool ) {
 	return filter_var( $bool, FILTER_VALIDATE_BOOLEAN );
 }
-
-/**
- * Implement the Custom Header feature.
- */
-//require get_template_directory() . '/inc/custom-header.php';
 
 /**
  * Custom template tags for this theme.

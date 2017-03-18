@@ -7,9 +7,6 @@
  *
  */
 ?>
-<!--	<label>-->
-<!--		<span class="screen-reader-text">--><?php //echo _x( 'Search for:', 'label', 'mesopotamia' ); ?><!--</span>-->
-<!--	</label>-->
 
 <form role="search" method="get" class="search-form" action="<?php echo esc_url( home_url( '/' ) ); ?>">
 	<div class="row">

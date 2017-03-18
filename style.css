@@ -24,10 +24,6 @@ Nicolas Gallagher and Jonathan Neal http://necolas.github.com/normalize.css/
 # Misc
 --------------------------------------------------------------*/
 
-/*body {*/
-/*padding-top: 40px;*/
-/*}*/
-
 /*Sidebar*/
 aside section, .footer-widgets section, .mesopotamia-widgets section {
     padding: 10px;
@@ -54,10 +50,6 @@ aside section table, .footer-widgets section table, .mesopotamia-widgets section
 }
 
 .container-fluid *:not(i) {
-    /*font-family: 'Italianno', cursive;*/
-    /*font-family: 'Courgette', cursive;*/
-    /*font-family: 'Contrail One', cursive;*/
-    /*font-family: 'Ranga', cursive;*/
     font-family: 'Ubuntu', sans-serif;
 }
 
@@ -387,12 +379,6 @@ object {
     font-size: 2em;
 }
 
-/*@media (min-width: 768px) {*/
-/*#primary-menu {*/
-/*float: right;*/
-/*}*/
-/*}*/
-
 #primary-menu a:hover, #primary-menu a:active, #primary-menu li.active a {
     box-shadow: none !important;
 }
@@ -585,10 +571,6 @@ section.error-404 .page-content > p, section.no-results .page-content > p {
 .widget #wp-calendar {
     margin: 1.5em;
 }
-
-/*.mesopotamia-navbar-search-form{*/
-/*float: right;*/
-/*}*/
 
 .navbar-container-fluid .navbar-header button.navbar-toggle {
     background: none;
