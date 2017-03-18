@@ -54,7 +54,7 @@ if ( ! function_exists( 'mesopotamia_entry_footer' ) ) :
 			$tags_list = get_the_tag_list( '<ul class="list-inline"><li><i class="fa fa-tag"></i> ',
 				'</li><li><i class="fa fa-tag"></i> ', '</li></ul>' );
 			if ( $tags_list ) {
-				printf( '<span class="tags-links"> ' . esc_html__( '%1$s', 'mesopotamia' ) . '</span>',
+				printf( '<span class="tags-links"> ' . esc_html( '%1$s' ) . '</span>',
 					$tags_list ); // WPCS: XSS OK.
 			}
 		}
