@@ -61,7 +61,7 @@
 								<span class="icon-bar"></span>
 								<span class="icon-bar"></span>
 							</button>
-							<a class="navbar-brand" href="<?php echo home_url(); ?>">
+							<a class="navbar-brand" href="<?php echo esc_url(home_url()); ?>">
 								<?php $logo = get_theme_mod( 'logo' ); ?>
 								<?php if ( $logo ) { ?>
 									<img src="<?php echo $logo; ?>"

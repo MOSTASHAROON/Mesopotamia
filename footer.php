@@ -157,7 +157,7 @@
 
 		<div class="bottom-footer">
 			<div class="site-info" id="copyright">
-				<?php echo stripslashes( str_replace( "%year%", current_time( 'Y' ), get_theme_mod( 'copyright' ) ) ); ?>
+				<?php esc_html_e( stripslashes( str_replace( "%year%", current_time( 'Y' ), get_theme_mod( 'copyright' ) ) )); ?>
 			</div><!-- .site-info -->
 			<?php mesopotamia_footer_menu(); ?>
 		</div><!-- .bottom-footer -->
