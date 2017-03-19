@@ -10,15 +10,14 @@ if ( ! defined( 'ABSPATH' ) ) {
  */
 function mesopotamia_inline_css() {
 
-	$first_main_color  = get_theme_mod("first_main_color");
-	$second_main_color = get_theme_mod( 'second_main_color');
+	$c1                = get_theme_mod( "first_main_color" );
+	$first_main_color  = $c1 ? $c1 : '#ff6700';
+	$c2                = get_theme_mod( 'second_main_color' );
+	$second_main_color = $c2 ? $c2 : '#00aeef';
 
-	if(!$first_main_color || !$second_main_color){
-		return;
-	}
 
 	$css = '
-		/* Mesopotamia Inline CSS */
+        /* Mesopotamia Inline CSS */
 /* Misc */
 aside section h2,.footer-widgets section h2, .mesopotamia-widgets h2 {
     border-top: 2px solid %1$s;
@@ -30,7 +29,7 @@ article.thumbnail:not(.mesopotamia-comment), a.mesopotamia-icon:hover {
 }
 
 a.mesopotamia-icon{
-	border-top: 4px solid %1$s !important;
+    border-top: 4px solid %1$s !important;
 }
 
 aside section, .footer-widgets section, .mesopotamia-widgets section {
@@ -53,7 +52,7 @@ a:hover, a:focus, .thumbnail .entry-header .entry-meta a:hover {
 
 /* Sticky */
 article.thumbnail .mesopotamia-sticky-icon{
-	background-color: %2$s;
+    background-color: %2$s;
 }
 
 /* Footer */
@@ -93,7 +92,7 @@ article.thumbnail .mesopotamia-sticky-icon{
 .comment-navigation,
 .posts-navigation,
 .post-navigation{
-	border-top: 4px solid %2$s;
+    border-top: 4px solid %2$s;
 }
 
 .comment-navigation .nav-previous a,
@@ -142,12 +141,12 @@ article.thumbnail .mesopotamia-sticky-icon{
 
 /* Buttons */
 .mes-btn{
-	border-bottom: 4px solid %2$s;
-	color:  %1$s;
+    border-bottom: 4px solid %2$s;
+    color:  %1$s;
 }
 
 .mes-btn:hover{
-	color:  %2$s;
+    color:  %2$s;
     border-bottom: 4px solid %1$s;
 }
 
@@ -166,13 +165,13 @@ article.thumbnail .mesopotamia-sticky-icon{
 }
 
 #submit{
-	color:  %1$s;
+    color:  %1$s;
 }
 
 #comments article{
     border-left: 4px solid %2$s;
 }
-	';
+    ';
 
 	wp_add_inline_style( 'mesopotamia-style', sprintf( $css, $first_main_color, $second_main_color ) );
 }
