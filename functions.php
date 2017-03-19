@@ -24,6 +24,12 @@ if ( ! function_exists( 'mesopotamia_setup' ) ) :
 		 */
 		load_theme_textdomain( 'mesopotamia', get_template_directory() . '/languages' );
 
+		add_theme_support( 'custom-logo', array(
+			'height'      => 50,
+			'width'       => 50,
+			'header-text' => array( 'site-title' ),
+		) );
+
 		// Add default posts and comments RSS feed links to head.
 		add_theme_support( 'automatic-feed-links' );
 

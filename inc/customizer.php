@@ -90,12 +90,6 @@ function register_mesopotamia_settings( $wp_customize ) {
 		'sanitize_callback' => 'mesopotamia_sanitize_boolean',
 	) );
 
-	$wp_customize->add_setting( "logo", array(
-		"default"   => "",
-		"transport" => "refresh",
-		'sanitize_callback' => 'sanitize_text_field',
-	) );
-
 	$wp_customize->add_setting( "search", array(
 		"default"   => false,
 		"transport" => "refresh",
@@ -205,20 +199,6 @@ function register_mesopotamia_controls( $wp_customize ) {
 			'type'    => 'checkbox',
 			'label'   => __( 'Disable sidebar for archive', 'mesopotamia' ),
 			'section' => 'general'
-		)
-	);
-
-	$wp_customize->add_control(
-		new WP_Customize_Image_Control(
-			$wp_customize,
-			'logo',
-			array(
-				'label'       => __( 'Upload a logo', 'mesopotamia' ),
-				'section'     => 'header',
-				'settings'    => 'logo',
-				'description' => __( 'Perfect logo height for Mesopotamia theme is 50px', 'mesopotamia' )
-//				'context'    => 'your_setting_context'
-			)
 		)
 	);
 

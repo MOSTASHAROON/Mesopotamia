@@ -61,15 +61,24 @@
 								<span class="icon-bar"></span>
 								<span class="icon-bar"></span>
 							</button>
-							<a class="navbar-brand" href="<?php echo esc_url(home_url()); ?>">
-								<?php $logo = get_theme_mod( 'logo' ); ?>
-								<?php if ( $logo ) { ?>
-									<img src="<?php echo $logo; ?>"
-									     style="max-height:50px; margin-top: -15px;" alt="<?php esc_attr_e( 'Brand', 'mesopotamia' ); ?>">
-								<?php } else { ?>
-									<?php bloginfo( 'name' ); ?>
-								<?php } ?>
+							<?php
+							if ( function_exists( 'get_custom_logo' ) && has_custom_logo() ) {
+								?>
+                                <a class="navbar-brand" href="<?php echo esc_url(home_url()); ?>">
+									<?php the_custom_logo(); ?>
+                                </a>
+								<?php
+							}
+							?>
+                            <?php $mod = get_theme_mod('header_text');
+							if ( $mod != 0 ) {
+							?>
+                            <a class="navbar-brand" href="<?php echo esc_url(home_url()); ?>">
+                               <?php bloginfo( 'name' );?>
 							</a>
+                            <?php
+                            }
+                            ?>
 						</div>
 						<!-- Collect the nav links, forms, and other content for toggling -->
 						<div class="collapse navbar-collapse" id="bs-mesopotamia-navbar-collapse-1">

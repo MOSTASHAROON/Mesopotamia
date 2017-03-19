@@ -379,6 +379,10 @@ object {
     font-size: 2em;
 }
 
+.navbar-header img {
+    float: left;
+}
+
 #primary-menu a:hover, #primary-menu a:active, #primary-menu li.active a {
     box-shadow: none !important;
 }
