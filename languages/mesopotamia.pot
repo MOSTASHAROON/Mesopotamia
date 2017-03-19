@@ -2,9 +2,9 @@
 # This file is distributed under the GNU General Public License v2 or later.
 msgid ""
 msgstr ""
-"Project-Id-Version: Mesopotamia 1.0.8\n"
+"Project-Id-Version: Mesopotamia 1.0.9\n"
 "Report-Msgid-Bugs-To: https://wordpress.org/support/theme/style\n"
-"POT-Creation-Date: 2017-03-15 21:23:28+00:00\n"
+"POT-Creation-Date: 2017-03-19 18:47:54+00:00\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=utf-8\n"
 "Content-Transfer-Encoding: 8bit\n"
@@ -13,19 +13,19 @@ msgstr ""
 "Language-Team: LANGUAGE <LL@li.org>\n"
 "X-Generator: grunt-wp-i18n 0.5.4\n"
 
-#: inc/customizer.php:259
+#: inc/customizer.php:239
 msgid "1"
 msgstr ""
 
-#: inc/customizer.php:260
+#: inc/customizer.php:240
 msgid "2"
 msgstr ""
 
-#: inc/customizer.php:261
+#: inc/customizer.php:241
 msgid "3"
 msgstr ""
 
-#: inc/customizer.php:262
+#: inc/customizer.php:242
 msgid "4"
 msgstr ""
 
@@ -55,11 +55,11 @@ msgstr ""
 msgid "Comments are closed."
 msgstr ""
 
-#: functions.php:47
+#: functions.php:53
 msgid "Primary"
 msgstr ""
 
-#: functions.php:48 inc/customizer.php:43
+#: functions.php:54 inc/customizer.php:43
 msgid "Footer"
 msgstr ""
 
@@ -95,11 +95,7 @@ msgstr ""
 msgid "Toggle navigation"
 msgstr ""
 
-#: header.php:68
-msgid "Brand"
-msgstr ""
-
-#: header.php:93
+#: header.php:101
 msgid "Search ..."
 msgstr ""
 
@@ -115,88 +111,76 @@ msgstr ""
 msgid "https://mostasharoon.org"
 msgstr ""
 
-#: inc/customizer.php:125
+#: inc/customizer.php:119
 msgid "MOSTASHAROON"
 msgstr ""
 
-#: inc/customizer.php:141
+#: inc/customizer.php:135
 msgid "First Main Color"
 msgstr ""
 
-#: inc/customizer.php:152
+#: inc/customizer.php:146
 msgid "Second Main Color"
 msgstr ""
 
-#: inc/customizer.php:162
+#: inc/customizer.php:156
 msgid "Grid"
 msgstr ""
 
-#: inc/customizer.php:165
+#: inc/customizer.php:159
 msgid "8X4"
 msgstr ""
 
-#: inc/customizer.php:166
+#: inc/customizer.php:160
 msgid "9X3"
 msgstr ""
 
-#: inc/customizer.php:175
+#: inc/customizer.php:169
 msgid "Skin"
 msgstr ""
 
-#: inc/customizer.php:178
+#: inc/customizer.php:172
 msgid "Light"
 msgstr ""
 
-#: inc/customizer.php:179
+#: inc/customizer.php:173
 msgid "Dark"
 msgstr ""
 
-#: inc/customizer.php:188
+#: inc/customizer.php:182
 msgid "Disable sidebar for blog"
 msgstr ""
 
-#: inc/customizer.php:197
+#: inc/customizer.php:191
 msgid "Disable sidebar for search"
 msgstr ""
 
-#: inc/customizer.php:206
+#: inc/customizer.php:200
 msgid "Disable sidebar for archive"
 msgstr ""
 
-#: inc/customizer.php:216
-msgid "Upload a logo"
-msgstr ""
-
-#: inc/customizer.php:219
-msgid "Perfect logo height for Mesopotamia theme is 50px"
-msgstr ""
-
-#: inc/customizer.php:229
+#: inc/customizer.php:209
 msgid "Show search box in menu"
 msgstr ""
 
-#: inc/customizer.php:238
+#: inc/customizer.php:218
 msgid "Fixed header"
 msgstr ""
 
-#: inc/customizer.php:247
+#: inc/customizer.php:227
 msgid "Enable top footer"
 msgstr ""
 
-#: inc/customizer.php:256
+#: inc/customizer.php:236
 msgid "Number of columns"
 msgstr ""
 
-#: inc/customizer.php:271
+#: inc/customizer.php:251
 msgid "Copyright"
 msgstr ""
 
-#: inc/template-tags.php:57
-#. translators: used between list items, there is a space after the comma
-msgid "%1$s"
-msgstr ""
-
 #: inc/template-tags.php:64
+#. translators: used between list items, there is a space after the comma
 msgid "Leave a comment"
 msgstr ""
 
@@ -217,35 +201,35 @@ msgstr ""
 msgid "Post navigation"
 msgstr ""
 
-#: inc/template-tags.php:253
+#: inc/template-tags.php:243
 msgid "&larr; Previous"
 msgstr ""
 
-#: inc/template-tags.php:254
+#: inc/template-tags.php:244
 msgid "Next &rarr;"
 msgstr ""
 
-#: inc/template-tags.php:261
+#: inc/template-tags.php:251
 msgid "Posts navigation"
 msgstr ""
 
-#: inc/template-tags.php:280
+#: inc/template-tags.php:270
 msgid "Name"
 msgstr ""
 
-#: inc/template-tags.php:283
+#: inc/template-tags.php:273
 msgid "Email"
 msgstr ""
 
-#: inc/template-tags.php:286
+#: inc/template-tags.php:276
 msgid "Website"
 msgstr ""
 
-#: inc/template-tags.php:323
+#: inc/template-tags.php:313
 msgid "Your comment is awaiting moderation."
 msgstr ""
 
-#: inc/template-tags.php:328
+#: inc/template-tags.php:318
 msgid "<i class=\"icon-reply\"></i>&nbsp; Reply"
 msgstr ""
 
@@ -361,22 +345,22 @@ msgctxt "Next post"
 msgid "Next"
 msgstr ""
 
-#: inc/template-tags.php:297
+#: inc/template-tags.php:287
 msgctxt "noun"
 msgid "Comment"
 msgstr ""
 
-#: searchform.php:19
+#: searchform.php:16
 msgctxt "placeholder"
 msgid "Search &hellip;"
 msgstr ""
 
-#: searchform.php:21
+#: searchform.php:18
 msgctxt "label"
 msgid "Search for:"
 msgstr ""
 
-#: searchform.php:24
+#: searchform.php:21
 msgctxt "submit button"
 msgid "Search"
 msgstr ""
