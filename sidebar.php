@@ -12,7 +12,7 @@ if ( ! is_active_sidebar( 'sidebar-1' ) ) {
 }
 ?>
 
-<?php $grid = get_theme_mod("grid"); ?>
+<?php $grid = mesopotamia_get_option( 'grid', '8X4' ); ?>
 <?php if ( $grid == '8X4' ) { ?>
 	<div class="col-md-4 col-xs-12">
 <?php } elseif ( $grid == '9X3' ) { ?>

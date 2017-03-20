@@ -29,7 +29,7 @@
 
 		<header id="masthead" class="site-header" role="banner">
             <?php do_action( 'mesopotamia_start_header_tag' ); ?>
-			<?php if ( !function_exists( 'ubermenu' ) || ( true != get_theme_mod( 'UberMenu' ) ) ): ?>
+			<?php if ( !function_exists( 'ubermenu' ) || ( true != mesopotamia_get_option( 'UberMenu', false ) ) ): ?>
 				<div class="site-branding screen-reader-text">
 					<?php
 					if ( is_front_page() && is_home() ) : ?>
@@ -47,7 +47,7 @@
 						<?php
 					endif; ?>
 				</div><!-- .site-branding -->
-				<?php $is_fixed_header = get_theme_mod( 'fixed_header' ); ?>
+				<?php $is_fixed_header = mesopotamia_get_option( 'fixed_header', false ); ?>
 				<?php $fixed_class = ( $is_fixed_header == true ) ? 'navbar-fixed-top' : ''; ?>
 				<nav class="navbar navbar-default <?php echo $fixed_class; ?> main-navigation" id="site-navigation"
 				     role="navigation">
@@ -94,7 +94,7 @@
 								)
 							);
 							?>
-							<?php if ( true == get_theme_mod( 'search' ) ) { ?>
+							<?php if ( true == mesopotamia_get_option( 'search', false ) ) { ?>
 								<form class="navbar-form navbar-right mesopotamia-navbar-search-form" role="search">
 									<div class="form-group">
 										<input type="search" class="search-field form-control input-search" name="s"

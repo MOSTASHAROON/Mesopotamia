@@ -150,10 +150,10 @@ function mesopotamia_widgets_init() {
 		'after_title'   => '</h2>',
 	) );
 
-	$top_footer = get_theme_mod( 'top_footer' );
+	$top_footer = mesopotamia_get_option( 'top_footer', false );
 
 	if ( $top_footer == true ) {
-		$top_columns = (int) get_theme_mod( 'top_columns' );
+		$top_columns = (int) mesopotamia_get_option( 'top_columns', '1' );
 
 		for ( $i = 1; $i <= $top_columns; $i ++ ) {
 			register_sidebar( array(
@@ -291,26 +291,13 @@ function mesopotamia_hex2rgb( $color ) {
  * @return bool
  */
 function mesopotamia_has_sidebar( $template ) {
-	$disabled_sidebars = mesopotamia_get_array_of_options( array(
-		'disable_blog_sidebar',
-		'disable_search_sidebar',
-		'disable_archive_sidebar'
-	) );
+	$results = mesopotamia_get_option( 'disable_' . $template . '_sidebar', false );
 
-	if ( in_array( $template, $disabled_sidebars ) ) {
+	if ( $results ) {
 		return false;
 	}
 
 	return true;
-}
-
-function mesopotamia_get_array_of_options( $options ) {
-	$results = array();
-	foreach ( $options as $option ) {
-		$results[] = get_theme_mod( $option );
-	}
-
-	return $results;
 }
 
 function mesopotamia_sanitize_boolean( $bool ) {

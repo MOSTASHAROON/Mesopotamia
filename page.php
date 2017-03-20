@@ -17,7 +17,7 @@ get_header(); ?>
 <?php do_action( 'mesopotamia_start_page_page' ); ?>
 
 	<div class="row">
-<?php $grid = get_theme_mod("grid"); ?>
+<?php $grid = mesopotamia_get_option( 'grid', '8X4' ); ?>
 <?php if ( $grid == '8X4' ){ ?>
 	<div class="col-md-8 col-xs-12">
 	<?php }elseif ( $grid == '9X3' ){ ?>
